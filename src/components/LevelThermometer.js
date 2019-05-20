@@ -19,11 +19,11 @@ const WIDTH = 550
 
 const Figure = styled.figure`
   margin: 0 0 0 -10px;
-`
 
-const Svg = styled.svg`
-  ${"" /* width: ${WIDTH}px;
-  height: ${HEIGHT + 10}px; */}
+  svg {
+    width: ${WIDTH}px;
+    height: ${HEIGHT + 10}px;
+  }
 `
 
 class LevelThermometer extends React.Component {
@@ -112,7 +112,7 @@ class LevelThermometer extends React.Component {
       <figure>
         <style jsx>{`
           figure {
-            margin: 0 0 0 -100px;
+            margin: 0 0 0 -10px;
           }
           svg {
             width: ${WIDTH}px;

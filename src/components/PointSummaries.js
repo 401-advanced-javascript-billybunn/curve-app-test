@@ -11,21 +11,21 @@ const PointSummariesTable = styled.table`
   border-spacing: 3px;
   margin-bottom: 20px;
   margin-left: -3px;
-`
-const PointSummaryLabelTableHeader = styled.th`
-  font-size: 12px;
-  text-align: center;
-  font-weight: normal;
-  width: 120px;
-`
-const PointSummaryValueTableData = styled.td`
-  width: 120px;
-  background: #eee;
-  font-size: 24px;
-  font-weight: bold;
-  line-height: 50px;
-  border-radius: 2px;
-  text-align: center;
+  .point-summary-label {
+    font-size: 12px;
+    text-align: center;
+    font-weight: normal;
+    width: 120px;
+  }
+  .point-summary-value {
+    width: 120px;
+    background: #eee;
+    font-size: 24px;
+    font-weight: bold;
+    line-height: 50px;
+    border-radius: 2px;
+    text-align: center;
+  }
 `
 
 class PointSummaries extends React.Component {
@@ -68,22 +68,16 @@ class PointSummaries extends React.Component {
         <tbody>
           <tr>
             {blocks.map(({ label }, i) => (
-              <PointSummaryLabelTableHeader
-                key={i}
-                className="point-summary-label"
-              >
+              <th key={i} className="point-summary-label">
                 {label}
-              </PointSummaryLabelTableHeader>
+              </th>
             ))}
           </tr>
           <tr>
             {blocks.map(({ value }, i) => (
-              <PointSummaryValueTableData
-                key={i}
-                className="point-summary-value"
-              >
+              <td key={i} className="point-summary-value">
                 {value}
-              </PointSummaryValueTableData>
+              </td>
             ))}
           </tr>
         </tbody>

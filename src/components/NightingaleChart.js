@@ -10,20 +10,16 @@ const arcMilestones = milestones.slice(1) // we'll draw the '0' milestone with a
 // Styles
 const Figure = styled.figure`
   margin: 0;
-`
-const Svg = styled.svg`
-  width: ${width}px;
-  height: ${width}px;
-`
-const TrackMilestone = styled.path`
-  fill: #eee;
-  cursor: pointer;
-`
-const TrackMilestoneCurrent = styled.path`
-  stroke: #000;
-  stroke-width: 4px;
-  stroke-linejoin: round;
-  &:hover {
+  svg {
+    width: ${width}px;
+    height: ${width}px;
+  }
+  .track-milestone {
+    fill: #eee;
+    cursor: pointer;
+  }
+  .track-milestone-current,
+  .track-milestone:hover {
     stroke: #000;
     stroke-width: 4px;
     stroke-linejoin: round;
@@ -56,28 +52,12 @@ class NightingaleChart extends React.Component {
   }
 
   render() {
-    // console.log("handleTRACKMILESTONE", this.props.handleTrackMilestoneChangeFn)
     const currentMilestoneId = this.props.milestoneByTrack[
       this.props.focusedTrackId
     ]
     return (
       <Figure>
-        <style jsx>{`
-          figure {
-            margin: 0;
-          }
-          .track-milestone {
-            fill: #eee;
-            cursor: pointer;
-          }
-          .track-milestone-current,
-          .track-milestone:hover {
-            stroke: #000;
-            stroke-width: 4px;
-            stroke-linejoin: round;
-          }
-        `}</style>
-        <Svg>
+        <svg>
           <g transform={`translate(${width / 2},${width / 2}) rotate(-33.75)`}>
             {trackIds.map((trackId, i) => {
               const isCurrentTrack = trackId == this.props.focusedTrackId
@@ -136,7 +116,7 @@ class NightingaleChart extends React.Component {
               )
             })}
           </g>
-        </Svg>
+        </svg>
       </Figure>
     )
   }

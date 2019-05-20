@@ -1,7 +1,7 @@
 // @flow
 import * as d3 from "d3"
 
-export const milestones = [0, 1, 2, 3, 4, 5]
+export const milestones = [0, 1, 2, 3, 4]
 
 export const milestoneToPoints = milestone => {
   switch (milestone) {
@@ -15,8 +15,8 @@ export const milestoneToPoints = milestone => {
       return 6
     case 4:
       return 12
-    case 5:
-      return 20
+    // case 5:
+    //   return 20
     default:
       return 0
   }
@@ -43,942 +43,950 @@ export const pointsToLevels = {
 export const maxLevel = 135
 
 export const tracks = {
-  MOBILE: {
-    displayName: "Mobile",
+  // BUSINESS ACUMEN COMPETENCY --------------------
+  MISSION_AND_VISION: {
+    displayName: "Mission and Vision",
     category: "A",
     description:
-      "Develops expertise in native mobile platform engineering, such as iOS or Android",
+      "Makes decisions that align work to support the company’s and product’s vision and goals, along with the team KPIs.",
     milestones: [
       {
         summary:
-          "Works effectively within established iOS or Android architectures, following current best practices",
+          "Milestone 1 summary. Wonderwall tommy hilfiger mr. jones and me tell each other fairy tales berry lips, track jackets flannel shirts tom hanks.",
         signals: [
-          "Delivers features requiring simple local modifications",
-          "Adds simple actions that call server endpoints",
-          "Reuses existing components appropriately",
+          "Signal 1. Super mario world ripped jeans paper fortune teller.",
+          "Signal 2. Super mario world ripped jeans paper fortune teller.",
+          "Signal 3. Super mario world ripped jeans paper fortune teller.",
         ],
         examples: [
-          "Added existing button to a different iOS surface",
-          "Add follow button for publications on Android",
-          "Fetched and displayed a new stream, using existing stream item styles",
+          "Example 1. Sports utility vehicles cut-off jean shorts armageddon george michael renting movies at a store.",
+          "Example 2. Sports utility vehicles cut-off jean shorts armageddon george michael renting movies at a store.",
+          "Example 3. Sports utility vehicles cut-off jean shorts armageddon george michael renting movies at a store.",
         ],
       },
       {
         summary:
-          "Develops new instances of existing architecture, or minor improvements to existing architecture",
+          "Milestone 2 summary. Wonderwall tommy hilfiger mr. jones and me tell each other fairy tales berry lips, track jackets flannel shirts tom hanks.",
         signals: [
-          "Defines new useful and appropriate proto-generated objects",
-          "Creates simple new activities on Android",
-          "Migrates code from old patterns to new patterns",
+          "Signal 1. Super mario world ripped jeans paper fortune teller.",
+          "Signal 2. Super mario world ripped jeans paper fortune teller.",
+          "Signal 3. Super mario world ripped jeans paper fortune teller.",
         ],
         examples: [
-          "Upgraded SDWebImage to a new major version",
-          "Added support for rendering a new type of stream item",
-          "Prototyped a simple new feature quickly",
+          "Example 1. Sports utility vehicles cut-off jean shorts armageddon george michael renting movies at a store.",
+          "Example 2. Sports utility vehicles cut-off jean shorts armageddon george michael renting movies at a store.",
+          "Example 3. Sports utility vehicles cut-off jean shorts armageddon george michael renting movies at a store.",
         ],
       },
       {
         summary:
-          "Designs major new features and demonstrates a nuanced understanding of mobile platform constraints",
+          "Milestone 3 summary. Wonderwall tommy hilfiger mr. jones and me tell each other fairy tales berry lips, track jackets flannel shirts tom hanks.",
         signals: [
-          "Implements complex features with a large product surface area",
-          "Works effectively with  Android reactive programming framework",
-          "Adds support for new iOS features after a major iOS version upgrade",
+          "Signal 1. Super mario world ripped jeans paper fortune teller.",
+          "Signal 2. Super mario world ripped jeans paper fortune teller.",
+          "Signal 3. Super mario world ripped jeans paper fortune teller.",
         ],
         examples: [
-          "Designed iOS caching strategy for offline reading",
-          "Built series reader on Android",
-          "Informed the team about recent best practice changes and deprecations",
+          "Example 1. Sports utility vehicles cut-off jean shorts armageddon george michael renting movies at a store.",
+          "Example 2. Sports utility vehicles cut-off jean shorts armageddon george michael renting movies at a store.",
+          "Example 3. Sports utility vehicles cut-off jean shorts armageddon george michael renting movies at a store.",
         ],
       },
       {
         summary:
-          "Builds complex, reusable architectures that pioneer best practices and enable engineers to work more effectively",
+          "Milestone 4 summary. Wonderwall tommy hilfiger mr. jones and me tell each other fairy tales berry lips, track jackets flannel shirts tom hanks.",
         signals: [
-          "Pioneers architecture migration strategies that reduce programmer burden",
-          "Fixes subtle memory management issues",
-          "Implements interactive dismissals that bring delight",
+          "Signal 1. Super mario world ripped jeans paper fortune teller.",
+          "Signal 2. Super mario world ripped jeans paper fortune teller.",
+          "Signal 3. Super mario world ripped jeans paper fortune teller.",
         ],
         examples: [
-          "Upgraded CocoaPods to a new major version",
-          "Designed architecture for fetching and rendering stream items",
-          "Migrated Android persistance layer to reactive programming",
+          "Example 1. Sports utility vehicles cut-off jean shorts armageddon george michael renting movies at a store.",
+          "Example 2. Sports utility vehicles cut-off jean shorts armageddon george michael renting movies at a store.",
+          "Example 3. Sports utility vehicles cut-off jean shorts armageddon george michael renting movies at a store.",
         ],
       },
       {
         summary:
-          "Is an industry-leading expert in mobile engineering or sets strategic mobile direction for an eng team",
+          "Milestone 5 summary. Wonderwall tommy hilfiger mr. jones and me tell each other fairy tales berry lips, track jackets flannel shirts tom hanks.",
         signals: [
-          "Defines long-term goals and ensures active projects are in service of them",
-          "Designs and builds innovative, industry-leading UI interactions",
-          "Invents new techniques to responsibly stretch limits of the Android platform",
+          "Signal 1. Super mario world ripped jeans paper fortune teller.",
+          "Signal 2. Super mario world ripped jeans paper fortune teller.",
+          "Signal 3. Super mario world ripped jeans paper fortune teller.",
         ],
         examples: [
-          "Defined and drove complete migration plan to Swift or Kotlin",
-          "Implemented Android recycler views before platform support existed",
-          "Pioneered application-level abstractions for multi-app environment",
+          "Example 1. Sports utility vehicles cut-off jean shorts armageddon george michael renting movies at a store.",
+          "Example 2. Sports utility vehicles cut-off jean shorts armageddon george michael renting movies at a store.",
+          "Example 3. Sports utility vehicles cut-off jean shorts armageddon george michael renting movies at a store.",
         ],
       },
     ],
   },
 
-  WEB_CLIENT: {
-    displayName: "Web client",
+  CUSTOMER_ORIENTATION: {
+    displayName: "Customer Orientation",
     category: "A",
     description:
-      "Develops expertise in web client technologies, such as HTML, CSS, and JavaScript",
+      "Seeks customer interaction opportunities, as a customer advocate, to anticipate and discover their needs. Uses detailed information and data about the customer to deliver high quality results and add value. Views features as part of an integrated customer experience.",
     milestones: [
       {
         summary:
-          "Works effectively within established web client architectures, following current best practices",
+          "Milestone 1 summary. Wonderwall tommy hilfiger mr. jones and me tell each other fairy tales berry lips, track jackets flannel shirts tom hanks.",
         signals: [
-          "Makes minor modifications to existing screens",
-          "Fixes simple design quality issues",
-          "Uses CSS appropriately, following style guide",
+          "Signal 1. Super mario world ripped jeans paper fortune teller.",
+          "Signal 2. Super mario world ripped jeans paper fortune teller.",
+          "Signal 3. Super mario world ripped jeans paper fortune teller.",
         ],
         examples: [
-          "Implemented sticky footer on the post page",
-          "Hooked up the action to dismiss a post from a stream",
-          "Built PaymentHistory screen using ResponseScreen",
+          "Example 1. Sports utility vehicles cut-off jean shorts armageddon george michael renting movies at a store.",
+          "Example 2. Sports utility vehicles cut-off jean shorts armageddon george michael renting movies at a store.",
+          "Example 3. Sports utility vehicles cut-off jean shorts armageddon george michael renting movies at a store.",
         ],
       },
       {
         summary:
-          "Develops new instances of existing architecture, or minor improvements to existing architecture",
+          "Milestone 2 summary. Wonderwall tommy hilfiger mr. jones and me tell each other fairy tales berry lips, track jackets flannel shirts tom hanks.",
         signals: [
-          "Makes sensible abstractions based on template and code patterns",
-          "Specs and builds interactive components independently",
-          "Prototypes simple new features quickly",
+          "Signal 1. Super mario world ripped jeans paper fortune teller.",
+          "Signal 2. Super mario world ripped jeans paper fortune teller.",
+          "Signal 3. Super mario world ripped jeans paper fortune teller.",
         ],
         examples: [
-          "Built credit card input component",
-          "Created shared buttons template",
-          "Built modal system",
+          "Example 1. Sports utility vehicles cut-off jean shorts armageddon george michael renting movies at a store.",
+          "Example 2. Sports utility vehicles cut-off jean shorts armageddon george michael renting movies at a store.",
+          "Example 3. Sports utility vehicles cut-off jean shorts armageddon george michael renting movies at a store.",
         ],
       },
       {
         summary:
-          "Designs major new features and demonstrates a nuanced understanding of browser constraints",
+          "Milestone 3 summary. Wonderwall tommy hilfiger mr. jones and me tell each other fairy tales berry lips, track jackets flannel shirts tom hanks.",
         signals: [
-          "Provides useful design feedback and suggests feasible alternatives",
-          "Performs systemic tasks to significantly minimise bundle size",
-          "Acts a caretaker for all of web client code",
+          "Signal 1. Super mario world ripped jeans paper fortune teller.",
+          "Signal 2. Super mario world ripped jeans paper fortune teller.",
+          "Signal 3. Super mario world ripped jeans paper fortune teller.",
         ],
         examples: [
-          "Designed font loading strategy for Medium",
-          "Researched utility of service workers for Medium",
-          "Designed and implemented ResponseScreen",
+          "Example 1. Sports utility vehicles cut-off jean shorts armageddon george michael renting movies at a store.",
+          "Example 2. Sports utility vehicles cut-off jean shorts armageddon george michael renting movies at a store.",
+          "Example 3. Sports utility vehicles cut-off jean shorts armageddon george michael renting movies at a store.",
         ],
       },
       {
         summary:
-          "Builds complex, reusable architectures that pioneer best practices and enable engineers to work more effectively",
+          "Milestone 4 summary. Wonderwall tommy hilfiger mr. jones and me tell each other fairy tales berry lips, track jackets flannel shirts tom hanks.",
         signals: [
-          "Pioneers architecture migrations that reduce programmer burden",
-          "Implements complex UI transitions that bring delight",
-          "Makes architectural decisions that eliminate entire classes of bugs",
+          "Signal 1. Super mario world ripped jeans paper fortune teller.",
+          "Signal 2. Super mario world ripped jeans paper fortune teller.",
+          "Signal 3. Super mario world ripped jeans paper fortune teller.",
         ],
         examples: [
-          "Designed Medium's post morpher and delta system",
-          "Implemented Medium's scrolling text over image blur",
-          "Designed and pioneered proto-based model storage",
+          "Example 1. Sports utility vehicles cut-off jean shorts armageddon george michael renting movies at a store.",
+          "Example 2. Sports utility vehicles cut-off jean shorts armageddon george michael renting movies at a store.",
+          "Example 3. Sports utility vehicles cut-off jean shorts armageddon george michael renting movies at a store.",
         ],
       },
       {
         summary:
-          "Is an industry-leading expert in web client or sets strategic web client direction for an eng team",
+          "Milestone 5 summary. Wonderwall tommy hilfiger mr. jones and me tell each other fairy tales berry lips, track jackets flannel shirts tom hanks.",
         signals: [
-          "Invents new techniques to innovate and overcome browser constraints",
-          "Identifies and solved systemic problems with current architecture",
-          "Defines a long-term vision for web client and ensures projects are in service of it",
+          "Signal 1. Super mario world ripped jeans paper fortune teller.",
+          "Signal 2. Super mario world ripped jeans paper fortune teller.",
+          "Signal 3. Super mario world ripped jeans paper fortune teller.",
         ],
         examples: [
-          "Invented CSS in JS",
-          "Defined and drove migration strategy to Lite",
-          "Implemented unidirectional data flow to completion",
+          "Example 1. Sports utility vehicles cut-off jean shorts armageddon george michael renting movies at a store.",
+          "Example 2. Sports utility vehicles cut-off jean shorts armageddon george michael renting movies at a store.",
+          "Example 3. Sports utility vehicles cut-off jean shorts armageddon george michael renting movies at a store.",
         ],
       },
     ],
   },
-
-  FOUNDATIONS: {
-    displayName: "Foundations",
-    category: "A",
-    description:
-      "Develops expertise in foundational systems, such as deployments, pipelines, databases and machine learning",
-    milestones: [
-      {
-        summary:
-          "Works effectively within established structures, following current best practices",
-        signals: [
-          "Writes thorough postmortems for service outages",
-          "Makes simple configuration changes to services",
-          "Performs backfills safely and effectively, without causing pages",
-        ],
-        examples: [
-          "Made safe and effective Ansible changes",
-          "Implemented new ETL pipelines based on existing ones",
-          "Resolved out of disk errors independently",
-        ],
-      },
-      {
-        summary:
-          "Develops new instances of existing architecture, or minor improvements to existing architecture",
-        signals: [
-          "Made minor version upgrades to technologies",
-          "Builds machine learning jobs within the ML framework",
-          "Triages service issues correctly and independently",
-        ],
-        examples: [
-          "Upgraded NodeJS from 8.0 to 8.1.1",
-          "Built custom packages for RPMs",
-          "Improved ETL efficiency by improving Dynamo to S3 loading",
-        ],
-      },
-      {
-        summary:
-          "Designs standalone systems of moderate complexity, or major new features in existing systems",
-        signals: [
-          "Acts as primary maintainer for existing critical systems",
-          "Designs moderately complex systems",
-          "Makes major version upgrades to libraries",
-        ],
-        examples: [
-          "Designed Ansible configuration management",
-          "Built Medium's realtime stats pipeline",
-          "Designed flexible framework for writing machine learning jobs",
-        ],
-      },
-      {
-        summary:
-          "Builds complex, reusable architectures that pioneer best practices for other engineers, or multi-system services",
-        signals: [
-          "Designs complex projects that encompass multiple systems and technologies",
-          "Demonstrates deep knowledge of foundational systems",
-          "Introduces new databases and technologies to meet underserved needs",
-        ],
-        examples: [
-          "Designed and built BBFD",
-          "Designed AWS configuration management",
-          "Introduced Kinesis and pioneered streaming events pipeline",
-        ],
-      },
-      {
-        summary:
-          "Is an industry-leading expert in foundational engineering or sets strategic foundational direction for an eng team",
-        signals: [
-          "Designs transformational projects in service of long-term goals",
-          "Defines the strategic vision for foundational work and supporting technologies",
-          "Invents industry-leading techniques to solve complex problems",
-        ],
-        examples: [
-          "Invented a novel ML technique that advanced the state of the art",
-          "Defined and developed Medium's continuous delivery strategy",
-          "Developed and implemented HA strategy",
-        ],
-      },
-    ],
-  },
-
-  SERVERS: {
-    displayName: "Servers",
-    category: "A",
-    description:
-      "Develops expertise in server side engineering, using technologies such as Go, NodeJS, or Scala",
-    milestones: [
-      {
-        summary:
-          "Works effectively within established server side frameworks, following current best practices",
-        signals: [
-          "Adds NodeJS endpoints using layers architecture",
-          "Adds golang endpoints using Gotham architecture",
-          "Makes minor server changes to support client needs",
-        ],
-        examples: [
-          "Added IFTTT trigger for new bookmark to medium2",
-          "Added delete audio route to Buggle",
-          "Queried a Dynamo LSI appropriately",
-        ],
-      },
-      {
-        summary:
-          "Develops new instances of existing architecture, or minor improvements to existing architecture",
-        signals: [
-          "Assesses correctness and utility of existing code and avoids blind copy-pasting",
-          "Generalizes code when appropriate",
-          "Determines data needs from product requirements",
-        ],
-        examples: [
-          "Identified need for new index on Dynamo",
-          "Acted as caretaker for routes protos",
-          "Updated Facebook API version and codebase dependencies",
-        ],
-      },
-      {
-        summary:
-          "Designs standalone systems of moderate complexity, or major new features in existing systems",
-        signals: [
-          "Acts as primary maintainer for existing critical systems",
-          "Integrates third party services effectively",
-          "Writes playbooks for new service maintenance",
-        ],
-        examples: [
-          "Implemented Google Auth login to Medium",
-          "Implemented payments integration with Stripe",
-          "Built Textshots server",
-        ],
-      },
-      {
-        summary:
-          "Builds complex, reusable architectures that pioneer best practices for other engineers, or multi-system services",
-        signals: [
-          "Delivers complex systems that achieve their goals",
-          "Avoids subtle architectural mistakes when considering new systems",
-          "Makes appropriate buy vs build choices",
-        ],
-        examples: [
-          "Designed Medium's ranked feed architecture",
-          "Designed custom domains architecture",
-          "Created Gotham framework for creating Go services",
-        ],
-      },
-      {
-        summary:
-          "Is an industry-leading expert in server side engineering or sets strategic server side direction for an eng team",
-        signals: [
-          "Designs transformational projects of significant complexity and scope",
-          "Makes decisions that have positive, long term, wide ranging consequences",
-          "Identifies and solves systemic problems with current architecture",
-        ],
-        examples: [
-          "Researched, vetted, and selected Go as Medium's statically typed language",
-          "Defined microservices architecture and medium2 migration plan",
-          "Defined and implemented proprietary IP core to the company's success",
-        ],
-      },
-    ],
-  },
-
-  PROJECT_MANAGEMENT: {
-    displayName: "Project management",
+  // GROWTH MINDSET COMPETENCY --------------------
+  ADAPTABILITY: {
+    displayName: "Adaptability",
     category: "B",
     description:
-      "Delivers well-scoped programs of work that meet their goals, on time, to budget, harmoniously",
+      "Ability to cope with change positively and constructively. Actively seeks information to tests assumptions. Shifts approach in response to the demands of a changing situation by demonstrating resilience.",
     milestones: [
       {
-        summary: "Effectively delivers individual tasks",
+        summary:
+          "Milestone 1 summary. Wonderwall tommy hilfiger mr. jones and me tell each other fairy tales berry lips, track jackets flannel shirts tom hanks.",
         signals: [
-          "Estimates small tasks accurately",
-          "Delivers tightly-scoped projects efficiently",
-          "Writes effective technical specs outlining approach",
+          "Signal 1. Super mario world ripped jeans paper fortune teller.",
+          "Signal 2. Super mario world ripped jeans paper fortune teller.",
+          "Signal 3. Super mario world ripped jeans paper fortune teller.",
         ],
         examples: [
-          "Wrote the technical spec for featured post images",
-          "Delivered stream item support for email digests",
-          "Delivered payment history dashboard",
-        ],
-      },
-      {
-        summary: "Effectively delivers small personal projects",
-        signals: [
-          "Performs research and considers alternative approaches",
-          "Balances pragmatism and polish appropriately",
-          "Defines and hits interim milestones",
-        ],
-        examples: [
-          "Delivered promo editor",
-          "Delivered audio uploading for web client",
-          "Executed the recommends to claps backfill",
-        ],
-      },
-      {
-        summary: "Effectively delivers projects through a small team",
-        signals: [
-          "Delegates tasks to others appropriately",
-          "Integrates business needs into project planning",
-          "Chooses appropriate project management strategy based on context",
-        ],
-        examples: [
-          "Ran project retro to assess improvement opportunities",
-          "Completed launch checklist unprompted for well controlled rollout",
-          "Facilitated project kickoff meeting to get buy-in",
+          "Example 1. Sports utility vehicles cut-off jean shorts armageddon george michael renting movies at a store.",
+          "Example 2. Sports utility vehicles cut-off jean shorts armageddon george michael renting movies at a store.",
+          "Example 3. Sports utility vehicles cut-off jean shorts armageddon george michael renting movies at a store.",
         ],
       },
       {
         summary:
-          "Effectively delivers projects through a large team, or with a significant amount of stakeholders or complexity",
+          "Milestone 2 summary. Wonderwall tommy hilfiger mr. jones and me tell each other fairy tales berry lips, track jackets flannel shirts tom hanks.",
         signals: [
-          "Finds ways to deliver requested scope faster, and prioritizes backlog",
-          "Manages dependencies on other projects and teams",
-          "Leverages recognition of repeated project patterns",
+          "Signal 1. Super mario world ripped jeans paper fortune teller.",
+          "Signal 2. Super mario world ripped jeans paper fortune teller.",
+          "Signal 3. Super mario world ripped jeans paper fortune teller.",
         ],
         examples: [
-          "Oversaw technical delivery of Hightower",
-          "Managed infrastructure migration to VPC",
-          "Involved marketing, legal, and appropriate functions at project start",
+          "Example 1. Sports utility vehicles cut-off jean shorts armageddon george michael renting movies at a store.",
+          "Example 2. Sports utility vehicles cut-off jean shorts armageddon george michael renting movies at a store.",
+          "Example 3. Sports utility vehicles cut-off jean shorts armageddon george michael renting movies at a store.",
         ],
       },
       {
-        summary: "Manages major company pushes delivered by multiple teams",
+        summary:
+          "Milestone 3 summary. Wonderwall tommy hilfiger mr. jones and me tell each other fairy tales berry lips, track jackets flannel shirts tom hanks.",
         signals: [
-          "Considers external constraints and business objectives when planning",
-          "Leads teams of teams, and coordinates effective cross-functional collaboration",
-          "Owns a key company metric",
+          "Signal 1. Super mario world ripped jeans paper fortune teller.",
+          "Signal 2. Super mario world ripped jeans paper fortune teller.",
+          "Signal 3. Super mario world ripped jeans paper fortune teller.",
         ],
         examples: [
-          "Managed technical migration to SOA",
-          "Lead technical delivery of 10/7",
-          "Delivered multi-month engineering project on time",
+          "Example 1. Sports utility vehicles cut-off jean shorts armageddon george michael renting movies at a store.",
+          "Example 2. Sports utility vehicles cut-off jean shorts armageddon george michael renting movies at a store.",
+          "Example 3. Sports utility vehicles cut-off jean shorts armageddon george michael renting movies at a store.",
+        ],
+      },
+      {
+        summary:
+          "Milestone 4 summary. Wonderwall tommy hilfiger mr. jones and me tell each other fairy tales berry lips, track jackets flannel shirts tom hanks.",
+        signals: [
+          "Signal 1. Super mario world ripped jeans paper fortune teller.",
+          "Signal 2. Super mario world ripped jeans paper fortune teller.",
+          "Signal 3. Super mario world ripped jeans paper fortune teller.",
+        ],
+        examples: [
+          "Example 1. Sports utility vehicles cut-off jean shorts armageddon george michael renting movies at a store.",
+          "Example 2. Sports utility vehicles cut-off jean shorts armageddon george michael renting movies at a store.",
+          "Example 3. Sports utility vehicles cut-off jean shorts armageddon george michael renting movies at a store.",
+        ],
+      },
+      {
+        summary:
+          "Milestone 5 summary. Wonderwall tommy hilfiger mr. jones and me tell each other fairy tales berry lips, track jackets flannel shirts tom hanks.",
+        signals: [
+          "Signal 1. Super mario world ripped jeans paper fortune teller.",
+          "Signal 2. Super mario world ripped jeans paper fortune teller.",
+          "Signal 3. Super mario world ripped jeans paper fortune teller.",
+        ],
+        examples: [
+          "Example 1. Sports utility vehicles cut-off jean shorts armageddon george michael renting movies at a store.",
+          "Example 2. Sports utility vehicles cut-off jean shorts armageddon george michael renting movies at a store.",
+          "Example 3. Sports utility vehicles cut-off jean shorts armageddon george michael renting movies at a store.",
         ],
       },
     ],
   },
 
-  COMMUNICATION: {
-    displayName: "Communication",
+  CURIOSITY: {
+    displayName: "Curiosity",
     category: "B",
     description:
-      "Shares the right amount of information with the right people, at the right time, and listens effectively",
+      "Demonstrates a inquisitive and wondering nature that actively digs deep to explore options and solutions. Constantly asks questions to learn more about business alignment and prioritization.",
     milestones: [
       {
         summary:
-          "Communicates effectively to close stakeholders when called upon, and incorporates constructive feedback",
+          "Milestone 1 summary. Wonderwall tommy hilfiger mr. jones and me tell each other fairy tales berry lips, track jackets flannel shirts tom hanks.",
         signals: [
-          "Communicates project status clearly and effectively",
-          "Collaborates with others with empathy",
-          "Asks for help at the appropriate juncture",
+          "Signal 1. Super mario world ripped jeans paper fortune teller.",
+          "Signal 2. Super mario world ripped jeans paper fortune teller.",
+          "Signal 3. Super mario world ripped jeans paper fortune teller.",
         ],
         examples: [
-          "Updated The Watch before running a backfill",
-          "Updated project status changes in Asana promptly",
-          "Gave thoughtful check-in and check-out comments",
+          "Example 1. Sports utility vehicles cut-off jean shorts armageddon george michael renting movies at a store.",
+          "Example 2. Sports utility vehicles cut-off jean shorts armageddon george michael renting movies at a store.",
+          "Example 3. Sports utility vehicles cut-off jean shorts armageddon george michael renting movies at a store.",
         ],
       },
       {
         summary:
-          "Communicates with the wider team appropriately, focusing on timeliness and good quality conversations",
+          "Milestone 2 summary. Wonderwall tommy hilfiger mr. jones and me tell each other fairy tales berry lips, track jackets flannel shirts tom hanks.",
         signals: [
-          "Practises active listening and suspension of attention",
-          "Ensures stakeholders are aware of current blockers",
-          "Chooses the appropriate tools for accurate and timely communication",
+          "Signal 1. Super mario world ripped jeans paper fortune teller.",
+          "Signal 2. Super mario world ripped jeans paper fortune teller.",
+          "Signal 3. Super mario world ripped jeans paper fortune teller.",
         ],
         examples: [
-          "Received and integrated critical feedback positively",
-          "Created cross-team Slack channel for payments work",
-          "Spoke to domain experts before writing spec",
+          "Example 1. Sports utility vehicles cut-off jean shorts armageddon george michael renting movies at a store.",
+          "Example 2. Sports utility vehicles cut-off jean shorts armageddon george michael renting movies at a store.",
+          "Example 3. Sports utility vehicles cut-off jean shorts armageddon george michael renting movies at a store.",
         ],
       },
       {
         summary:
-          "Proactively shares information, actively solicits feedback, and facilitates communication for multiple stakeholders",
+          "Milestone 3 summary. Wonderwall tommy hilfiger mr. jones and me tell each other fairy tales berry lips, track jackets flannel shirts tom hanks.",
         signals: [
-          "Resolves communication difficulties between others",
-          "Anticipates and shares schedule deviations in plenty of time",
-          "Manages project stakeholder expectations effectively",
+          "Signal 1. Super mario world ripped jeans paper fortune teller.",
+          "Signal 2. Super mario world ripped jeans paper fortune teller.",
+          "Signal 3. Super mario world ripped jeans paper fortune teller.",
         ],
         examples: [
-          "Directed team response effectively during outages",
-          "Gave a substantial Eng All Hands presentation on React",
-          "Gave notice of upcoming related work in Eng Briefing",
+          "Example 1. Sports utility vehicles cut-off jean shorts armageddon george michael renting movies at a store.",
+          "Example 2. Sports utility vehicles cut-off jean shorts armageddon george michael renting movies at a store.",
+          "Example 3. Sports utility vehicles cut-off jean shorts armageddon george michael renting movies at a store.",
         ],
       },
       {
         summary:
-          "Communicates complex ideas skillfully and with nuance, and establishes alignment within the wider organization",
+          "Milestone 4 summary. Wonderwall tommy hilfiger mr. jones and me tell each other fairy tales berry lips, track jackets flannel shirts tom hanks.",
         signals: [
-          "Communicates project risk and tradeoffs skillfully and with nuance",
-          "Contextualizes and clarifies ambiguous direction and strategy for others",
-          "Negotiates resourcing compromises with other teams",
+          "Signal 1. Super mario world ripped jeans paper fortune teller.",
+          "Signal 2. Super mario world ripped jeans paper fortune teller.",
+          "Signal 3. Super mario world ripped jeans paper fortune teller.",
         ],
         examples: [
-          "Lead off-site workshop on interviewing",
-          "Wrote Medium's growth framework and rationale",
-          "Aligned the entire organization around claps",
+          "Example 1. Sports utility vehicles cut-off jean shorts armageddon george michael renting movies at a store.",
+          "Example 2. Sports utility vehicles cut-off jean shorts armageddon george michael renting movies at a store.",
+          "Example 3. Sports utility vehicles cut-off jean shorts armageddon george michael renting movies at a store.",
         ],
       },
       {
         summary:
-          "Influences outcomes at the highest level, moves beyond mere broadcasting, and sets best practices for others",
+          "Milestone 5 summary. Wonderwall tommy hilfiger mr. jones and me tell each other fairy tales berry lips, track jackets flannel shirts tom hanks.",
         signals: [
-          "Defines processes for clear communication for the entire team",
-          "Shares the right amount of information with the right people, at the right time",
-          "Develops and delivers plans to execs, the board, and outside investors",
+          "Signal 1. Super mario world ripped jeans paper fortune teller.",
+          "Signal 2. Super mario world ripped jeans paper fortune teller.",
+          "Signal 3. Super mario world ripped jeans paper fortune teller.",
         ],
         examples: [
-          "Organized half year check-in company offsite",
-          "Created the communication plan for a large organizational change",
-          "Presented to the board about key company metrics and projects",
+          "Example 1. Sports utility vehicles cut-off jean shorts armageddon george michael renting movies at a store.",
+          "Example 2. Sports utility vehicles cut-off jean shorts armageddon george michael renting movies at a store.",
+          "Example 3. Sports utility vehicles cut-off jean shorts armageddon george michael renting movies at a store.",
         ],
       },
     ],
   },
 
-  CRAFT: {
-    displayName: "Craft",
+  CONSTANT_IMPROVEMENT: {
+    displayName: "Constant Improvement",
     category: "B",
     description:
-      "Embodies and promotes practices to ensure excellent quality products and services",
+      "Continuously invests in personal and professional growth. Stays technically relevant by being aware of new technologies and practices. Knows the latest industry trends by reading books, blogs, attending workshops, meetups, classes and conferences.",
     milestones: [
       {
-        summary: "Delivers consistently good quality work",
+        summary:
+          "Milestone 1 summary. Wonderwall tommy hilfiger mr. jones and me tell each other fairy tales berry lips, track jackets flannel shirts tom hanks.",
         signals: [
-          "Tests new code thoroughly, both locally, and in production once shipped",
-          "Writes tests for every new feature and bug fix",
-          "Writes clear comments and documentation",
+          "Signal 1. Super mario world ripped jeans paper fortune teller.",
+          "Signal 2. Super mario world ripped jeans paper fortune teller.",
+          "Signal 3. Super mario world ripped jeans paper fortune teller.",
         ],
         examples: [
-          "Caught a bug on Hatch before it went live",
-          "Landed non-trivial PR with no caretaker comments",
-          "Wrote hermetic tests for the happy and sad cases",
+          "Example 1. Sports utility vehicles cut-off jean shorts armageddon george michael renting movies at a store.",
+          "Example 2. Sports utility vehicles cut-off jean shorts armageddon george michael renting movies at a store.",
+          "Example 3. Sports utility vehicles cut-off jean shorts armageddon george michael renting movies at a store.",
         ],
       },
       {
         summary:
-          "Increases the robustness and reliability of codebases, and devotes time to polishing products and systems",
+          "Milestone 2 summary. Wonderwall tommy hilfiger mr. jones and me tell each other fairy tales berry lips, track jackets flannel shirts tom hanks.",
         signals: [
-          "Refactors existing code to make it more testable",
-          "Adds tests for uncovered areas",
-          "Deletes unnecessary code and deprecates proactively when safe to do so",
+          "Signal 1. Super mario world ripped jeans paper fortune teller.",
+          "Signal 2. Super mario world ripped jeans paper fortune teller.",
+          "Signal 3. Super mario world ripped jeans paper fortune teller.",
         ],
         examples: [
-          "Requested tests for a PR when acting as reviewer",
-          "Reduced the number of zelda fitzgerald exceptions",
-          "Fixed a TODO for someone else in the codebase",
-        ],
-      },
-      {
-        summary: "Improves others' ability to deliver great quality work",
-        signals: [
-          "Implements systems that enable better testing",
-          "Gives thoughtful code reviews as a domain expert",
-          "Adds tooling to improve code quality",
-        ],
-        examples: [
-          "Improved PRB to run the same volume of tests faster",
-          "Simplified hermetic test data modification",
-          "Created fixture system for visual quality",
+          "Example 1. Sports utility vehicles cut-off jean shorts armageddon george michael renting movies at a store.",
+          "Example 2. Sports utility vehicles cut-off jean shorts armageddon george michael renting movies at a store.",
+          "Example 3. Sports utility vehicles cut-off jean shorts armageddon george michael renting movies at a store.",
         ],
       },
       {
         summary:
-          "Advocates for and models great quality with proactive actions, and tackles difficult and subtle system issues",
+          "Milestone 3 summary. Wonderwall tommy hilfiger mr. jones and me tell each other fairy tales berry lips, track jackets flannel shirts tom hanks.",
         signals: [
-          "Builds systems so as to eliminate entire classes of programmer error",
-          "Focuses the team on quality with regular reminders",
-          "Coordinates Watch priorities and projects",
+          "Signal 1. Super mario world ripped jeans paper fortune teller.",
+          "Signal 2. Super mario world ripped jeans paper fortune teller.",
+          "Signal 3. Super mario world ripped jeans paper fortune teller.",
         ],
         examples: [
-          "Added code coverage reporting to iOS CI pipeline",
-          "Iterated repeatedly to develop Medium's underlines solution",
-          "Defined and oversaw plan for closing Heartbleed vulnerability",
+          "Example 1. Sports utility vehicles cut-off jean shorts armageddon george michael renting movies at a store.",
+          "Example 2. Sports utility vehicles cut-off jean shorts armageddon george michael renting movies at a store.",
+          "Example 3. Sports utility vehicles cut-off jean shorts armageddon george michael renting movies at a store.",
         ],
       },
       {
         summary:
-          "Enables and encourages the entire organization to make quality a central part of the development process",
+          "Milestone 4 summary. Wonderwall tommy hilfiger mr. jones and me tell each other fairy tales berry lips, track jackets flannel shirts tom hanks.",
         signals: [
-          "Defines policies for the engineering org that encourage quality work",
-          "Identifies and eliminates single points of failure throughout the organization",
-          "Secures time and resources from execs to support great quality",
+          "Signal 1. Super mario world ripped jeans paper fortune teller.",
+          "Signal 2. Super mario world ripped jeans paper fortune teller.",
+          "Signal 3. Super mario world ripped jeans paper fortune teller.",
         ],
         examples: [
-          "Negotiated resources for Fix-It week with exec team",
-          "Instituted and ensured success of a 20% time policy",
-          "Started The Watch",
+          "Example 1. Sports utility vehicles cut-off jean shorts armageddon george michael renting movies at a store.",
+          "Example 2. Sports utility vehicles cut-off jean shorts armageddon george michael renting movies at a store.",
+          "Example 3. Sports utility vehicles cut-off jean shorts armageddon george michael renting movies at a store.",
+        ],
+      },
+      {
+        summary:
+          "Milestone 5 summary. Wonderwall tommy hilfiger mr. jones and me tell each other fairy tales berry lips, track jackets flannel shirts tom hanks.",
+        signals: [
+          "Signal 1. Super mario world ripped jeans paper fortune teller.",
+          "Signal 2. Super mario world ripped jeans paper fortune teller.",
+          "Signal 3. Super mario world ripped jeans paper fortune teller.",
+        ],
+        examples: [
+          "Example 1. Sports utility vehicles cut-off jean shorts armageddon george michael renting movies at a store.",
+          "Example 2. Sports utility vehicles cut-off jean shorts armageddon george michael renting movies at a store.",
+          "Example 3. Sports utility vehicles cut-off jean shorts armageddon george michael renting movies at a store.",
         ],
       },
     ],
   },
 
-  INITIATIVE: {
-    displayName: "Initiative",
+  HANDLING_AMBIGUITY: {
+    displayName: "Handling Ambiguity",
     category: "B",
     description:
-      "Challenges the status quo and effects positive organizational change outside of mandated work",
+      "Functions effectively on limited information and not fully understanding the whole picture. Finds a way forward when there aren't clear next steps and works through open ended questions while maintaining a constructive attitude in times of stress. Can participate in creation of solid design with vague requirements. Can change strategies quickly when initial approach doesn’t work.",
     milestones: [
       {
         summary:
-          "Identifies opportunities for organizational change or product improvements",
+          "Milestone 1 summary. Wonderwall tommy hilfiger mr. jones and me tell each other fairy tales berry lips, track jackets flannel shirts tom hanks.",
         signals: [
-          "Writes Hatch posts about improvement opportunities",
-          "Raises meaningful tensions in tactical meetings",
-          "Asks leadership team probing questions at FAM",
+          "Signal 1. Super mario world ripped jeans paper fortune teller.",
+          "Signal 2. Super mario world ripped jeans paper fortune teller.",
+          "Signal 3. Super mario world ripped jeans paper fortune teller.",
         ],
         examples: [
-          "Wrote about problems with TTR on Hatch",
-          "Wrote about content policy problems on Hatch",
-          "Reported a site issue in Github",
+          "Example 1. Sports utility vehicles cut-off jean shorts armageddon george michael renting movies at a store.",
+          "Example 2. Sports utility vehicles cut-off jean shorts armageddon george michael renting movies at a store.",
+          "Example 3. Sports utility vehicles cut-off jean shorts armageddon george michael renting movies at a store.",
         ],
       },
       {
         summary:
-          "Causes change to positively impact a few individuals or minor improvement to an existing product or service",
+          "Milestone 2 summary. Wonderwall tommy hilfiger mr. jones and me tell each other fairy tales berry lips, track jackets flannel shirts tom hanks.",
         signals: [
-          "Picks bugs off the backlog proactively when blocked elsewhere",
-          "Makes design quality improvements unprompted",
-          "Takes on trust and safety tasks proactively when blocked elsewhere",
+          "Signal 1. Super mario world ripped jeans paper fortune teller.",
+          "Signal 2. Super mario world ripped jeans paper fortune teller.",
+          "Signal 3. Super mario world ripped jeans paper fortune teller.",
         ],
         examples: [
-          "Advocated on own behalf for a change in role",
-          "Implemented flow typing for promises",
-          "Audited web client performance in Chrome and proposed fixes",
+          "Example 1. Sports utility vehicles cut-off jean shorts armageddon george michael renting movies at a store.",
+          "Example 2. Sports utility vehicles cut-off jean shorts armageddon george michael renting movies at a store.",
+          "Example 3. Sports utility vehicles cut-off jean shorts armageddon george michael renting movies at a store.",
         ],
       },
       {
         summary:
-          "Causes change to positively impact an entire team or instigates a minor feature or service",
+          "Milestone 3 summary. Wonderwall tommy hilfiger mr. jones and me tell each other fairy tales berry lips, track jackets flannel shirts tom hanks.",
         signals: [
-          "Demonstrates concepts proactively with prototypes",
-          "Fixes complicated bugs outside of regular domain",
-          "Takes ownership of systems that nobody owns or wants",
+          "Signal 1. Super mario world ripped jeans paper fortune teller.",
+          "Signal 2. Super mario world ripped jeans paper fortune teller.",
+          "Signal 3. Super mario world ripped jeans paper fortune teller.",
         ],
         examples: [
-          "Defined style guide to resolve style arguments",
-          "Proposed and implemented at-mentions prototype",
-          "Implemented video for Android independently, unprompted",
+          "Example 1. Sports utility vehicles cut-off jean shorts armageddon george michael renting movies at a store.",
+          "Example 2. Sports utility vehicles cut-off jean shorts armageddon george michael renting movies at a store.",
+          "Example 3. Sports utility vehicles cut-off jean shorts armageddon george michael renting movies at a store.",
         ],
       },
       {
         summary:
-          "Effects change that has a substantial positive impact on the engineering organization or a major product impact",
+          "Milestone 4 summary. Wonderwall tommy hilfiger mr. jones and me tell each other fairy tales berry lips, track jackets flannel shirts tom hanks.",
         signals: [
-          "Champions and pioneers new technologies to solve new classes of problem",
-          "Exemplifies grit and determination in the face of persistent obstacles",
-          "Instigates major new features, services, or architectures",
+          "Signal 1. Super mario world ripped jeans paper fortune teller.",
+          "Signal 2. Super mario world ripped jeans paper fortune teller.",
+          "Signal 3. Super mario world ripped jeans paper fortune teller.",
         ],
         examples: [
-          "Created the interviewing rubric and booklet",
-          "Implemented and secured support for native login",
-          "Migrated medium2 to mono repo and bazel",
+          "Example 1. Sports utility vehicles cut-off jean shorts armageddon george michael renting movies at a store.",
+          "Example 2. Sports utility vehicles cut-off jean shorts armageddon george michael renting movies at a store.",
+          "Example 3. Sports utility vehicles cut-off jean shorts armageddon george michael renting movies at a store.",
         ],
       },
       {
         summary:
-          "Effects change that has a substantial positive impact on the whole company",
+          "Milestone 5 summary. Wonderwall tommy hilfiger mr. jones and me tell each other fairy tales berry lips, track jackets flannel shirts tom hanks.",
         signals: [
-          "Creates a new function to solve systemic issues",
-          "Galvanizes the entire company and garners buy in for a new strategy",
-          "Changes complex organizational processes",
+          "Signal 1. Super mario world ripped jeans paper fortune teller.",
+          "Signal 2. Super mario world ripped jeans paper fortune teller.",
+          "Signal 3. Super mario world ripped jeans paper fortune teller.",
         ],
         examples: [
-          "Migrated the organization from Holacracy",
-          "Built Medium Android prototype and convinced execs to fund it",
-          "Convinced leadership and engineering org to move to Medium Lite architecture",
+          "Example 1. Sports utility vehicles cut-off jean shorts armageddon george michael renting movies at a store.",
+          "Example 2. Sports utility vehicles cut-off jean shorts armageddon george michael renting movies at a store.",
+          "Example 3. Sports utility vehicles cut-off jean shorts armageddon george michael renting movies at a store.",
         ],
       },
     ],
   },
 
-  CAREER_DEVELOPMENT: {
-    displayName: "Career development",
-    category: "C",
+  INCLUSIVITY: {
+    displayName: "Inclusivity",
+    category: "B",
     description:
-      "Provides strategic support to engineers to help them build the career they want",
+      "Embraces diversity of thought, work style, perspective, and experiences outside of one’s own experiences. Actively involves people who might otherwise be excluded or marginalized because of race, gender, learning/physical disabilities, lifestyles, or having a different points of view. Emotionally aware and accountable when speaking up with questions and opinions.",
     milestones: [
       {
         summary:
-          "Gives insight into opportunities and helps identify individuals' strengths and weaknesses",
+          "Milestone 1 summary. Wonderwall tommy hilfiger mr. jones and me tell each other fairy tales berry lips, track jackets flannel shirts tom hanks.",
         signals: [
-          "Advocates on behalf and in defense of a group member",
-          "Shares opportunities for improvements and recognises achievements",
-          "Explains appropriate available industry paths",
+          "Signal 1. Super mario world ripped jeans paper fortune teller.",
+          "Signal 2. Super mario world ripped jeans paper fortune teller.",
+          "Signal 3. Super mario world ripped jeans paper fortune teller.",
         ],
         examples: [
-          "Collected and delivered feedback",
-          "Discussed career options and areas of interest informally",
-          "Hosted a Floodgate Academy intern",
+          "Example 1. Sports utility vehicles cut-off jean shorts armageddon george michael renting movies at a store.",
+          "Example 2. Sports utility vehicles cut-off jean shorts armageddon george michael renting movies at a store.",
+          "Example 3. Sports utility vehicles cut-off jean shorts armageddon george michael renting movies at a store.",
         ],
       },
       {
         summary:
-          "Formally supports and advocates for one person and provides tools to help them solve career problems",
+          "Milestone 2 summary. Wonderwall tommy hilfiger mr. jones and me tell each other fairy tales berry lips, track jackets flannel shirts tom hanks.",
         signals: [
-          "Ensure a group member has an appropriate role on their team",
-          "Offers effective career advice to group members, without being prescriptive",
-          "Creates space for people to talk through challenges",
+          "Signal 1. Super mario world ripped jeans paper fortune teller.",
+          "Signal 2. Super mario world ripped jeans paper fortune teller.",
+          "Signal 3. Super mario world ripped jeans paper fortune teller.",
         ],
         examples: [
-          "Set up and attended regular, constructive 1:1s",
-          "Provided coaching on how to have difficult conversations",
-          "Taught group members the GROW model",
+          "Example 1. Sports utility vehicles cut-off jean shorts armageddon george michael renting movies at a store.",
+          "Example 2. Sports utility vehicles cut-off jean shorts armageddon george michael renting movies at a store.",
+          "Example 3. Sports utility vehicles cut-off jean shorts armageddon george michael renting movies at a store.",
         ],
       },
       {
         summary:
-          "Inspires and retains a small group of people and actively pushes them to stretch themselves",
+          "Milestone 3 summary. Wonderwall tommy hilfiger mr. jones and me tell each other fairy tales berry lips, track jackets flannel shirts tom hanks.",
         signals: [
-          "Discusses paths, and creates plans for personal and professional growth",
-          "Advocates to align people with appropriate roles within organization",
-          "Works with team leads to elevate emerging leaders",
+          "Signal 1. Super mario world ripped jeans paper fortune teller.",
+          "Signal 2. Super mario world ripped jeans paper fortune teller.",
+          "Signal 3. Super mario world ripped jeans paper fortune teller.",
         ],
         examples: [
-          "Reviewed individual group member progression every 6 weeks",
-          "Suggested appropriate group member for Tech Lead position",
-          "Arranged a requested switch of discipline for a group member",
+          "Example 1. Sports utility vehicles cut-off jean shorts armageddon george michael renting movies at a store.",
+          "Example 2. Sports utility vehicles cut-off jean shorts armageddon george michael renting movies at a store.",
+          "Example 3. Sports utility vehicles cut-off jean shorts armageddon george michael renting movies at a store.",
         ],
       },
       {
         summary:
-          "Manages interactions and processes between groups, promoting best practices and setting a positive example",
+          "Milestone 4 summary. Wonderwall tommy hilfiger mr. jones and me tell each other fairy tales berry lips, track jackets flannel shirts tom hanks.",
         signals: [
-          "Manages team transitions smoothly, respecting team and individual needs",
-          "Develops best practices for conflict resolution",
-          "Ensures all group members' roles are meeting their career needs",
+          "Signal 1. Super mario world ripped jeans paper fortune teller.",
+          "Signal 2. Super mario world ripped jeans paper fortune teller.",
+          "Signal 3. Super mario world ripped jeans paper fortune teller.",
         ],
         examples: [
-          "Completed training on situational leadership",
-          "Built a resourcing plan based on company, team, and individual goals",
-          "Prevented regretted attrition with intentional, targeted intervention",
+          "Example 1. Sports utility vehicles cut-off jean shorts armageddon george michael renting movies at a store.",
+          "Example 2. Sports utility vehicles cut-off jean shorts armageddon george michael renting movies at a store.",
+          "Example 3. Sports utility vehicles cut-off jean shorts armageddon george michael renting movies at a store.",
         ],
       },
       {
         summary:
-          "Supports the development of a signficant part of the engineering org, and widely viewed as a trusted advisor",
+          "Milestone 5 summary. Wonderwall tommy hilfiger mr. jones and me tell each other fairy tales berry lips, track jackets flannel shirts tom hanks.",
         signals: [
-          "Supports and develops senior leaders",
-          "Identified leadership training opportunities for senior leadership",
-          "Pushes everyone to be as good as they can be, with empathy",
+          "Signal 1. Super mario world ripped jeans paper fortune teller.",
+          "Signal 2. Super mario world ripped jeans paper fortune teller.",
+          "Signal 3. Super mario world ripped jeans paper fortune teller.",
         ],
         examples: [
-          "Provided coaching to group leads",
-          "Devised Pathwise curriculum for group leads",
-          "Advocated to execs for engineer development resources and programs",
+          "Example 1. Sports utility vehicles cut-off jean shorts armageddon george michael renting movies at a store.",
+          "Example 2. Sports utility vehicles cut-off jean shorts armageddon george michael renting movies at a store.",
+          "Example 3. Sports utility vehicles cut-off jean shorts armageddon george michael renting movies at a store.",
         ],
       },
     ],
   },
 
-  ORG_DESIGN: {
-    displayName: "Org design",
-    category: "C",
+  OPENNESS: {
+    displayName: "Openness",
+    category: "B",
     description:
-      "Defines processes and structures that enables the strong growth and execution of a diverse eng organization",
+      "Seeks and listens to feedback about their work, and takes appropriate action in response. Open to new ideas, processes, and ways of getting things done. Focuses on positive outcomes while taking responsibility for poor results.",
     milestones: [
       {
         summary:
-          "Respects and participates in processes, giving meaningful feedback to help the organization improve",
+          "Milestone 1 summary. Wonderwall tommy hilfiger mr. jones and me tell each other fairy tales berry lips, track jackets flannel shirts tom hanks.",
         signals: [
-          "Reflects on meetings that leave them inspired or frustrated",
-          "Teaches others about existing processes",
-          "Actively participates and makes contributions within organizational processes",
+          "Signal 1. Super mario world ripped jeans paper fortune teller.",
+          "Signal 2. Super mario world ripped jeans paper fortune teller.",
+          "Signal 3. Super mario world ripped jeans paper fortune teller.",
         ],
         examples: [
-          "Facilitated effective tactical meeting with empathy",
-          "Explained tactical meeting format to a new hire",
-          "Provided feedback on sprint planning meeting",
+          "Example 1. Sports utility vehicles cut-off jean shorts armageddon george michael renting movies at a store.",
+          "Example 2. Sports utility vehicles cut-off jean shorts armageddon george michael renting movies at a store.",
+          "Example 3. Sports utility vehicles cut-off jean shorts armageddon george michael renting movies at a store.",
         ],
       },
       {
         summary:
-          "Identifies opportunities to improve existing processes and makes changes that positively affect the local team",
+          "Milestone 2 summary. Wonderwall tommy hilfiger mr. jones and me tell each other fairy tales berry lips, track jackets flannel shirts tom hanks.",
         signals: [
-          "Defines meeting structure and cadence that meets team needs",
-          "Engages in organizational systems thinking",
-          "Advocates for improved diversity and inclusion, and proposes ideas to help",
+          "Signal 1. Super mario world ripped jeans paper fortune teller.",
+          "Signal 2. Super mario world ripped jeans paper fortune teller.",
+          "Signal 3. Super mario world ripped jeans paper fortune teller.",
         ],
         examples: [
-          "Defined Frankenmeeting structure for small team",
-          "Improved Watch on-call rotation scheduling",
-          "Defined standard channels for inter-team communication",
-        ],
-      },
-      {
-        summary: "Develops processes to solve ongoing organizational problems",
-        signals: [
-          "Creates programs that meaningfully improve organizational diversity",
-          "Solves long-standing organizational problems",
-          "Reallocates resources to meet organizational needs",
-        ],
-        examples: [
-          "Developed baseline team templates for consistency",
-          "Created bug-rotation program to address ongoing quality issues",
-          "Defined Guilds manifesto and charter",
+          "Example 1. Sports utility vehicles cut-off jean shorts armageddon george michael renting movies at a store.",
+          "Example 2. Sports utility vehicles cut-off jean shorts armageddon george michael renting movies at a store.",
+          "Example 3. Sports utility vehicles cut-off jean shorts armageddon george michael renting movies at a store.",
         ],
       },
       {
         summary:
-          "Thinks deeply about organizational issues and identifies hidden dynamics that contribute to them",
+          "Milestone 3 summary. Wonderwall tommy hilfiger mr. jones and me tell each other fairy tales berry lips, track jackets flannel shirts tom hanks.",
         signals: [
-          "Evaluates incentive structures and their effect on execution",
-          "Analyzes existing processes for bias and shortfall",
-          "Ties abstract concerns to concrete organizational actions or norms",
+          "Signal 1. Super mario world ripped jeans paper fortune teller.",
+          "Signal 2. Super mario world ripped jeans paper fortune teller.",
+          "Signal 3. Super mario world ripped jeans paper fortune teller.",
         ],
         examples: [
-          "Connected mobile recruiting difficulties to focus on excellence",
-          "Raised leadership level change discrepancies",
-          "Analyzed the hiring rubric for false negative potential",
+          "Example 1. Sports utility vehicles cut-off jean shorts armageddon george michael renting movies at a store.",
+          "Example 2. Sports utility vehicles cut-off jean shorts armageddon george michael renting movies at a store.",
+          "Example 3. Sports utility vehicles cut-off jean shorts armageddon george michael renting movies at a store.",
         ],
       },
       {
         summary:
-          "Leads initiatives to address issues stemming from hidden dynamics and company norms",
+          "Milestone 4 summary. Wonderwall tommy hilfiger mr. jones and me tell each other fairy tales berry lips, track jackets flannel shirts tom hanks.",
         signals: [
-          "Builds programs to train leadership in desired skills",
-          "Creates new structures that provide unique growth opportunities",
-          "Leads planning and communication for reorgs",
+          "Signal 1. Super mario world ripped jeans paper fortune teller.",
+          "Signal 2. Super mario world ripped jeans paper fortune teller.",
+          "Signal 3. Super mario world ripped jeans paper fortune teller.",
         ],
         examples: [
-          "Lead efforts to increase number of mobile engineers",
-          "Directed resources to meaningfully improve diversity at all levels",
-          "Built the growth framework rubric",
+          "Example 1. Sports utility vehicles cut-off jean shorts armageddon george michael renting movies at a store.",
+          "Example 2. Sports utility vehicles cut-off jean shorts armageddon george michael renting movies at a store.",
+          "Example 3. Sports utility vehicles cut-off jean shorts armageddon george michael renting movies at a store.",
+        ],
+      },
+      {
+        summary:
+          "Milestone 5 summary. Wonderwall tommy hilfiger mr. jones and me tell each other fairy tales berry lips, track jackets flannel shirts tom hanks.",
+        signals: [
+          "Signal 1. Super mario world ripped jeans paper fortune teller.",
+          "Signal 2. Super mario world ripped jeans paper fortune teller.",
+          "Signal 3. Super mario world ripped jeans paper fortune teller.",
+        ],
+        examples: [
+          "Example 1. Sports utility vehicles cut-off jean shorts armageddon george michael renting movies at a store.",
+          "Example 2. Sports utility vehicles cut-off jean shorts armageddon george michael renting movies at a store.",
+          "Example 3. Sports utility vehicles cut-off jean shorts armageddon george michael renting movies at a store.",
         ],
       },
     ],
   },
 
-  WELLBEING: {
-    displayName: "Wellbeing",
-    category: "C",
+  AMBITION_AND_INITIATIVE: {
+    displayName: "Ambition and Initiative",
+    category: "B",
     description:
-      "Supports the emotional well-being of group members in difficult times, and celebrates their successes",
+      "Demonstrates personal drive without needing recognition or reward. When there is downtime, finds a productive task. Exhibits a bias for action with a strong will to accomplish task with excellence.",
     milestones: [
       {
         summary:
-          "Uses tools and processes to help ensure colleagues are healthy and happy",
+          "Milestone 1 summary. Wonderwall tommy hilfiger mr. jones and me tell each other fairy tales berry lips, track jackets flannel shirts tom hanks.",
         signals: [
-          "Keeps confidences unless legally or morally obliged to do otherwise",
-          "Applies the reasonable person principle to others",
-          "Avoids blame and focuses on positive change",
+          "Signal 1. Super mario world ripped jeans paper fortune teller.",
+          "Signal 2. Super mario world ripped jeans paper fortune teller.",
+          "Signal 3. Super mario world ripped jeans paper fortune teller.",
         ],
         examples: [
-          "Ensured group members were taking enough vacation",
-          "Put themself in another's shoes to understand their perspective",
-          "Checked in with colleague showing signs of burnout",
+          "Example 1. Sports utility vehicles cut-off jean shorts armageddon george michael renting movies at a store.",
+          "Example 2. Sports utility vehicles cut-off jean shorts armageddon george michael renting movies at a store.",
+          "Example 3. Sports utility vehicles cut-off jean shorts armageddon george michael renting movies at a store.",
         ],
       },
       {
         summary:
-          "Creates a positive, supportive, engaging team environment for group members",
+          "Milestone 2 summary. Wonderwall tommy hilfiger mr. jones and me tell each other fairy tales berry lips, track jackets flannel shirts tom hanks.",
         signals: [
-          "Sheds light on other experiences to build empathy and compassion",
-          "Validates ongoing work and sustains motivation",
-          "Proposes solutions when teams get bogged down or lose momentum",
+          "Signal 1. Super mario world ripped jeans paper fortune teller.",
+          "Signal 2. Super mario world ripped jeans paper fortune teller.",
+          "Signal 3. Super mario world ripped jeans paper fortune teller.",
         ],
         examples: [
-          "Coordinated a small celebration for a project launch",
-          "Connected tedious A|B testing project with overall company goals",
-          "Noted a team without a recent win and suggested some easy quick wins",
+          "Example 1. Sports utility vehicles cut-off jean shorts armageddon george michael renting movies at a store.",
+          "Example 2. Sports utility vehicles cut-off jean shorts armageddon george michael renting movies at a store.",
+          "Example 3. Sports utility vehicles cut-off jean shorts armageddon george michael renting movies at a store.",
         ],
       },
       {
         summary:
-          "Manages expectations across peers, leads in the org, promotes calm, and prevents consensus building",
+          "Milestone 3 summary. Wonderwall tommy hilfiger mr. jones and me tell each other fairy tales berry lips, track jackets flannel shirts tom hanks.",
         signals: [
-          "Trains group members to separate stimulus from response",
-          "Maintains a pulse on individual and team morale",
-          "Helps group members approach problems with curiosity",
+          "Signal 1. Super mario world ripped jeans paper fortune teller.",
+          "Signal 2. Super mario world ripped jeans paper fortune teller.",
+          "Signal 3. Super mario world ripped jeans paper fortune teller.",
         ],
         examples: [
-          "Completed training on transference and counter transference",
-          "Completed training on compromise and negotiation techniques",
-          "Reframed a problem as a challenge, instead of a barrier, when appropriate",
+          "Example 1. Sports utility vehicles cut-off jean shorts armageddon george michael renting movies at a store.",
+          "Example 2. Sports utility vehicles cut-off jean shorts armageddon george michael renting movies at a store.",
+          "Example 3. Sports utility vehicles cut-off jean shorts armageddon george michael renting movies at a store.",
         ],
       },
       {
         summary:
-          "Advocates for the needs of teams and group members, and proactively works to calm the organization",
+          "Milestone 4 summary. Wonderwall tommy hilfiger mr. jones and me tell each other fairy tales berry lips, track jackets flannel shirts tom hanks.",
         signals: [
-          "Ensures team environments are safe and inclusive, proactively",
-          "Grounds group member anxieties in reality",
-          "Tracks team retention actively and proposes solutions to strengthen it",
+          "Signal 1. Super mario world ripped jeans paper fortune teller.",
+          "Signal 2. Super mario world ripped jeans paper fortune teller.",
+          "Signal 3. Super mario world ripped jeans paper fortune teller.",
         ],
         examples: [
-          "Relieved org tension around product direction by providing extra context",
-          "Encouraged group members to focus on what they can control",
-          "Guided people through complex organizational change",
+          "Example 1. Sports utility vehicles cut-off jean shorts armageddon george michael renting movies at a store.",
+          "Example 2. Sports utility vehicles cut-off jean shorts armageddon george michael renting movies at a store.",
+          "Example 3. Sports utility vehicles cut-off jean shorts armageddon george michael renting movies at a store.",
         ],
       },
       {
         summary:
-          "Manages narratives, channels negativity into inspiration and motivation, and protects the entire team",
+          "Milestone 5 summary. Wonderwall tommy hilfiger mr. jones and me tell each other fairy tales berry lips, track jackets flannel shirts tom hanks.",
         signals: [
-          "Recognizes and points out narratives when appropriate",
-          "Works to reshape narratives from victimization to ownership",
-          "Increases the psychological safety of the entire team",
+          "Signal 1. Super mario world ripped jeans paper fortune teller.",
+          "Signal 2. Super mario world ripped jeans paper fortune teller.",
+          "Signal 3. Super mario world ripped jeans paper fortune teller.",
         ],
         examples: [
-          "Converted group member from a problem haver to a problem solver",
-          "Challenged false narrative and redirected to compassion and empathy",
-          "Cultivated and championed a culture of empathy within the entire team",
+          "Example 1. Sports utility vehicles cut-off jean shorts armageddon george michael renting movies at a store.",
+          "Example 2. Sports utility vehicles cut-off jean shorts armageddon george michael renting movies at a store.",
+          "Example 3. Sports utility vehicles cut-off jean shorts armageddon george michael renting movies at a store.",
+        ],
+      },
+    ],
+  },
+  // LEADERSHIP COMPETENCY --------------------
+  ACCOUNTABILITY: {
+    displayName: "Accountability",
+    category: "C",
+    description:
+      "Behaves with responsibility for one’s role with quality and timeliness of deliverables while accepting responsibility when work does not meet expectations. Works toward a high standard of performance and provides helpful context/information on demand.",
+    milestones: [
+      {
+        summary:
+          "Milestone 1 summary. Wonderwall tommy hilfiger mr. jones and me tell each other fairy tales berry lips, track jackets flannel shirts tom hanks.",
+        signals: [
+          "Signal 1. Super mario world ripped jeans paper fortune teller.",
+          "Signal 2. Super mario world ripped jeans paper fortune teller.",
+          "Signal 3. Super mario world ripped jeans paper fortune teller.",
+        ],
+        examples: [
+          "Example 1. Sports utility vehicles cut-off jean shorts armageddon george michael renting movies at a store.",
+          "Example 2. Sports utility vehicles cut-off jean shorts armageddon george michael renting movies at a store.",
+          "Example 3. Sports utility vehicles cut-off jean shorts armageddon george michael renting movies at a store.",
+        ],
+      },
+      {
+        summary:
+          "Milestone 2 summary. Wonderwall tommy hilfiger mr. jones and me tell each other fairy tales berry lips, track jackets flannel shirts tom hanks.",
+        signals: [
+          "Signal 1. Super mario world ripped jeans paper fortune teller.",
+          "Signal 2. Super mario world ripped jeans paper fortune teller.",
+          "Signal 3. Super mario world ripped jeans paper fortune teller.",
+        ],
+        examples: [
+          "Example 1. Sports utility vehicles cut-off jean shorts armageddon george michael renting movies at a store.",
+          "Example 2. Sports utility vehicles cut-off jean shorts armageddon george michael renting movies at a store.",
+          "Example 3. Sports utility vehicles cut-off jean shorts armageddon george michael renting movies at a store.",
+        ],
+      },
+      {
+        summary:
+          "Milestone 3 summary. Wonderwall tommy hilfiger mr. jones and me tell each other fairy tales berry lips, track jackets flannel shirts tom hanks.",
+        signals: [
+          "Signal 1. Super mario world ripped jeans paper fortune teller.",
+          "Signal 2. Super mario world ripped jeans paper fortune teller.",
+          "Signal 3. Super mario world ripped jeans paper fortune teller.",
+        ],
+        examples: [
+          "Example 1. Sports utility vehicles cut-off jean shorts armageddon george michael renting movies at a store.",
+          "Example 2. Sports utility vehicles cut-off jean shorts armageddon george michael renting movies at a store.",
+          "Example 3. Sports utility vehicles cut-off jean shorts armageddon george michael renting movies at a store.",
+        ],
+      },
+      {
+        summary:
+          "Milestone 4 summary. Wonderwall tommy hilfiger mr. jones and me tell each other fairy tales berry lips, track jackets flannel shirts tom hanks.",
+        signals: [
+          "Signal 1. Super mario world ripped jeans paper fortune teller.",
+          "Signal 2. Super mario world ripped jeans paper fortune teller.",
+          "Signal 3. Super mario world ripped jeans paper fortune teller.",
+        ],
+        examples: [
+          "Example 1. Sports utility vehicles cut-off jean shorts armageddon george michael renting movies at a store.",
+          "Example 2. Sports utility vehicles cut-off jean shorts armageddon george michael renting movies at a store.",
+          "Example 3. Sports utility vehicles cut-off jean shorts armageddon george michael renting movies at a store.",
+        ],
+      },
+      {
+        summary:
+          "Milestone 5 summary. Wonderwall tommy hilfiger mr. jones and me tell each other fairy tales berry lips, track jackets flannel shirts tom hanks.",
+        signals: [
+          "Signal 1. Super mario world ripped jeans paper fortune teller.",
+          "Signal 2. Super mario world ripped jeans paper fortune teller.",
+          "Signal 3. Super mario world ripped jeans paper fortune teller.",
+        ],
+        examples: [
+          "Example 1. Sports utility vehicles cut-off jean shorts armageddon george michael renting movies at a store.",
+          "Example 2. Sports utility vehicles cut-off jean shorts armageddon george michael renting movies at a store.",
+          "Example 3. Sports utility vehicles cut-off jean shorts armageddon george michael renting movies at a store.",
         ],
       },
     ],
   },
 
-  ACCOMPLISHMENT: {
-    displayName: "Accomplishment",
+  INTEGRITY: {
+    displayName: "Integrity",
     category: "C",
     description:
-      "Inspires day to day excellence, maximises potential and effectively resolves performance issues with compassion",
+      "Does the right thing in a reliable way. “Wholeness” of character shows quality and honesty.",
     milestones: [
       {
         summary:
-          "Helps individuals identify blockers and helps them identify next steps for resolution",
+          "Milestone 1 summary. Wonderwall tommy hilfiger mr. jones and me tell each other fairy tales berry lips, track jackets flannel shirts tom hanks.",
         signals: [
-          "Notices when someone is stuck and reaches out",
-          "Helps others break down problems into feasible, tangible next steps",
-          "Talks through problems non-judgmentally",
+          "Signal 1. Super mario world ripped jeans paper fortune teller.",
+          "Signal 2. Super mario world ripped jeans paper fortune teller.",
+          "Signal 3. Super mario world ripped jeans paper fortune teller.",
         ],
         examples: [
-          "Completed training on diagnosing problems",
-          "Unblocked a group member",
-          "Reinforces and affirms positive feedback for good work",
+          "Example 1. Sports utility vehicles cut-off jean shorts armageddon george michael renting movies at a store.",
+          "Example 2. Sports utility vehicles cut-off jean shorts armageddon george michael renting movies at a store.",
+          "Example 3. Sports utility vehicles cut-off jean shorts armageddon george michael renting movies at a store.",
         ],
       },
       {
         summary:
-          "Helps individuals resolve difficult performance issues, with insight, compassion, and skill",
+          "Milestone 2 summary. Wonderwall tommy hilfiger mr. jones and me tell each other fairy tales berry lips, track jackets flannel shirts tom hanks.",
         signals: [
-          "Gathers context outside the immediate problem",
-          "Recognizes issues within local environment and suggests change",
-          "Works to encourage ownership of actions and responsibilities",
+          "Signal 1. Super mario world ripped jeans paper fortune teller.",
+          "Signal 2. Super mario world ripped jeans paper fortune teller.",
+          "Signal 3. Super mario world ripped jeans paper fortune teller.",
         ],
         examples: [
-          "Completed training on decision making",
-          "Convinced a group member to solve a problem directly, rather than doing it for them",
-          "Gave honest feedback about poor performance, with compassion",
+          "Example 1. Sports utility vehicles cut-off jean shorts armageddon george michael renting movies at a store.",
+          "Example 2. Sports utility vehicles cut-off jean shorts armageddon george michael renting movies at a store.",
+          "Example 3. Sports utility vehicles cut-off jean shorts armageddon george michael renting movies at a store.",
         ],
       },
       {
         summary:
-          "Intervenes in long-standing performance issues with targeted behavior change or performance plans",
+          "Milestone 3 summary. Wonderwall tommy hilfiger mr. jones and me tell each other fairy tales berry lips, track jackets flannel shirts tom hanks.",
         signals: [
-          "Aggregates signals of poor performance and creates process for improvement",
-          "Investigates motivation and externalities for consistent poor performance",
-          "Puts together comprehensive, achievable performance plans",
+          "Signal 1. Super mario world ripped jeans paper fortune teller.",
+          "Signal 2. Super mario world ripped jeans paper fortune teller.",
+          "Signal 3. Super mario world ripped jeans paper fortune teller.",
         ],
         examples: [
-          "Worked with group member to address persistent communication failures",
-          "Arranged a transfer to another team, resulting in improved performance",
-          "Managed group member closely to maximise chances of PIP success",
+          "Example 1. Sports utility vehicles cut-off jean shorts armageddon george michael renting movies at a store.",
+          "Example 2. Sports utility vehicles cut-off jean shorts armageddon george michael renting movies at a store.",
+          "Example 3. Sports utility vehicles cut-off jean shorts armageddon george michael renting movies at a store.",
         ],
       },
       {
         summary:
-          "Mediates escalated situations, empowers underperforming teams, and resolves conflict",
+          "Milestone 4 summary. Wonderwall tommy hilfiger mr. jones and me tell each other fairy tales berry lips, track jackets flannel shirts tom hanks.",
         signals: [
-          "Recognizes heightened situations and toxic or aggressive interactions",
-          "Inserts themself into conflict where appropriate to calm and mediate",
-          "Encourages open dialog and builds trust between parties in conflict",
+          "Signal 1. Super mario world ripped jeans paper fortune teller.",
+          "Signal 2. Super mario world ripped jeans paper fortune teller.",
+          "Signal 3. Super mario world ripped jeans paper fortune teller.",
         ],
         examples: [
-          "Empowered a team to drive forward amidst uncertainty",
-          "Protected team from externalities so they could focus on goals",
-          "Mediated sit-down between team members to address tension",
+          "Example 1. Sports utility vehicles cut-off jean shorts armageddon george michael renting movies at a store.",
+          "Example 2. Sports utility vehicles cut-off jean shorts armageddon george michael renting movies at a store.",
+          "Example 3. Sports utility vehicles cut-off jean shorts armageddon george michael renting movies at a store.",
         ],
       },
       {
         summary:
-          "Resolves complex organizational dysfunction, or persistent conflict at senior levels",
+          "Milestone 5 summary. Wonderwall tommy hilfiger mr. jones and me tell each other fairy tales berry lips, track jackets flannel shirts tom hanks.",
         signals: [
-          "Takes control of dysfunctional teams to organise chaos",
-          "Repairs broken team dynamics and builds harmony",
-          "Presides over a well-oiled team of teams",
+          "Signal 1. Super mario world ripped jeans paper fortune teller.",
+          "Signal 2. Super mario world ripped jeans paper fortune teller.",
+          "Signal 3. Super mario world ripped jeans paper fortune teller.",
         ],
         examples: [
-          "Turned around the performance of a problematic team",
-          "De-escalated serious tensions between teams",
-          "Rebuilt trust between senior team leads",
+          "Example 1. Sports utility vehicles cut-off jean shorts armageddon george michael renting movies at a store.",
+          "Example 2. Sports utility vehicles cut-off jean shorts armageddon george michael renting movies at a store.",
+          "Example 3. Sports utility vehicles cut-off jean shorts armageddon george michael renting movies at a store.",
+        ],
+      },
+    ],
+  },
+
+  OWNERSHIP: {
+    displayName: "Ownership",
+    category: "C",
+    description:
+      "Focuses on taking the initiative and accepting responsibility for actions and outcomes. Persistent and tenacious in delivering quality work product and thinking long term and not sacrificing value in the short-term. Embraces leadership opportunities and work on higher level responsibilities.",
+    milestones: [
+      {
+        summary:
+          "Milestone 1 summary. Wonderwall tommy hilfiger mr. jones and me tell each other fairy tales berry lips, track jackets flannel shirts tom hanks.",
+        signals: [
+          "Signal 1. Super mario world ripped jeans paper fortune teller.",
+          "Signal 2. Super mario world ripped jeans paper fortune teller.",
+          "Signal 3. Super mario world ripped jeans paper fortune teller.",
+        ],
+        examples: [
+          "Example 1. Sports utility vehicles cut-off jean shorts armageddon george michael renting movies at a store.",
+          "Example 2. Sports utility vehicles cut-off jean shorts armageddon george michael renting movies at a store.",
+          "Example 3. Sports utility vehicles cut-off jean shorts armageddon george michael renting movies at a store.",
+        ],
+      },
+      {
+        summary:
+          "Milestone 2 summary. Wonderwall tommy hilfiger mr. jones and me tell each other fairy tales berry lips, track jackets flannel shirts tom hanks.",
+        signals: [
+          "Signal 1. Super mario world ripped jeans paper fortune teller.",
+          "Signal 2. Super mario world ripped jeans paper fortune teller.",
+          "Signal 3. Super mario world ripped jeans paper fortune teller.",
+        ],
+        examples: [
+          "Example 1. Sports utility vehicles cut-off jean shorts armageddon george michael renting movies at a store.",
+          "Example 2. Sports utility vehicles cut-off jean shorts armageddon george michael renting movies at a store.",
+          "Example 3. Sports utility vehicles cut-off jean shorts armageddon george michael renting movies at a store.",
+        ],
+      },
+      {
+        summary:
+          "Milestone 3 summary. Wonderwall tommy hilfiger mr. jones and me tell each other fairy tales berry lips, track jackets flannel shirts tom hanks.",
+        signals: [
+          "Signal 1. Super mario world ripped jeans paper fortune teller.",
+          "Signal 2. Super mario world ripped jeans paper fortune teller.",
+          "Signal 3. Super mario world ripped jeans paper fortune teller.",
+        ],
+        examples: [
+          "Example 1. Sports utility vehicles cut-off jean shorts armageddon george michael renting movies at a store.",
+          "Example 2. Sports utility vehicles cut-off jean shorts armageddon george michael renting movies at a store.",
+          "Example 3. Sports utility vehicles cut-off jean shorts armageddon george michael renting movies at a store.",
+        ],
+      },
+      {
+        summary:
+          "Milestone 4 summary. Wonderwall tommy hilfiger mr. jones and me tell each other fairy tales berry lips, track jackets flannel shirts tom hanks.",
+        signals: [
+          "Signal 1. Super mario world ripped jeans paper fortune teller.",
+          "Signal 2. Super mario world ripped jeans paper fortune teller.",
+          "Signal 3. Super mario world ripped jeans paper fortune teller.",
+        ],
+        examples: [
+          "Example 1. Sports utility vehicles cut-off jean shorts armageddon george michael renting movies at a store.",
+          "Example 2. Sports utility vehicles cut-off jean shorts armageddon george michael renting movies at a store.",
+          "Example 3. Sports utility vehicles cut-off jean shorts armageddon george michael renting movies at a store.",
+        ],
+      },
+      {
+        summary:
+          "Milestone 5 summary. Wonderwall tommy hilfiger mr. jones and me tell each other fairy tales berry lips, track jackets flannel shirts tom hanks.",
+        signals: [
+          "Signal 1. Super mario world ripped jeans paper fortune teller.",
+          "Signal 2. Super mario world ripped jeans paper fortune teller.",
+          "Signal 3. Super mario world ripped jeans paper fortune teller.",
+        ],
+        examples: [
+          "Example 1. Sports utility vehicles cut-off jean shorts armageddon george michael renting movies at a store.",
+          "Example 2. Sports utility vehicles cut-off jean shorts armageddon george michael renting movies at a store.",
+          "Example 3. Sports utility vehicles cut-off jean shorts armageddon george michael renting movies at a store.",
         ],
       },
     ],
@@ -986,315 +994,2295 @@ export const tracks = {
 
   MENTORSHIP: {
     displayName: "Mentorship",
-    category: "D",
+    category: "C",
     description:
-      "Provides support to colleagues, spreads knowledge, and develops the team outside formal reporting structures",
+      "Ability to mediate in or across teams. Models good judgement and business decisions to complete work. Willingness to give or receive guidance to improve overall skills and abilities, leaving a positive impact through leading by example.",
     milestones: [
       {
         summary:
-          "Informally mentors individuals in an ad-hoc way, supports new hires, and conveys institutional knowledge",
+          "Milestone 1 summary. Wonderwall tommy hilfiger mr. jones and me tell each other fairy tales berry lips, track jackets flannel shirts tom hanks.",
         signals: [
-          "Makes themself available for informal support and advice",
-          "Acts as sounding board for peers and more junior members",
-          "Provides sound advice when asked",
+          "Signal 1. Super mario world ripped jeans paper fortune teller.",
+          "Signal 2. Super mario world ripped jeans paper fortune teller.",
+          "Signal 3. Super mario world ripped jeans paper fortune teller.",
         ],
         examples: [
-          "Acted as an onboarding buddy",
-          "Paired with an engineer to help them with an unfamiliar area",
-          "Helped a colleague understand their feelings",
+          "Example 1. Sports utility vehicles cut-off jean shorts armageddon george michael renting movies at a store.",
+          "Example 2. Sports utility vehicles cut-off jean shorts armageddon george michael renting movies at a store.",
+          "Example 3. Sports utility vehicles cut-off jean shorts armageddon george michael renting movies at a store.",
         ],
       },
       {
         summary:
-          "Mentors people proactively, and guides people to realizations rather than providing the answer",
+          "Milestone 2 summary. Wonderwall tommy hilfiger mr. jones and me tell each other fairy tales berry lips, track jackets flannel shirts tom hanks.",
         signals: [
-          "Takes time to explain concepts and best practices",
-          "Asks questions to illuminate concepts, rather than stating them",
-          "Allows others to lead efforts when it will help their development",
+          "Signal 1. Super mario world ripped jeans paper fortune teller.",
+          "Signal 2. Super mario world ripped jeans paper fortune teller.",
+          "Signal 3. Super mario world ripped jeans paper fortune teller.",
         ],
         examples: [
-          "Shared interesting article with a team member to help with their growth",
-          "Offered unprompted feedback to help growth, with empathy",
-          "Lead from behind to support someone new to a leadership role",
+          "Example 1. Sports utility vehicles cut-off jean shorts armageddon george michael renting movies at a store.",
+          "Example 2. Sports utility vehicles cut-off jean shorts armageddon george michael renting movies at a store.",
+          "Example 3. Sports utility vehicles cut-off jean shorts armageddon george michael renting movies at a store.",
         ],
       },
       {
         summary:
-          "Teaches small groups of engineers and contributes to Medium's shared knowledge base",
+          "Milestone 3 summary. Wonderwall tommy hilfiger mr. jones and me tell each other fairy tales berry lips, track jackets flannel shirts tom hanks.",
         signals: [
-          "Avoids siloing information when it can be usefully shared with others",
-          "Works to increase the bus factor of systems",
-          "Finds tools that work best for a team member's personality",
+          "Signal 1. Super mario world ripped jeans paper fortune teller.",
+          "Signal 2. Super mario world ripped jeans paper fortune teller.",
+          "Signal 3. Super mario world ripped jeans paper fortune teller.",
         ],
         examples: [
-          "Gave a brown bag presentation on payments",
-          "Wrote Hatch post on avoiding RDS backfill issues",
-          "Wrote Medium-U content module",
+          "Example 1. Sports utility vehicles cut-off jean shorts armageddon george michael renting movies at a store.",
+          "Example 2. Sports utility vehicles cut-off jean shorts armageddon george michael renting movies at a store.",
+          "Example 3. Sports utility vehicles cut-off jean shorts armageddon george michael renting movies at a store.",
         ],
       },
       {
         summary:
-          "Encourages people to mentor each other, and creates ways for them to do so",
+          "Milestone 4 summary. Wonderwall tommy hilfiger mr. jones and me tell each other fairy tales berry lips, track jackets flannel shirts tom hanks.",
         signals: [
-          "Defines an entire curriculum for a discipline",
-          "Draws positive attention to well-modeled mentor and teaching behaviours",
-          "Creates brown bag series and lines up speakers",
+          "Signal 1. Super mario world ripped jeans paper fortune teller.",
+          "Signal 2. Super mario world ripped jeans paper fortune teller.",
+          "Signal 3. Super mario world ripped jeans paper fortune teller.",
         ],
         examples: [
-          "Created and lead Medium's Women in Eng group",
-          "Organized an Eng All Hands with an outside speaker",
-          "Designed and taught web client guild curriculum",
+          "Example 1. Sports utility vehicles cut-off jean shorts armageddon george michael renting movies at a store.",
+          "Example 2. Sports utility vehicles cut-off jean shorts armageddon george michael renting movies at a store.",
+          "Example 3. Sports utility vehicles cut-off jean shorts armageddon george michael renting movies at a store.",
         ],
       },
       {
         summary:
-          "Instills and promotes a culture of learning and development within the team",
+          "Milestone 5 summary. Wonderwall tommy hilfiger mr. jones and me tell each other fairy tales berry lips, track jackets flannel shirts tom hanks.",
         signals: [
-          "Sets incentive structures to recognise and reward mentorship",
-          "Empowers team members to develop themselves",
-          "Role models productive and healthy mentor relationships",
+          "Signal 1. Super mario world ripped jeans paper fortune teller.",
+          "Signal 2. Super mario world ripped jeans paper fortune teller.",
+          "Signal 3. Super mario world ripped jeans paper fortune teller.",
         ],
         examples: [
-          "Instituted the professional education budget for engineers",
-          "Mentored mentors",
-          "Started the eng advisor program and lined up external mentors",
+          "Example 1. Sports utility vehicles cut-off jean shorts armageddon george michael renting movies at a store.",
+          "Example 2. Sports utility vehicles cut-off jean shorts armageddon george michael renting movies at a store.",
+          "Example 3. Sports utility vehicles cut-off jean shorts armageddon george michael renting movies at a store.",
         ],
       },
     ],
   },
 
-  EVANGELISM: {
-    displayName: "Evangelism",
-    category: "D",
+  NETWORKING: {
+    displayName: "Networking",
+    category: "C",
     description:
-      "Promotes Medium to the outside world and establishes it as an attractive and thoughtful place to work",
+      "Has a active community of experts with different perspectives to help drive personal growth, product goals, and business initiatives.",
     milestones: [
       {
         summary:
-          "Represents Medium well externally, and influences individuals positively",
+          "Milestone 1 summary. Wonderwall tommy hilfiger mr. jones and me tell each other fairy tales berry lips, track jackets flannel shirts tom hanks.",
         signals: [
-          "Shares personal and organizational successes with their network",
-          "Attends Medium-hosted events and talks with guests",
-          "Communicates genuine and honest excitement about their work externally",
+          "Signal 1. Super mario world ripped jeans paper fortune teller.",
+          "Signal 2. Super mario world ripped jeans paper fortune teller.",
+          "Signal 3. Super mario world ripped jeans paper fortune teller.",
         ],
         examples: [
-          "Shared a Medium product launch post on Facebook",
-          "Acted as a guide for a non-friend visitor to the office",
-          "Supported PR efforts by giving a quote or having a photo taken",
+          "Example 1. Sports utility vehicles cut-off jean shorts armageddon george michael renting movies at a store.",
+          "Example 2. Sports utility vehicles cut-off jean shorts armageddon george michael renting movies at a store.",
+          "Example 3. Sports utility vehicles cut-off jean shorts armageddon george michael renting movies at a store.",
         ],
       },
       {
         summary:
-          "Participates more centrally in small events, and takes simple actions that positively influence groups of people",
+          "Milestone 2 summary. Wonderwall tommy hilfiger mr. jones and me tell each other fairy tales berry lips, track jackets flannel shirts tom hanks.",
         signals: [
-          "Takes meaningful action to introduce people to Medium",
-          "Joined public Slack group and represented Medium appropriately, and well",
-          "Organizes positive small- or medium-sized events that bring people to Medium",
+          "Signal 1. Super mario world ripped jeans paper fortune teller.",
+          "Signal 2. Super mario world ripped jeans paper fortune teller.",
+          "Signal 3. Super mario world ripped jeans paper fortune teller.",
         ],
         examples: [
-          "Volunteered as a helper for CODE2040 writing workshop",
-          "Organized a short tour of the office by college students",
-          "Talked at a Women Who Code event hosted at Medium",
+          "Example 1. Sports utility vehicles cut-off jean shorts armageddon george michael renting movies at a store.",
+          "Example 2. Sports utility vehicles cut-off jean shorts armageddon george michael renting movies at a store.",
+          "Example 3. Sports utility vehicles cut-off jean shorts armageddon george michael renting movies at a store.",
         ],
       },
       {
         summary:
-          "Works hard to positively influence large groups of people on their views of Medium",
+          "Milestone 3 summary. Wonderwall tommy hilfiger mr. jones and me tell each other fairy tales berry lips, track jackets flannel shirts tom hanks.",
         signals: [
-          "Mentors or participates in a high visibility way in an external organization",
-          "Builds fruitful partnerships with external organizations",
-          "Writes blog posts about Medium that receive moderate traffic",
+          "Signal 1. Super mario world ripped jeans paper fortune teller.",
+          "Signal 2. Super mario world ripped jeans paper fortune teller.",
+          "Signal 3. Super mario world ripped jeans paper fortune teller.",
         ],
         examples: [
-          "Represented Medium on a panel at a conference of industry experts",
-          "Established close ties with Creative Commons",
-          "Built a durable, long-standing relationship with Code2040",
+          "Example 1. Sports utility vehicles cut-off jean shorts armageddon george michael renting movies at a store.",
+          "Example 2. Sports utility vehicles cut-off jean shorts armageddon george michael renting movies at a store.",
+          "Example 3. Sports utility vehicles cut-off jean shorts armageddon george michael renting movies at a store.",
         ],
       },
       {
         summary:
-          "Establishes Medium as an great, innovative company and workplace to the whole industry",
+          "Milestone 4 summary. Wonderwall tommy hilfiger mr. jones and me tell each other fairy tales berry lips, track jackets flannel shirts tom hanks.",
         signals: [
-          "Establishes themself as an industry thought leader who attracts talent",
-          "Publishes material about Medium's organizational or technical innovations",
-          "Leverages significant following to evangelise Medium",
+          "Signal 1. Super mario world ripped jeans paper fortune teller.",
+          "Signal 2. Super mario world ripped jeans paper fortune teller.",
+          "Signal 3. Super mario world ripped jeans paper fortune teller.",
         ],
         examples: [
-          "Published a paper on Medium technology in a peer-reviewed journal",
-          "Authored joint-press release with EFF on DNT",
-          "Published “Why Content Editable Is Terrible” on the Medium engineering blog",
+          "Example 1. Sports utility vehicles cut-off jean shorts armageddon george michael renting movies at a store.",
+          "Example 2. Sports utility vehicles cut-off jean shorts armageddon george michael renting movies at a store.",
+          "Example 3. Sports utility vehicles cut-off jean shorts armageddon george michael renting movies at a store.",
         ],
       },
       {
         summary:
-          "Introduces Medium in a positive light to a wider audience outside the industry",
+          "Milestone 5 summary. Wonderwall tommy hilfiger mr. jones and me tell each other fairy tales berry lips, track jackets flannel shirts tom hanks.",
         signals: [
-          "Delivers key messages to broad, mainstream audiences",
-          "Influences people with large audiences to talk about Medium positively",
-          "Drives recognition and adoption of Medium in significant numbers",
+          "Signal 1. Super mario world ripped jeans paper fortune teller.",
+          "Signal 2. Super mario world ripped jeans paper fortune teller.",
+          "Signal 3. Super mario world ripped jeans paper fortune teller.",
         ],
         examples: [
-          "Published or interviewed in a mainstream newspaper or website outside tech",
-          "Keynoted a conference with international attention",
-          "Represented Medium in national televised media",
+          "Example 1. Sports utility vehicles cut-off jean shorts armageddon george michael renting movies at a store.",
+          "Example 2. Sports utility vehicles cut-off jean shorts armageddon george michael renting movies at a store.",
+          "Example 3. Sports utility vehicles cut-off jean shorts armageddon george michael renting movies at a store.",
         ],
       },
     ],
   },
 
-  RECRUITING: {
-    displayName: "Recruiting",
-    category: "D",
+  SUCCESSION: {
+    displayName: "Succession",
+    category: "C",
     description:
-      "Strengthens Medium's team by bringing in excellent staff members",
+      "Information and knowledge that is passed and shared with team members promoting a continuous workflow in ones absence.",
     milestones: [
       {
         summary:
-          "Brings new candidates into the pipeline and understands how to evaluate candidates at Medium",
+          "Milestone 1 summary. Wonderwall tommy hilfiger mr. jones and me tell each other fairy tales berry lips, track jackets flannel shirts tom hanks.",
         signals: [
-          "Reviews existing network for hiring leads regularly",
-          "Shadows interviews to gain familiarity with process",
-          "Reviews current job postings regularly",
+          "Signal 1. Super mario world ripped jeans paper fortune teller.",
+          "Signal 2. Super mario world ripped jeans paper fortune teller.",
+          "Signal 3. Super mario world ripped jeans paper fortune teller.",
         ],
         examples: [
-          "Completed interview calibration",
-          "Set up casual sessions to practice asking questions",
-          "Referred appropriate individuals for open positions",
+          "Example 1. Sports utility vehicles cut-off jean shorts armageddon george michael renting movies at a store.",
+          "Example 2. Sports utility vehicles cut-off jean shorts armageddon george michael renting movies at a store.",
+          "Example 3. Sports utility vehicles cut-off jean shorts armageddon george michael renting movies at a store.",
         ],
       },
       {
         summary:
-          "Interviews regularly, helps the team make meaningful hiring decisions, and helps build a diverse pipeline",
+          "Milestone 2 summary. Wonderwall tommy hilfiger mr. jones and me tell each other fairy tales berry lips, track jackets flannel shirts tom hanks.",
         signals: [
-          "Uses interview rubric to provide clear, objective feedback on candidates",
-          "Interviews candidates with empathy and treats them all with equal respect",
-          "Researches approaches for sourcing candidates and diversifying hiring",
+          "Signal 1. Super mario world ripped jeans paper fortune teller.",
+          "Signal 2. Super mario world ripped jeans paper fortune teller.",
+          "Signal 3. Super mario world ripped jeans paper fortune teller.",
         ],
         examples: [
-          "Added observable evidence for every rating",
-          "Started a monthly brunch for candidates to meet Medium employees",
-          "Tested a new service for quality and diversity of candidates",
+          "Example 1. Sports utility vehicles cut-off jean shorts armageddon george michael renting movies at a store.",
+          "Example 2. Sports utility vehicles cut-off jean shorts armageddon george michael renting movies at a store.",
+          "Example 3. Sports utility vehicles cut-off jean shorts armageddon george michael renting movies at a store.",
         ],
       },
       {
         summary:
-          "Maintains and strengthens the integrity of the current process, and regularly brings in great candidates",
+          "Milestone 3 summary. Wonderwall tommy hilfiger mr. jones and me tell each other fairy tales berry lips, track jackets flannel shirts tom hanks.",
         signals: [
-          "Teaches new interviewers how to interview with empathy",
-          "Models great interview technique and feedback when shadowed",
-          "Reverse shadows trainees and helps calibrate their feedback",
+          "Signal 1. Super mario world ripped jeans paper fortune teller.",
+          "Signal 2. Super mario world ripped jeans paper fortune teller.",
+          "Signal 3. Super mario world ripped jeans paper fortune teller.",
         ],
         examples: [
-          "Wrote new interview question which meets our question quality criteria",
-          "Brought candidates into our pipeline proactively, with a high conversion rate",
-          "Proposed useful, tangible improvements to the interview process",
+          "Example 1. Sports utility vehicles cut-off jean shorts armageddon george michael renting movies at a store.",
+          "Example 2. Sports utility vehicles cut-off jean shorts armageddon george michael renting movies at a store.",
+          "Example 3. Sports utility vehicles cut-off jean shorts armageddon george michael renting movies at a store.",
         ],
       },
       {
         summary:
-          "Actively contributes to and leads hiring decisions, and goes to great lengths to source great candidates",
+          "Milestone 4 summary. Wonderwall tommy hilfiger mr. jones and me tell each other fairy tales berry lips, track jackets flannel shirts tom hanks.",
         signals: [
-          "Documents subtle cues in interviews that indicate values alignment",
-          "Makes hiring decisions, resolving discrepancies between conflicting reports",
-          "Top-grades candidates and teases out character traits",
+          "Signal 1. Super mario world ripped jeans paper fortune teller.",
+          "Signal 2. Super mario world ripped jeans paper fortune teller.",
+          "Signal 3. Super mario world ripped jeans paper fortune teller.",
         ],
         examples: [
-          "Planned engineering summit on interview process and training",
-          "Organized and lead Medium's presence at a recruitment fair",
-          "Started CODE2040 internship program",
+          "Example 1. Sports utility vehicles cut-off jean shorts armageddon george michael renting movies at a store.",
+          "Example 2. Sports utility vehicles cut-off jean shorts armageddon george michael renting movies at a store.",
+          "Example 3. Sports utility vehicles cut-off jean shorts armageddon george michael renting movies at a store.",
         ],
       },
       {
         summary:
-          "Sets recruitment strategy, invests in long-term relationships for critical roles, and recruits at scale",
+          "Milestone 5 summary. Wonderwall tommy hilfiger mr. jones and me tell each other fairy tales berry lips, track jackets flannel shirts tom hanks.",
         signals: [
-          "Sets the tone, policy and goals around building a diverse, high-quality team",
-          "Identifies and brings in promising acquisitions",
-          "Tracks industry activity, identifying opportunities for critical roles",
+          "Signal 1. Super mario world ripped jeans paper fortune teller.",
+          "Signal 2. Super mario world ripped jeans paper fortune teller.",
+          "Signal 3. Super mario world ripped jeans paper fortune teller.",
         ],
         examples: [
-          "Talked with a senior candidate over many months to fill a critical role",
-          "Organized efforts around convincing acquired engineers to join and stay",
-          "Set goals, then tracked and reported metrics on team demographics over time",
+          "Example 1. Sports utility vehicles cut-off jean shorts armageddon george michael renting movies at a store.",
+          "Example 2. Sports utility vehicles cut-off jean shorts armageddon george michael renting movies at a store.",
+          "Example 3. Sports utility vehicles cut-off jean shorts armageddon george michael renting movies at a store.",
         ],
       },
     ],
   },
 
-  COMMUNITY: {
-    displayName: "Community",
-    category: "D",
+  HEALTH_AND_SAFETY: {
+    displayName: "Health and Safety",
+    category: "C",
     description:
-      "Builds community internally, gives of themself to the team, and champions and extols company values",
+      "Has discipline to manage self-care through diet, exercise, relaxation, and fulfilling activities while keeping one's self and others from harm.",
     milestones: [
       {
         summary:
-          "Is available and present on current teams, and works to contribute positively to company culture",
+          "Milestone 1 summary. Wonderwall tommy hilfiger mr. jones and me tell each other fairy tales berry lips, track jackets flannel shirts tom hanks.",
         signals: [
-          "Participates in team activities and offsites",
-          "Treats colleagues and clients with respect",
-          "Joins groups or committees outside regular duties",
+          "Signal 1. Super mario world ripped jeans paper fortune teller.",
+          "Signal 2. Super mario world ripped jeans paper fortune teller.",
+          "Signal 3. Super mario world ripped jeans paper fortune teller.",
         ],
         examples: [
-          "Joined and actively participated in the web client guild",
-          "Brought a small gift back from vacation for the team",
-          "Wrote entertaining and informative Prod Ops writeups on Hatch",
+          "Example 1. Sports utility vehicles cut-off jean shorts armageddon george michael renting movies at a store.",
+          "Example 2. Sports utility vehicles cut-off jean shorts armageddon george michael renting movies at a store.",
+          "Example 3. Sports utility vehicles cut-off jean shorts armageddon george michael renting movies at a store.",
         ],
       },
       {
         summary:
-          "Steps up, builds connectedness, and takes concrete actions to promote an inclusive culture",
+          "Milestone 2 summary. Wonderwall tommy hilfiger mr. jones and me tell each other fairy tales berry lips, track jackets flannel shirts tom hanks.",
         signals: [
-          "Makes space for others to participate",
-          "Collaborates with other engineers outside direct responsibilities",
-          "Finds ways to ramp up and engage new hires quickly",
+          "Signal 1. Super mario world ripped jeans paper fortune teller.",
+          "Signal 2. Super mario world ripped jeans paper fortune teller.",
+          "Signal 3. Super mario world ripped jeans paper fortune teller.",
         ],
         examples: [
-          "Created onboarding bingo",
-          "Brought shy and introverted people into a dominant conversation",
-          "Volunteered as secretary for a team",
+          "Example 1. Sports utility vehicles cut-off jean shorts armageddon george michael renting movies at a store.",
+          "Example 2. Sports utility vehicles cut-off jean shorts armageddon george michael renting movies at a store.",
+          "Example 3. Sports utility vehicles cut-off jean shorts armageddon george michael renting movies at a store.",
         ],
       },
       {
         summary:
-          "Contributes to improving team relatedness, and helps build a culture of lending support",
+          "Milestone 3 summary. Wonderwall tommy hilfiger mr. jones and me tell each other fairy tales berry lips, track jackets flannel shirts tom hanks.",
         signals: [
-          "Takes on additional Watch shifts at short notice",
-          "Pitches in to help other teams hit deadlines, without missing own deadlines",
-          "Uses position to raise difficult issues on someone's behalf",
+          "Signal 1. Super mario world ripped jeans paper fortune teller.",
+          "Signal 2. Super mario world ripped jeans paper fortune teller.",
+          "Signal 3. Super mario world ripped jeans paper fortune teller.",
         ],
         examples: [
-          "Lead Watch cycles with little support while still contributing to projects",
-          "Started and drove the LGBTQIA ERG",
-          "Stayed positive and improved team morale during period after layoffs",
+          "Example 1. Sports utility vehicles cut-off jean shorts armageddon george michael renting movies at a store.",
+          "Example 2. Sports utility vehicles cut-off jean shorts armageddon george michael renting movies at a store.",
+          "Example 3. Sports utility vehicles cut-off jean shorts armageddon george michael renting movies at a store.",
         ],
       },
       {
         summary:
-          "Exemplifies selflessness for the team without compromising responsibilities, and lifts everyone up",
+          "Milestone 4 summary. Wonderwall tommy hilfiger mr. jones and me tell each other fairy tales berry lips, track jackets flannel shirts tom hanks.",
         signals: [
-          "Goes above and beyond on the Watch, serving the team without complaint",
-          "Implements concrete programs to signficantly improve team inclusivity",
-          "Takes on large amounts of tedious grunt work for the team without being asked",
+          "Signal 1. Super mario world ripped jeans paper fortune teller.",
+          "Signal 2. Super mario world ripped jeans paper fortune teller.",
+          "Signal 3. Super mario world ripped jeans paper fortune teller.",
         ],
         examples: [
-          "Devoted large amount of time to helping outside direct responsibilities",
-          "Refactored hundreds of legacy Shepherd nodes",
-          "Acted as sole maintainer of Boxen for years",
+          "Example 1. Sports utility vehicles cut-off jean shorts armageddon george michael renting movies at a store.",
+          "Example 2. Sports utility vehicles cut-off jean shorts armageddon george michael renting movies at a store.",
+          "Example 3. Sports utility vehicles cut-off jean shorts armageddon george michael renting movies at a store.",
         ],
       },
       {
         summary:
-          "Lives the company values, guards positive culture, and defines policies that support relatedness between teams",
+          "Milestone 5 summary. Wonderwall tommy hilfiger mr. jones and me tell each other fairy tales berry lips, track jackets flannel shirts tom hanks.",
         signals: [
-          "Brings separate teams together to build relatedness",
-          "Holds individuals, teams, and leadership accountable to Medium's values",
-          "Sets the tone, policy, and goals around maintaining an inclusive company",
+          "Signal 1. Super mario world ripped jeans paper fortune teller.",
+          "Signal 2. Super mario world ripped jeans paper fortune teller.",
+          "Signal 3. Super mario world ripped jeans paper fortune teller.",
         ],
         examples: [
-          "Organized wine and olive tasting offsite to Napa for the whole engineering org",
-          "Devised, delivered and acted on findings from an engineer happiness survey",
-          "Challenged and corrected exclusionary behaviour or policies",
+          "Example 1. Sports utility vehicles cut-off jean shorts armageddon george michael renting movies at a store.",
+          "Example 2. Sports utility vehicles cut-off jean shorts armageddon george michael renting movies at a store.",
+          "Example 3. Sports utility vehicles cut-off jean shorts armageddon george michael renting movies at a store.",
+        ],
+      },
+    ],
+  },
+
+  CONFIDENCE: {
+    displayName: "Confidence",
+    category: "C",
+    description:
+      "Displays a positive sense of efficacy and readiness to handle stress, competitiveness, workload, instructional or orientation methods, and related associated complexities. States ideas with self-assurance and enthusiasm. Stands up for beliefs and views while preserving respect of others.Willingness to support final team decisions.",
+    milestones: [
+      {
+        summary:
+          "Milestone 1 summary. Wonderwall tommy hilfiger mr. jones and me tell each other fairy tales berry lips, track jackets flannel shirts tom hanks.",
+        signals: [
+          "Signal 1. Super mario world ripped jeans paper fortune teller.",
+          "Signal 2. Super mario world ripped jeans paper fortune teller.",
+          "Signal 3. Super mario world ripped jeans paper fortune teller.",
+        ],
+        examples: [
+          "Example 1. Sports utility vehicles cut-off jean shorts armageddon george michael renting movies at a store.",
+          "Example 2. Sports utility vehicles cut-off jean shorts armageddon george michael renting movies at a store.",
+          "Example 3. Sports utility vehicles cut-off jean shorts armageddon george michael renting movies at a store.",
+        ],
+      },
+      {
+        summary:
+          "Milestone 2 summary. Wonderwall tommy hilfiger mr. jones and me tell each other fairy tales berry lips, track jackets flannel shirts tom hanks.",
+        signals: [
+          "Signal 1. Super mario world ripped jeans paper fortune teller.",
+          "Signal 2. Super mario world ripped jeans paper fortune teller.",
+          "Signal 3. Super mario world ripped jeans paper fortune teller.",
+        ],
+        examples: [
+          "Example 1. Sports utility vehicles cut-off jean shorts armageddon george michael renting movies at a store.",
+          "Example 2. Sports utility vehicles cut-off jean shorts armageddon george michael renting movies at a store.",
+          "Example 3. Sports utility vehicles cut-off jean shorts armageddon george michael renting movies at a store.",
+        ],
+      },
+      {
+        summary:
+          "Milestone 3 summary. Wonderwall tommy hilfiger mr. jones and me tell each other fairy tales berry lips, track jackets flannel shirts tom hanks.",
+        signals: [
+          "Signal 1. Super mario world ripped jeans paper fortune teller.",
+          "Signal 2. Super mario world ripped jeans paper fortune teller.",
+          "Signal 3. Super mario world ripped jeans paper fortune teller.",
+        ],
+        examples: [
+          "Example 1. Sports utility vehicles cut-off jean shorts armageddon george michael renting movies at a store.",
+          "Example 2. Sports utility vehicles cut-off jean shorts armageddon george michael renting movies at a store.",
+          "Example 3. Sports utility vehicles cut-off jean shorts armageddon george michael renting movies at a store.",
+        ],
+      },
+      {
+        summary:
+          "Milestone 4 summary. Wonderwall tommy hilfiger mr. jones and me tell each other fairy tales berry lips, track jackets flannel shirts tom hanks.",
+        signals: [
+          "Signal 1. Super mario world ripped jeans paper fortune teller.",
+          "Signal 2. Super mario world ripped jeans paper fortune teller.",
+          "Signal 3. Super mario world ripped jeans paper fortune teller.",
+        ],
+        examples: [
+          "Example 1. Sports utility vehicles cut-off jean shorts armageddon george michael renting movies at a store.",
+          "Example 2. Sports utility vehicles cut-off jean shorts armageddon george michael renting movies at a store.",
+          "Example 3. Sports utility vehicles cut-off jean shorts armageddon george michael renting movies at a store.",
+        ],
+      },
+      {
+        summary:
+          "Milestone 5 summary. Wonderwall tommy hilfiger mr. jones and me tell each other fairy tales berry lips, track jackets flannel shirts tom hanks.",
+        signals: [
+          "Signal 1. Super mario world ripped jeans paper fortune teller.",
+          "Signal 2. Super mario world ripped jeans paper fortune teller.",
+          "Signal 3. Super mario world ripped jeans paper fortune teller.",
+        ],
+        examples: [
+          "Example 1. Sports utility vehicles cut-off jean shorts armageddon george michael renting movies at a store.",
+          "Example 2. Sports utility vehicles cut-off jean shorts armageddon george michael renting movies at a store.",
+          "Example 3. Sports utility vehicles cut-off jean shorts armageddon george michael renting movies at a store.",
+        ],
+      },
+    ],
+  },
+
+  CREDIBILITY: {
+    displayName: "Credibility",
+    category: "C",
+    description:
+      "Having earned reliability and trustworthiness to obtain collaboration and participation of others to accomplish goals. Consistently doing what you say you are going to do.",
+    milestones: [
+      {
+        summary:
+          "Milestone 1 summary. Wonderwall tommy hilfiger mr. jones and me tell each other fairy tales berry lips, track jackets flannel shirts tom hanks.",
+        signals: [
+          "Signal 1. Super mario world ripped jeans paper fortune teller.",
+          "Signal 2. Super mario world ripped jeans paper fortune teller.",
+          "Signal 3. Super mario world ripped jeans paper fortune teller.",
+        ],
+        examples: [
+          "Example 1. Sports utility vehicles cut-off jean shorts armageddon george michael renting movies at a store.",
+          "Example 2. Sports utility vehicles cut-off jean shorts armageddon george michael renting movies at a store.",
+          "Example 3. Sports utility vehicles cut-off jean shorts armageddon george michael renting movies at a store.",
+        ],
+      },
+      {
+        summary:
+          "Milestone 2 summary. Wonderwall tommy hilfiger mr. jones and me tell each other fairy tales berry lips, track jackets flannel shirts tom hanks.",
+        signals: [
+          "Signal 1. Super mario world ripped jeans paper fortune teller.",
+          "Signal 2. Super mario world ripped jeans paper fortune teller.",
+          "Signal 3. Super mario world ripped jeans paper fortune teller.",
+        ],
+        examples: [
+          "Example 1. Sports utility vehicles cut-off jean shorts armageddon george michael renting movies at a store.",
+          "Example 2. Sports utility vehicles cut-off jean shorts armageddon george michael renting movies at a store.",
+          "Example 3. Sports utility vehicles cut-off jean shorts armageddon george michael renting movies at a store.",
+        ],
+      },
+      {
+        summary:
+          "Milestone 3 summary. Wonderwall tommy hilfiger mr. jones and me tell each other fairy tales berry lips, track jackets flannel shirts tom hanks.",
+        signals: [
+          "Signal 1. Super mario world ripped jeans paper fortune teller.",
+          "Signal 2. Super mario world ripped jeans paper fortune teller.",
+          "Signal 3. Super mario world ripped jeans paper fortune teller.",
+        ],
+        examples: [
+          "Example 1. Sports utility vehicles cut-off jean shorts armageddon george michael renting movies at a store.",
+          "Example 2. Sports utility vehicles cut-off jean shorts armageddon george michael renting movies at a store.",
+          "Example 3. Sports utility vehicles cut-off jean shorts armageddon george michael renting movies at a store.",
+        ],
+      },
+      {
+        summary:
+          "Milestone 4 summary. Wonderwall tommy hilfiger mr. jones and me tell each other fairy tales berry lips, track jackets flannel shirts tom hanks.",
+        signals: [
+          "Signal 1. Super mario world ripped jeans paper fortune teller.",
+          "Signal 2. Super mario world ripped jeans paper fortune teller.",
+          "Signal 3. Super mario world ripped jeans paper fortune teller.",
+        ],
+        examples: [
+          "Example 1. Sports utility vehicles cut-off jean shorts armageddon george michael renting movies at a store.",
+          "Example 2. Sports utility vehicles cut-off jean shorts armageddon george michael renting movies at a store.",
+          "Example 3. Sports utility vehicles cut-off jean shorts armageddon george michael renting movies at a store.",
+        ],
+      },
+      {
+        summary:
+          "Milestone 5 summary. Wonderwall tommy hilfiger mr. jones and me tell each other fairy tales berry lips, track jackets flannel shirts tom hanks.",
+        signals: [
+          "Signal 1. Super mario world ripped jeans paper fortune teller.",
+          "Signal 2. Super mario world ripped jeans paper fortune teller.",
+          "Signal 3. Super mario world ripped jeans paper fortune teller.",
+        ],
+        examples: [
+          "Example 1. Sports utility vehicles cut-off jean shorts armageddon george michael renting movies at a store.",
+          "Example 2. Sports utility vehicles cut-off jean shorts armageddon george michael renting movies at a store.",
+          "Example 3. Sports utility vehicles cut-off jean shorts armageddon george michael renting movies at a store.",
+        ],
+      },
+    ],
+  },
+
+  // CRAFT COMPETENCY --------------------
+  TECHNICAL: {
+    displayName: "Technical",
+    category: "D",
+    description:
+      "Applies engineering principles to solve complex problems through sound and creative engineering. Uses internal or industry best practices to improve technical solutions while seeking feedback. Evangelizes and teaches others to reach beyond existing solutions and technologies. Delivers high quality software that is written with pride, great skill and careful attention. Not only values working software, but well-crafted software that is easy to read, maintain and refactor. Designs, develops and delivers systems that are secure, efficient, reliable and scalable.",
+    milestones: [
+      {
+        summary:
+          "Milestone 1 summary. Wonderwall tommy hilfiger mr. jones and me tell each other fairy tales berry lips, track jackets flannel shirts tom hanks.",
+        signals: [
+          "Signal 1. Super mario world ripped jeans paper fortune teller.",
+          "Signal 2. Super mario world ripped jeans paper fortune teller.",
+          "Signal 3. Super mario world ripped jeans paper fortune teller.",
+        ],
+        examples: [
+          "Example 1. Sports utility vehicles cut-off jean shorts armageddon george michael renting movies at a store.",
+          "Example 2. Sports utility vehicles cut-off jean shorts armageddon george michael renting movies at a store.",
+          "Example 3. Sports utility vehicles cut-off jean shorts armageddon george michael renting movies at a store.",
+        ],
+      },
+      {
+        summary:
+          "Milestone 2 summary. Wonderwall tommy hilfiger mr. jones and me tell each other fairy tales berry lips, track jackets flannel shirts tom hanks.",
+        signals: [
+          "Signal 1. Super mario world ripped jeans paper fortune teller.",
+          "Signal 2. Super mario world ripped jeans paper fortune teller.",
+          "Signal 3. Super mario world ripped jeans paper fortune teller.",
+        ],
+        examples: [
+          "Example 1. Sports utility vehicles cut-off jean shorts armageddon george michael renting movies at a store.",
+          "Example 2. Sports utility vehicles cut-off jean shorts armageddon george michael renting movies at a store.",
+          "Example 3. Sports utility vehicles cut-off jean shorts armageddon george michael renting movies at a store.",
+        ],
+      },
+      {
+        summary:
+          "Milestone 3 summary. Wonderwall tommy hilfiger mr. jones and me tell each other fairy tales berry lips, track jackets flannel shirts tom hanks.",
+        signals: [
+          "Signal 1. Super mario world ripped jeans paper fortune teller.",
+          "Signal 2. Super mario world ripped jeans paper fortune teller.",
+          "Signal 3. Super mario world ripped jeans paper fortune teller.",
+        ],
+        examples: [
+          "Example 1. Sports utility vehicles cut-off jean shorts armageddon george michael renting movies at a store.",
+          "Example 2. Sports utility vehicles cut-off jean shorts armageddon george michael renting movies at a store.",
+          "Example 3. Sports utility vehicles cut-off jean shorts armageddon george michael renting movies at a store.",
+        ],
+      },
+      {
+        summary:
+          "Milestone 4 summary. Wonderwall tommy hilfiger mr. jones and me tell each other fairy tales berry lips, track jackets flannel shirts tom hanks.",
+        signals: [
+          "Signal 1. Super mario world ripped jeans paper fortune teller.",
+          "Signal 2. Super mario world ripped jeans paper fortune teller.",
+          "Signal 3. Super mario world ripped jeans paper fortune teller.",
+        ],
+        examples: [
+          "Example 1. Sports utility vehicles cut-off jean shorts armageddon george michael renting movies at a store.",
+          "Example 2. Sports utility vehicles cut-off jean shorts armageddon george michael renting movies at a store.",
+          "Example 3. Sports utility vehicles cut-off jean shorts armageddon george michael renting movies at a store.",
+        ],
+      },
+      {
+        summary:
+          "Milestone 5 summary. Wonderwall tommy hilfiger mr. jones and me tell each other fairy tales berry lips, track jackets flannel shirts tom hanks.",
+        signals: [
+          "Signal 1. Super mario world ripped jeans paper fortune teller.",
+          "Signal 2. Super mario world ripped jeans paper fortune teller.",
+          "Signal 3. Super mario world ripped jeans paper fortune teller.",
+        ],
+        examples: [
+          "Example 1. Sports utility vehicles cut-off jean shorts armageddon george michael renting movies at a store.",
+          "Example 2. Sports utility vehicles cut-off jean shorts armageddon george michael renting movies at a store.",
+          "Example 3. Sports utility vehicles cut-off jean shorts armageddon george michael renting movies at a store.",
+        ],
+      },
+    ],
+  },
+
+  PROCESS: {
+    displayName: "Process",
+    category: "D",
+    description:
+      "Prioritizes and completes assigned tasks according to team's process. Consults with more senior teammates on how and when to ask for help. Aligns with team’s management style, best practices and processes. Addresses issues on-demand as a standard rule.",
+    milestones: [
+      {
+        summary:
+          "Milestone 1 summary. Wonderwall tommy hilfiger mr. jones and me tell each other fairy tales berry lips, track jackets flannel shirts tom hanks.",
+        signals: [
+          "Signal 1. Super mario world ripped jeans paper fortune teller.",
+          "Signal 2. Super mario world ripped jeans paper fortune teller.",
+          "Signal 3. Super mario world ripped jeans paper fortune teller.",
+        ],
+        examples: [
+          "Example 1. Sports utility vehicles cut-off jean shorts armageddon george michael renting movies at a store.",
+          "Example 2. Sports utility vehicles cut-off jean shorts armageddon george michael renting movies at a store.",
+          "Example 3. Sports utility vehicles cut-off jean shorts armageddon george michael renting movies at a store.",
+        ],
+      },
+      {
+        summary:
+          "Milestone 2 summary. Wonderwall tommy hilfiger mr. jones and me tell each other fairy tales berry lips, track jackets flannel shirts tom hanks.",
+        signals: [
+          "Signal 1. Super mario world ripped jeans paper fortune teller.",
+          "Signal 2. Super mario world ripped jeans paper fortune teller.",
+          "Signal 3. Super mario world ripped jeans paper fortune teller.",
+        ],
+        examples: [
+          "Example 1. Sports utility vehicles cut-off jean shorts armageddon george michael renting movies at a store.",
+          "Example 2. Sports utility vehicles cut-off jean shorts armageddon george michael renting movies at a store.",
+          "Example 3. Sports utility vehicles cut-off jean shorts armageddon george michael renting movies at a store.",
+        ],
+      },
+      {
+        summary:
+          "Milestone 3 summary. Wonderwall tommy hilfiger mr. jones and me tell each other fairy tales berry lips, track jackets flannel shirts tom hanks.",
+        signals: [
+          "Signal 1. Super mario world ripped jeans paper fortune teller.",
+          "Signal 2. Super mario world ripped jeans paper fortune teller.",
+          "Signal 3. Super mario world ripped jeans paper fortune teller.",
+        ],
+        examples: [
+          "Example 1. Sports utility vehicles cut-off jean shorts armageddon george michael renting movies at a store.",
+          "Example 2. Sports utility vehicles cut-off jean shorts armageddon george michael renting movies at a store.",
+          "Example 3. Sports utility vehicles cut-off jean shorts armageddon george michael renting movies at a store.",
+        ],
+      },
+      {
+        summary:
+          "Milestone 4 summary. Wonderwall tommy hilfiger mr. jones and me tell each other fairy tales berry lips, track jackets flannel shirts tom hanks.",
+        signals: [
+          "Signal 1. Super mario world ripped jeans paper fortune teller.",
+          "Signal 2. Super mario world ripped jeans paper fortune teller.",
+          "Signal 3. Super mario world ripped jeans paper fortune teller.",
+        ],
+        examples: [
+          "Example 1. Sports utility vehicles cut-off jean shorts armageddon george michael renting movies at a store.",
+          "Example 2. Sports utility vehicles cut-off jean shorts armageddon george michael renting movies at a store.",
+          "Example 3. Sports utility vehicles cut-off jean shorts armageddon george michael renting movies at a store.",
+        ],
+      },
+      {
+        summary:
+          "Milestone 5 summary. Wonderwall tommy hilfiger mr. jones and me tell each other fairy tales berry lips, track jackets flannel shirts tom hanks.",
+        signals: [
+          "Signal 1. Super mario world ripped jeans paper fortune teller.",
+          "Signal 2. Super mario world ripped jeans paper fortune teller.",
+          "Signal 3. Super mario world ripped jeans paper fortune teller.",
+        ],
+        examples: [
+          "Example 1. Sports utility vehicles cut-off jean shorts armageddon george michael renting movies at a store.",
+          "Example 2. Sports utility vehicles cut-off jean shorts armageddon george michael renting movies at a store.",
+          "Example 3. Sports utility vehicles cut-off jean shorts armageddon george michael renting movies at a store.",
+        ],
+      },
+    ],
+  },
+
+  INNOVATION: {
+    displayName: "Innovation",
+    category: "D",
+    description:
+      "Generates new ideas for meeting customer needs by effectively using customer interaction and research. Proactively identifies and manages risks within scope and resolves issues via an established process or with coaching. Develops multiple options for fulfilling customer needs.",
+    milestones: [
+      {
+        summary:
+          "Milestone 1 summary. Wonderwall tommy hilfiger mr. jones and me tell each other fairy tales berry lips, track jackets flannel shirts tom hanks.",
+        signals: [
+          "Signal 1. Super mario world ripped jeans paper fortune teller.",
+          "Signal 2. Super mario world ripped jeans paper fortune teller.",
+          "Signal 3. Super mario world ripped jeans paper fortune teller.",
+        ],
+        examples: [
+          "Example 1. Sports utility vehicles cut-off jean shorts armageddon george michael renting movies at a store.",
+          "Example 2. Sports utility vehicles cut-off jean shorts armageddon george michael renting movies at a store.",
+          "Example 3. Sports utility vehicles cut-off jean shorts armageddon george michael renting movies at a store.",
+        ],
+      },
+      {
+        summary:
+          "Milestone 2 summary. Wonderwall tommy hilfiger mr. jones and me tell each other fairy tales berry lips, track jackets flannel shirts tom hanks.",
+        signals: [
+          "Signal 1. Super mario world ripped jeans paper fortune teller.",
+          "Signal 2. Super mario world ripped jeans paper fortune teller.",
+          "Signal 3. Super mario world ripped jeans paper fortune teller.",
+        ],
+        examples: [
+          "Example 1. Sports utility vehicles cut-off jean shorts armageddon george michael renting movies at a store.",
+          "Example 2. Sports utility vehicles cut-off jean shorts armageddon george michael renting movies at a store.",
+          "Example 3. Sports utility vehicles cut-off jean shorts armageddon george michael renting movies at a store.",
+        ],
+      },
+      {
+        summary:
+          "Milestone 3 summary. Wonderwall tommy hilfiger mr. jones and me tell each other fairy tales berry lips, track jackets flannel shirts tom hanks.",
+        signals: [
+          "Signal 1. Super mario world ripped jeans paper fortune teller.",
+          "Signal 2. Super mario world ripped jeans paper fortune teller.",
+          "Signal 3. Super mario world ripped jeans paper fortune teller.",
+        ],
+        examples: [
+          "Example 1. Sports utility vehicles cut-off jean shorts armageddon george michael renting movies at a store.",
+          "Example 2. Sports utility vehicles cut-off jean shorts armageddon george michael renting movies at a store.",
+          "Example 3. Sports utility vehicles cut-off jean shorts armageddon george michael renting movies at a store.",
+        ],
+      },
+      {
+        summary:
+          "Milestone 4 summary. Wonderwall tommy hilfiger mr. jones and me tell each other fairy tales berry lips, track jackets flannel shirts tom hanks.",
+        signals: [
+          "Signal 1. Super mario world ripped jeans paper fortune teller.",
+          "Signal 2. Super mario world ripped jeans paper fortune teller.",
+          "Signal 3. Super mario world ripped jeans paper fortune teller.",
+        ],
+        examples: [
+          "Example 1. Sports utility vehicles cut-off jean shorts armageddon george michael renting movies at a store.",
+          "Example 2. Sports utility vehicles cut-off jean shorts armageddon george michael renting movies at a store.",
+          "Example 3. Sports utility vehicles cut-off jean shorts armageddon george michael renting movies at a store.",
+        ],
+      },
+      {
+        summary:
+          "Milestone 5 summary. Wonderwall tommy hilfiger mr. jones and me tell each other fairy tales berry lips, track jackets flannel shirts tom hanks.",
+        signals: [
+          "Signal 1. Super mario world ripped jeans paper fortune teller.",
+          "Signal 2. Super mario world ripped jeans paper fortune teller.",
+          "Signal 3. Super mario world ripped jeans paper fortune teller.",
+        ],
+        examples: [
+          "Example 1. Sports utility vehicles cut-off jean shorts armageddon george michael renting movies at a store.",
+          "Example 2. Sports utility vehicles cut-off jean shorts armageddon george michael renting movies at a store.",
+          "Example 3. Sports utility vehicles cut-off jean shorts armageddon george michael renting movies at a store.",
+        ],
+      },
+    ],
+  },
+
+  TOOL_PROFICIENCY: {
+    displayName: "Tool Proficiency",
+    category: "D",
+    description:
+      "Makes efficient use of internal tools for version control management, log analysis, CI/CD, bug tracking, exception reporting, and debugging tools to diagnose problems and inform decisions.",
+    milestones: [
+      {
+        summary:
+          "Milestone 1 summary. Wonderwall tommy hilfiger mr. jones and me tell each other fairy tales berry lips, track jackets flannel shirts tom hanks.",
+        signals: [
+          "Signal 1. Super mario world ripped jeans paper fortune teller.",
+          "Signal 2. Super mario world ripped jeans paper fortune teller.",
+          "Signal 3. Super mario world ripped jeans paper fortune teller.",
+        ],
+        examples: [
+          "Example 1. Sports utility vehicles cut-off jean shorts armageddon george michael renting movies at a store.",
+          "Example 2. Sports utility vehicles cut-off jean shorts armageddon george michael renting movies at a store.",
+          "Example 3. Sports utility vehicles cut-off jean shorts armageddon george michael renting movies at a store.",
+        ],
+      },
+      {
+        summary:
+          "Milestone 2 summary. Wonderwall tommy hilfiger mr. jones and me tell each other fairy tales berry lips, track jackets flannel shirts tom hanks.",
+        signals: [
+          "Signal 1. Super mario world ripped jeans paper fortune teller.",
+          "Signal 2. Super mario world ripped jeans paper fortune teller.",
+          "Signal 3. Super mario world ripped jeans paper fortune teller.",
+        ],
+        examples: [
+          "Example 1. Sports utility vehicles cut-off jean shorts armageddon george michael renting movies at a store.",
+          "Example 2. Sports utility vehicles cut-off jean shorts armageddon george michael renting movies at a store.",
+          "Example 3. Sports utility vehicles cut-off jean shorts armageddon george michael renting movies at a store.",
+        ],
+      },
+      {
+        summary:
+          "Milestone 3 summary. Wonderwall tommy hilfiger mr. jones and me tell each other fairy tales berry lips, track jackets flannel shirts tom hanks.",
+        signals: [
+          "Signal 1. Super mario world ripped jeans paper fortune teller.",
+          "Signal 2. Super mario world ripped jeans paper fortune teller.",
+          "Signal 3. Super mario world ripped jeans paper fortune teller.",
+        ],
+        examples: [
+          "Example 1. Sports utility vehicles cut-off jean shorts armageddon george michael renting movies at a store.",
+          "Example 2. Sports utility vehicles cut-off jean shorts armageddon george michael renting movies at a store.",
+          "Example 3. Sports utility vehicles cut-off jean shorts armageddon george michael renting movies at a store.",
+        ],
+      },
+      {
+        summary:
+          "Milestone 4 summary. Wonderwall tommy hilfiger mr. jones and me tell each other fairy tales berry lips, track jackets flannel shirts tom hanks.",
+        signals: [
+          "Signal 1. Super mario world ripped jeans paper fortune teller.",
+          "Signal 2. Super mario world ripped jeans paper fortune teller.",
+          "Signal 3. Super mario world ripped jeans paper fortune teller.",
+        ],
+        examples: [
+          "Example 1. Sports utility vehicles cut-off jean shorts armageddon george michael renting movies at a store.",
+          "Example 2. Sports utility vehicles cut-off jean shorts armageddon george michael renting movies at a store.",
+          "Example 3. Sports utility vehicles cut-off jean shorts armageddon george michael renting movies at a store.",
+        ],
+      },
+      {
+        summary:
+          "Milestone 5 summary. Wonderwall tommy hilfiger mr. jones and me tell each other fairy tales berry lips, track jackets flannel shirts tom hanks.",
+        signals: [
+          "Signal 1. Super mario world ripped jeans paper fortune teller.",
+          "Signal 2. Super mario world ripped jeans paper fortune teller.",
+          "Signal 3. Super mario world ripped jeans paper fortune teller.",
+        ],
+        examples: [
+          "Example 1. Sports utility vehicles cut-off jean shorts armageddon george michael renting movies at a store.",
+          "Example 2. Sports utility vehicles cut-off jean shorts armageddon george michael renting movies at a store.",
+          "Example 3. Sports utility vehicles cut-off jean shorts armageddon george michael renting movies at a store.",
+        ],
+      },
+    ],
+  },
+
+  // QUALITY COMPETENCY --------------------
+  JUDGEMENT: {
+    displayName: "Judgement",
+    category: "E",
+    description:
+      "The ability to assess and research a problem to identify key issues, inputs, stakeholders, desired outcomes then come to a sensible logical conclusion.",
+    milestones: [
+      {
+        summary:
+          "Milestone 1 summary. Wonderwall tommy hilfiger mr. jones and me tell each other fairy tales berry lips, track jackets flannel shirts tom hanks.",
+        signals: [
+          "Signal 1. Super mario world ripped jeans paper fortune teller.",
+          "Signal 2. Super mario world ripped jeans paper fortune teller.",
+          "Signal 3. Super mario world ripped jeans paper fortune teller.",
+        ],
+        examples: [
+          "Example 1. Sports utility vehicles cut-off jean shorts armageddon george michael renting movies at a store.",
+          "Example 2. Sports utility vehicles cut-off jean shorts armageddon george michael renting movies at a store.",
+          "Example 3. Sports utility vehicles cut-off jean shorts armageddon george michael renting movies at a store.",
+        ],
+      },
+      {
+        summary:
+          "Milestone 2 summary. Wonderwall tommy hilfiger mr. jones and me tell each other fairy tales berry lips, track jackets flannel shirts tom hanks.",
+        signals: [
+          "Signal 1. Super mario world ripped jeans paper fortune teller.",
+          "Signal 2. Super mario world ripped jeans paper fortune teller.",
+          "Signal 3. Super mario world ripped jeans paper fortune teller.",
+        ],
+        examples: [
+          "Example 1. Sports utility vehicles cut-off jean shorts armageddon george michael renting movies at a store.",
+          "Example 2. Sports utility vehicles cut-off jean shorts armageddon george michael renting movies at a store.",
+          "Example 3. Sports utility vehicles cut-off jean shorts armageddon george michael renting movies at a store.",
+        ],
+      },
+      {
+        summary:
+          "Milestone 3 summary. Wonderwall tommy hilfiger mr. jones and me tell each other fairy tales berry lips, track jackets flannel shirts tom hanks.",
+        signals: [
+          "Signal 1. Super mario world ripped jeans paper fortune teller.",
+          "Signal 2. Super mario world ripped jeans paper fortune teller.",
+          "Signal 3. Super mario world ripped jeans paper fortune teller.",
+        ],
+        examples: [
+          "Example 1. Sports utility vehicles cut-off jean shorts armageddon george michael renting movies at a store.",
+          "Example 2. Sports utility vehicles cut-off jean shorts armageddon george michael renting movies at a store.",
+          "Example 3. Sports utility vehicles cut-off jean shorts armageddon george michael renting movies at a store.",
+        ],
+      },
+      {
+        summary:
+          "Milestone 4 summary. Wonderwall tommy hilfiger mr. jones and me tell each other fairy tales berry lips, track jackets flannel shirts tom hanks.",
+        signals: [
+          "Signal 1. Super mario world ripped jeans paper fortune teller.",
+          "Signal 2. Super mario world ripped jeans paper fortune teller.",
+          "Signal 3. Super mario world ripped jeans paper fortune teller.",
+        ],
+        examples: [
+          "Example 1. Sports utility vehicles cut-off jean shorts armageddon george michael renting movies at a store.",
+          "Example 2. Sports utility vehicles cut-off jean shorts armageddon george michael renting movies at a store.",
+          "Example 3. Sports utility vehicles cut-off jean shorts armageddon george michael renting movies at a store.",
+        ],
+      },
+      {
+        summary:
+          "Milestone 5 summary. Wonderwall tommy hilfiger mr. jones and me tell each other fairy tales berry lips, track jackets flannel shirts tom hanks.",
+        signals: [
+          "Signal 1. Super mario world ripped jeans paper fortune teller.",
+          "Signal 2. Super mario world ripped jeans paper fortune teller.",
+          "Signal 3. Super mario world ripped jeans paper fortune teller.",
+        ],
+        examples: [
+          "Example 1. Sports utility vehicles cut-off jean shorts armageddon george michael renting movies at a store.",
+          "Example 2. Sports utility vehicles cut-off jean shorts armageddon george michael renting movies at a store.",
+          "Example 3. Sports utility vehicles cut-off jean shorts armageddon george michael renting movies at a store.",
+        ],
+      },
+    ],
+  },
+
+  ROOT_CAUSE_RESOLUTION: {
+    displayName: "Root Cause Resolution",
+    category: "E",
+    description:
+      "Proactively identifies source of problems beyond the surface. involves the right people to analyze the problem, and tracks the chain of events that lead to the failure. Offers and implements appropriate solutions.",
+    milestones: [
+      {
+        summary:
+          "Milestone 1 summary. Wonderwall tommy hilfiger mr. jones and me tell each other fairy tales berry lips, track jackets flannel shirts tom hanks.",
+        signals: [
+          "Signal 1. Super mario world ripped jeans paper fortune teller.",
+          "Signal 2. Super mario world ripped jeans paper fortune teller.",
+          "Signal 3. Super mario world ripped jeans paper fortune teller.",
+        ],
+        examples: [
+          "Example 1. Sports utility vehicles cut-off jean shorts armageddon george michael renting movies at a store.",
+          "Example 2. Sports utility vehicles cut-off jean shorts armageddon george michael renting movies at a store.",
+          "Example 3. Sports utility vehicles cut-off jean shorts armageddon george michael renting movies at a store.",
+        ],
+      },
+      {
+        summary:
+          "Milestone 2 summary. Wonderwall tommy hilfiger mr. jones and me tell each other fairy tales berry lips, track jackets flannel shirts tom hanks.",
+        signals: [
+          "Signal 1. Super mario world ripped jeans paper fortune teller.",
+          "Signal 2. Super mario world ripped jeans paper fortune teller.",
+          "Signal 3. Super mario world ripped jeans paper fortune teller.",
+        ],
+        examples: [
+          "Example 1. Sports utility vehicles cut-off jean shorts armageddon george michael renting movies at a store.",
+          "Example 2. Sports utility vehicles cut-off jean shorts armageddon george michael renting movies at a store.",
+          "Example 3. Sports utility vehicles cut-off jean shorts armageddon george michael renting movies at a store.",
+        ],
+      },
+      {
+        summary:
+          "Milestone 3 summary. Wonderwall tommy hilfiger mr. jones and me tell each other fairy tales berry lips, track jackets flannel shirts tom hanks.",
+        signals: [
+          "Signal 1. Super mario world ripped jeans paper fortune teller.",
+          "Signal 2. Super mario world ripped jeans paper fortune teller.",
+          "Signal 3. Super mario world ripped jeans paper fortune teller.",
+        ],
+        examples: [
+          "Example 1. Sports utility vehicles cut-off jean shorts armageddon george michael renting movies at a store.",
+          "Example 2. Sports utility vehicles cut-off jean shorts armageddon george michael renting movies at a store.",
+          "Example 3. Sports utility vehicles cut-off jean shorts armageddon george michael renting movies at a store.",
+        ],
+      },
+      {
+        summary:
+          "Milestone 4 summary. Wonderwall tommy hilfiger mr. jones and me tell each other fairy tales berry lips, track jackets flannel shirts tom hanks.",
+        signals: [
+          "Signal 1. Super mario world ripped jeans paper fortune teller.",
+          "Signal 2. Super mario world ripped jeans paper fortune teller.",
+          "Signal 3. Super mario world ripped jeans paper fortune teller.",
+        ],
+        examples: [
+          "Example 1. Sports utility vehicles cut-off jean shorts armageddon george michael renting movies at a store.",
+          "Example 2. Sports utility vehicles cut-off jean shorts armageddon george michael renting movies at a store.",
+          "Example 3. Sports utility vehicles cut-off jean shorts armageddon george michael renting movies at a store.",
+        ],
+      },
+      {
+        summary:
+          "Milestone 5 summary. Wonderwall tommy hilfiger mr. jones and me tell each other fairy tales berry lips, track jackets flannel shirts tom hanks.",
+        signals: [
+          "Signal 1. Super mario world ripped jeans paper fortune teller.",
+          "Signal 2. Super mario world ripped jeans paper fortune teller.",
+          "Signal 3. Super mario world ripped jeans paper fortune teller.",
+        ],
+        examples: [
+          "Example 1. Sports utility vehicles cut-off jean shorts armageddon george michael renting movies at a store.",
+          "Example 2. Sports utility vehicles cut-off jean shorts armageddon george michael renting movies at a store.",
+          "Example 3. Sports utility vehicles cut-off jean shorts armageddon george michael renting movies at a store.",
+        ],
+      },
+    ],
+  },
+
+  // COMMUNICATION COMPETENCY --------------------
+  WRITING: {
+    displayName: "Writing",
+    category: "F",
+    description:
+      "Ability to sum up complex ideas, problems, or solutions with effective style. Engages and influences the audience with clarity and persuasiveness.",
+    milestones: [
+      {
+        summary:
+          "Milestone 1 summary. Wonderwall tommy hilfiger mr. jones and me tell each other fairy tales berry lips, track jackets flannel shirts tom hanks.",
+        signals: [
+          "Signal 1. Super mario world ripped jeans paper fortune teller.",
+          "Signal 2. Super mario world ripped jeans paper fortune teller.",
+          "Signal 3. Super mario world ripped jeans paper fortune teller.",
+        ],
+        examples: [
+          "Example 1. Sports utility vehicles cut-off jean shorts armageddon george michael renting movies at a store.",
+          "Example 2. Sports utility vehicles cut-off jean shorts armageddon george michael renting movies at a store.",
+          "Example 3. Sports utility vehicles cut-off jean shorts armageddon george michael renting movies at a store.",
+        ],
+      },
+      {
+        summary:
+          "Milestone 2 summary. Wonderwall tommy hilfiger mr. jones and me tell each other fairy tales berry lips, track jackets flannel shirts tom hanks.",
+        signals: [
+          "Signal 1. Super mario world ripped jeans paper fortune teller.",
+          "Signal 2. Super mario world ripped jeans paper fortune teller.",
+          "Signal 3. Super mario world ripped jeans paper fortune teller.",
+        ],
+        examples: [
+          "Example 1. Sports utility vehicles cut-off jean shorts armageddon george michael renting movies at a store.",
+          "Example 2. Sports utility vehicles cut-off jean shorts armageddon george michael renting movies at a store.",
+          "Example 3. Sports utility vehicles cut-off jean shorts armageddon george michael renting movies at a store.",
+        ],
+      },
+      {
+        summary:
+          "Milestone 3 summary. Wonderwall tommy hilfiger mr. jones and me tell each other fairy tales berry lips, track jackets flannel shirts tom hanks.",
+        signals: [
+          "Signal 1. Super mario world ripped jeans paper fortune teller.",
+          "Signal 2. Super mario world ripped jeans paper fortune teller.",
+          "Signal 3. Super mario world ripped jeans paper fortune teller.",
+        ],
+        examples: [
+          "Example 1. Sports utility vehicles cut-off jean shorts armageddon george michael renting movies at a store.",
+          "Example 2. Sports utility vehicles cut-off jean shorts armageddon george michael renting movies at a store.",
+          "Example 3. Sports utility vehicles cut-off jean shorts armageddon george michael renting movies at a store.",
+        ],
+      },
+      {
+        summary:
+          "Milestone 4 summary. Wonderwall tommy hilfiger mr. jones and me tell each other fairy tales berry lips, track jackets flannel shirts tom hanks.",
+        signals: [
+          "Signal 1. Super mario world ripped jeans paper fortune teller.",
+          "Signal 2. Super mario world ripped jeans paper fortune teller.",
+          "Signal 3. Super mario world ripped jeans paper fortune teller.",
+        ],
+        examples: [
+          "Example 1. Sports utility vehicles cut-off jean shorts armageddon george michael renting movies at a store.",
+          "Example 2. Sports utility vehicles cut-off jean shorts armageddon george michael renting movies at a store.",
+          "Example 3. Sports utility vehicles cut-off jean shorts armageddon george michael renting movies at a store.",
+        ],
+      },
+      {
+        summary:
+          "Milestone 5 summary. Wonderwall tommy hilfiger mr. jones and me tell each other fairy tales berry lips, track jackets flannel shirts tom hanks.",
+        signals: [
+          "Signal 1. Super mario world ripped jeans paper fortune teller.",
+          "Signal 2. Super mario world ripped jeans paper fortune teller.",
+          "Signal 3. Super mario world ripped jeans paper fortune teller.",
+        ],
+        examples: [
+          "Example 1. Sports utility vehicles cut-off jean shorts armageddon george michael renting movies at a store.",
+          "Example 2. Sports utility vehicles cut-off jean shorts armageddon george michael renting movies at a store.",
+          "Example 3. Sports utility vehicles cut-off jean shorts armageddon george michael renting movies at a store.",
+        ],
+      },
+    ],
+  },
+
+  READING: {
+    displayName: "Reading",
+    category: "F",
+    description:
+      "Ability to comprehend task instructions, bug reports, and emails. Locates and understands internal and external documentation.",
+    milestones: [
+      {
+        summary:
+          "Milestone 1 summary. Wonderwall tommy hilfiger mr. jones and me tell each other fairy tales berry lips, track jackets flannel shirts tom hanks.",
+        signals: [
+          "Signal 1. Super mario world ripped jeans paper fortune teller.",
+          "Signal 2. Super mario world ripped jeans paper fortune teller.",
+          "Signal 3. Super mario world ripped jeans paper fortune teller.",
+        ],
+        examples: [
+          "Example 1. Sports utility vehicles cut-off jean shorts armageddon george michael renting movies at a store.",
+          "Example 2. Sports utility vehicles cut-off jean shorts armageddon george michael renting movies at a store.",
+          "Example 3. Sports utility vehicles cut-off jean shorts armageddon george michael renting movies at a store.",
+        ],
+      },
+      {
+        summary:
+          "Milestone 2 summary. Wonderwall tommy hilfiger mr. jones and me tell each other fairy tales berry lips, track jackets flannel shirts tom hanks.",
+        signals: [
+          "Signal 1. Super mario world ripped jeans paper fortune teller.",
+          "Signal 2. Super mario world ripped jeans paper fortune teller.",
+          "Signal 3. Super mario world ripped jeans paper fortune teller.",
+        ],
+        examples: [
+          "Example 1. Sports utility vehicles cut-off jean shorts armageddon george michael renting movies at a store.",
+          "Example 2. Sports utility vehicles cut-off jean shorts armageddon george michael renting movies at a store.",
+          "Example 3. Sports utility vehicles cut-off jean shorts armageddon george michael renting movies at a store.",
+        ],
+      },
+      {
+        summary:
+          "Milestone 3 summary. Wonderwall tommy hilfiger mr. jones and me tell each other fairy tales berry lips, track jackets flannel shirts tom hanks.",
+        signals: [
+          "Signal 1. Super mario world ripped jeans paper fortune teller.",
+          "Signal 2. Super mario world ripped jeans paper fortune teller.",
+          "Signal 3. Super mario world ripped jeans paper fortune teller.",
+        ],
+        examples: [
+          "Example 1. Sports utility vehicles cut-off jean shorts armageddon george michael renting movies at a store.",
+          "Example 2. Sports utility vehicles cut-off jean shorts armageddon george michael renting movies at a store.",
+          "Example 3. Sports utility vehicles cut-off jean shorts armageddon george michael renting movies at a store.",
+        ],
+      },
+      {
+        summary:
+          "Milestone 4 summary. Wonderwall tommy hilfiger mr. jones and me tell each other fairy tales berry lips, track jackets flannel shirts tom hanks.",
+        signals: [
+          "Signal 1. Super mario world ripped jeans paper fortune teller.",
+          "Signal 2. Super mario world ripped jeans paper fortune teller.",
+          "Signal 3. Super mario world ripped jeans paper fortune teller.",
+        ],
+        examples: [
+          "Example 1. Sports utility vehicles cut-off jean shorts armageddon george michael renting movies at a store.",
+          "Example 2. Sports utility vehicles cut-off jean shorts armageddon george michael renting movies at a store.",
+          "Example 3. Sports utility vehicles cut-off jean shorts armageddon george michael renting movies at a store.",
+        ],
+      },
+      {
+        summary:
+          "Milestone 5 summary. Wonderwall tommy hilfiger mr. jones and me tell each other fairy tales berry lips, track jackets flannel shirts tom hanks.",
+        signals: [
+          "Signal 1. Super mario world ripped jeans paper fortune teller.",
+          "Signal 2. Super mario world ripped jeans paper fortune teller.",
+          "Signal 3. Super mario world ripped jeans paper fortune teller.",
+        ],
+        examples: [
+          "Example 1. Sports utility vehicles cut-off jean shorts armageddon george michael renting movies at a store.",
+          "Example 2. Sports utility vehicles cut-off jean shorts armageddon george michael renting movies at a store.",
+          "Example 3. Sports utility vehicles cut-off jean shorts armageddon george michael renting movies at a store.",
+        ],
+      },
+    ],
+  },
+
+  SPEAKING: {
+    displayName: "Speaking",
+    category: "F",
+    description:
+      "Articulates effectively and confidently. Expresses in a clear and outlined manner how ideas fits into wider scenarios.",
+    milestones: [
+      {
+        summary:
+          "Milestone 1 summary. Wonderwall tommy hilfiger mr. jones and me tell each other fairy tales berry lips, track jackets flannel shirts tom hanks.",
+        signals: [
+          "Signal 1. Super mario world ripped jeans paper fortune teller.",
+          "Signal 2. Super mario world ripped jeans paper fortune teller.",
+          "Signal 3. Super mario world ripped jeans paper fortune teller.",
+        ],
+        examples: [
+          "Example 1. Sports utility vehicles cut-off jean shorts armageddon george michael renting movies at a store.",
+          "Example 2. Sports utility vehicles cut-off jean shorts armageddon george michael renting movies at a store.",
+          "Example 3. Sports utility vehicles cut-off jean shorts armageddon george michael renting movies at a store.",
+        ],
+      },
+      {
+        summary:
+          "Milestone 2 summary. Wonderwall tommy hilfiger mr. jones and me tell each other fairy tales berry lips, track jackets flannel shirts tom hanks.",
+        signals: [
+          "Signal 1. Super mario world ripped jeans paper fortune teller.",
+          "Signal 2. Super mario world ripped jeans paper fortune teller.",
+          "Signal 3. Super mario world ripped jeans paper fortune teller.",
+        ],
+        examples: [
+          "Example 1. Sports utility vehicles cut-off jean shorts armageddon george michael renting movies at a store.",
+          "Example 2. Sports utility vehicles cut-off jean shorts armageddon george michael renting movies at a store.",
+          "Example 3. Sports utility vehicles cut-off jean shorts armageddon george michael renting movies at a store.",
+        ],
+      },
+      {
+        summary:
+          "Milestone 3 summary. Wonderwall tommy hilfiger mr. jones and me tell each other fairy tales berry lips, track jackets flannel shirts tom hanks.",
+        signals: [
+          "Signal 1. Super mario world ripped jeans paper fortune teller.",
+          "Signal 2. Super mario world ripped jeans paper fortune teller.",
+          "Signal 3. Super mario world ripped jeans paper fortune teller.",
+        ],
+        examples: [
+          "Example 1. Sports utility vehicles cut-off jean shorts armageddon george michael renting movies at a store.",
+          "Example 2. Sports utility vehicles cut-off jean shorts armageddon george michael renting movies at a store.",
+          "Example 3. Sports utility vehicles cut-off jean shorts armageddon george michael renting movies at a store.",
+        ],
+      },
+      {
+        summary:
+          "Milestone 4 summary. Wonderwall tommy hilfiger mr. jones and me tell each other fairy tales berry lips, track jackets flannel shirts tom hanks.",
+        signals: [
+          "Signal 1. Super mario world ripped jeans paper fortune teller.",
+          "Signal 2. Super mario world ripped jeans paper fortune teller.",
+          "Signal 3. Super mario world ripped jeans paper fortune teller.",
+        ],
+        examples: [
+          "Example 1. Sports utility vehicles cut-off jean shorts armageddon george michael renting movies at a store.",
+          "Example 2. Sports utility vehicles cut-off jean shorts armageddon george michael renting movies at a store.",
+          "Example 3. Sports utility vehicles cut-off jean shorts armageddon george michael renting movies at a store.",
+        ],
+      },
+      {
+        summary:
+          "Milestone 5 summary. Wonderwall tommy hilfiger mr. jones and me tell each other fairy tales berry lips, track jackets flannel shirts tom hanks.",
+        signals: [
+          "Signal 1. Super mario world ripped jeans paper fortune teller.",
+          "Signal 2. Super mario world ripped jeans paper fortune teller.",
+          "Signal 3. Super mario world ripped jeans paper fortune teller.",
+        ],
+        examples: [
+          "Example 1. Sports utility vehicles cut-off jean shorts armageddon george michael renting movies at a store.",
+          "Example 2. Sports utility vehicles cut-off jean shorts armageddon george michael renting movies at a store.",
+          "Example 3. Sports utility vehicles cut-off jean shorts armageddon george michael renting movies at a store.",
+        ],
+      },
+    ],
+  },
+
+  LISTENING: {
+    displayName: "Listening",
+    category: "F",
+    description:
+      "Has patience to not interrupt, takes turns speaking, pays close attention to what is being shared, and maintains eye contact. Uses listening cues such as nodding to show engagement. Acknowledges concerns and different perspectives of others.",
+    milestones: [
+      {
+        summary:
+          "Milestone 1 summary. Wonderwall tommy hilfiger mr. jones and me tell each other fairy tales berry lips, track jackets flannel shirts tom hanks.",
+        signals: [
+          "Signal 1. Super mario world ripped jeans paper fortune teller.",
+          "Signal 2. Super mario world ripped jeans paper fortune teller.",
+          "Signal 3. Super mario world ripped jeans paper fortune teller.",
+        ],
+        examples: [
+          "Example 1. Sports utility vehicles cut-off jean shorts armageddon george michael renting movies at a store.",
+          "Example 2. Sports utility vehicles cut-off jean shorts armageddon george michael renting movies at a store.",
+          "Example 3. Sports utility vehicles cut-off jean shorts armageddon george michael renting movies at a store.",
+        ],
+      },
+      {
+        summary:
+          "Milestone 2 summary. Wonderwall tommy hilfiger mr. jones and me tell each other fairy tales berry lips, track jackets flannel shirts tom hanks.",
+        signals: [
+          "Signal 1. Super mario world ripped jeans paper fortune teller.",
+          "Signal 2. Super mario world ripped jeans paper fortune teller.",
+          "Signal 3. Super mario world ripped jeans paper fortune teller.",
+        ],
+        examples: [
+          "Example 1. Sports utility vehicles cut-off jean shorts armageddon george michael renting movies at a store.",
+          "Example 2. Sports utility vehicles cut-off jean shorts armageddon george michael renting movies at a store.",
+          "Example 3. Sports utility vehicles cut-off jean shorts armageddon george michael renting movies at a store.",
+        ],
+      },
+      {
+        summary:
+          "Milestone 3 summary. Wonderwall tommy hilfiger mr. jones and me tell each other fairy tales berry lips, track jackets flannel shirts tom hanks.",
+        signals: [
+          "Signal 1. Super mario world ripped jeans paper fortune teller.",
+          "Signal 2. Super mario world ripped jeans paper fortune teller.",
+          "Signal 3. Super mario world ripped jeans paper fortune teller.",
+        ],
+        examples: [
+          "Example 1. Sports utility vehicles cut-off jean shorts armageddon george michael renting movies at a store.",
+          "Example 2. Sports utility vehicles cut-off jean shorts armageddon george michael renting movies at a store.",
+          "Example 3. Sports utility vehicles cut-off jean shorts armageddon george michael renting movies at a store.",
+        ],
+      },
+      {
+        summary:
+          "Milestone 4 summary. Wonderwall tommy hilfiger mr. jones and me tell each other fairy tales berry lips, track jackets flannel shirts tom hanks.",
+        signals: [
+          "Signal 1. Super mario world ripped jeans paper fortune teller.",
+          "Signal 2. Super mario world ripped jeans paper fortune teller.",
+          "Signal 3. Super mario world ripped jeans paper fortune teller.",
+        ],
+        examples: [
+          "Example 1. Sports utility vehicles cut-off jean shorts armageddon george michael renting movies at a store.",
+          "Example 2. Sports utility vehicles cut-off jean shorts armageddon george michael renting movies at a store.",
+          "Example 3. Sports utility vehicles cut-off jean shorts armageddon george michael renting movies at a store.",
+        ],
+      },
+      {
+        summary:
+          "Milestone 5 summary. Wonderwall tommy hilfiger mr. jones and me tell each other fairy tales berry lips, track jackets flannel shirts tom hanks.",
+        signals: [
+          "Signal 1. Super mario world ripped jeans paper fortune teller.",
+          "Signal 2. Super mario world ripped jeans paper fortune teller.",
+          "Signal 3. Super mario world ripped jeans paper fortune teller.",
+        ],
+        examples: [
+          "Example 1. Sports utility vehicles cut-off jean shorts armageddon george michael renting movies at a store.",
+          "Example 2. Sports utility vehicles cut-off jean shorts armageddon george michael renting movies at a store.",
+          "Example 3. Sports utility vehicles cut-off jean shorts armageddon george michael renting movies at a store.",
+        ],
+      },
+    ],
+  },
+
+  // TEAMWORK COMPETENCY --------------------
+  COLLABORATION: {
+    displayName: "Collaboration",
+    category: "G",
+    description:
+      "Actively works with others to produce or create something in a friendly and professional manner on behalf of the entire company, beyond own team or self. Seeks to ensure the team understands the business value of every story by sharing knowledge and expertise with other team members. Consistently tries to improve code quality by seeking pair programming opportunities.",
+    milestones: [
+      {
+        summary:
+          "Milestone 1 summary. Wonderwall tommy hilfiger mr. jones and me tell each other fairy tales berry lips, track jackets flannel shirts tom hanks.",
+        signals: [
+          "Signal 1. Super mario world ripped jeans paper fortune teller.",
+          "Signal 2. Super mario world ripped jeans paper fortune teller.",
+          "Signal 3. Super mario world ripped jeans paper fortune teller.",
+        ],
+        examples: [
+          "Example 1. Sports utility vehicles cut-off jean shorts armageddon george michael renting movies at a store.",
+          "Example 2. Sports utility vehicles cut-off jean shorts armageddon george michael renting movies at a store.",
+          "Example 3. Sports utility vehicles cut-off jean shorts armageddon george michael renting movies at a store.",
+        ],
+      },
+      {
+        summary:
+          "Milestone 2 summary. Wonderwall tommy hilfiger mr. jones and me tell each other fairy tales berry lips, track jackets flannel shirts tom hanks.",
+        signals: [
+          "Signal 1. Super mario world ripped jeans paper fortune teller.",
+          "Signal 2. Super mario world ripped jeans paper fortune teller.",
+          "Signal 3. Super mario world ripped jeans paper fortune teller.",
+        ],
+        examples: [
+          "Example 1. Sports utility vehicles cut-off jean shorts armageddon george michael renting movies at a store.",
+          "Example 2. Sports utility vehicles cut-off jean shorts armageddon george michael renting movies at a store.",
+          "Example 3. Sports utility vehicles cut-off jean shorts armageddon george michael renting movies at a store.",
+        ],
+      },
+      {
+        summary:
+          "Milestone 3 summary. Wonderwall tommy hilfiger mr. jones and me tell each other fairy tales berry lips, track jackets flannel shirts tom hanks.",
+        signals: [
+          "Signal 1. Super mario world ripped jeans paper fortune teller.",
+          "Signal 2. Super mario world ripped jeans paper fortune teller.",
+          "Signal 3. Super mario world ripped jeans paper fortune teller.",
+        ],
+        examples: [
+          "Example 1. Sports utility vehicles cut-off jean shorts armageddon george michael renting movies at a store.",
+          "Example 2. Sports utility vehicles cut-off jean shorts armageddon george michael renting movies at a store.",
+          "Example 3. Sports utility vehicles cut-off jean shorts armageddon george michael renting movies at a store.",
+        ],
+      },
+      {
+        summary:
+          "Milestone 4 summary. Wonderwall tommy hilfiger mr. jones and me tell each other fairy tales berry lips, track jackets flannel shirts tom hanks.",
+        signals: [
+          "Signal 1. Super mario world ripped jeans paper fortune teller.",
+          "Signal 2. Super mario world ripped jeans paper fortune teller.",
+          "Signal 3. Super mario world ripped jeans paper fortune teller.",
+        ],
+        examples: [
+          "Example 1. Sports utility vehicles cut-off jean shorts armageddon george michael renting movies at a store.",
+          "Example 2. Sports utility vehicles cut-off jean shorts armageddon george michael renting movies at a store.",
+          "Example 3. Sports utility vehicles cut-off jean shorts armageddon george michael renting movies at a store.",
+        ],
+      },
+      {
+        summary:
+          "Milestone 5 summary. Wonderwall tommy hilfiger mr. jones and me tell each other fairy tales berry lips, track jackets flannel shirts tom hanks.",
+        signals: [
+          "Signal 1. Super mario world ripped jeans paper fortune teller.",
+          "Signal 2. Super mario world ripped jeans paper fortune teller.",
+          "Signal 3. Super mario world ripped jeans paper fortune teller.",
+        ],
+        examples: [
+          "Example 1. Sports utility vehicles cut-off jean shorts armageddon george michael renting movies at a store.",
+          "Example 2. Sports utility vehicles cut-off jean shorts armageddon george michael renting movies at a store.",
+          "Example 3. Sports utility vehicles cut-off jean shorts armageddon george michael renting movies at a store.",
+        ],
+      },
+    ],
+  },
+
+  // RESULTS COMPETENCY --------------------
+  AGILE: {
+    displayName: "Agile",
+    category: "H",
+    description:
+      "Passionate about developing and delivering high quality code that is easy to read and maintain. Refactors code to improve the quality. Habitually applies agile development principles, displaying a solid understanding of agile processes, reports, and metrics, and how to use them.",
+    milestones: [
+      {
+        summary:
+          "Milestone 1 summary. Wonderwall tommy hilfiger mr. jones and me tell each other fairy tales berry lips, track jackets flannel shirts tom hanks.",
+        signals: [
+          "Signal 1. Super mario world ripped jeans paper fortune teller.",
+          "Signal 2. Super mario world ripped jeans paper fortune teller.",
+          "Signal 3. Super mario world ripped jeans paper fortune teller.",
+        ],
+        examples: [
+          "Example 1. Sports utility vehicles cut-off jean shorts armageddon george michael renting movies at a store.",
+          "Example 2. Sports utility vehicles cut-off jean shorts armageddon george michael renting movies at a store.",
+          "Example 3. Sports utility vehicles cut-off jean shorts armageddon george michael renting movies at a store.",
+        ],
+      },
+      {
+        summary:
+          "Milestone 2 summary. Wonderwall tommy hilfiger mr. jones and me tell each other fairy tales berry lips, track jackets flannel shirts tom hanks.",
+        signals: [
+          "Signal 1. Super mario world ripped jeans paper fortune teller.",
+          "Signal 2. Super mario world ripped jeans paper fortune teller.",
+          "Signal 3. Super mario world ripped jeans paper fortune teller.",
+        ],
+        examples: [
+          "Example 1. Sports utility vehicles cut-off jean shorts armageddon george michael renting movies at a store.",
+          "Example 2. Sports utility vehicles cut-off jean shorts armageddon george michael renting movies at a store.",
+          "Example 3. Sports utility vehicles cut-off jean shorts armageddon george michael renting movies at a store.",
+        ],
+      },
+      {
+        summary:
+          "Milestone 3 summary. Wonderwall tommy hilfiger mr. jones and me tell each other fairy tales berry lips, track jackets flannel shirts tom hanks.",
+        signals: [
+          "Signal 1. Super mario world ripped jeans paper fortune teller.",
+          "Signal 2. Super mario world ripped jeans paper fortune teller.",
+          "Signal 3. Super mario world ripped jeans paper fortune teller.",
+        ],
+        examples: [
+          "Example 1. Sports utility vehicles cut-off jean shorts armageddon george michael renting movies at a store.",
+          "Example 2. Sports utility vehicles cut-off jean shorts armageddon george michael renting movies at a store.",
+          "Example 3. Sports utility vehicles cut-off jean shorts armageddon george michael renting movies at a store.",
+        ],
+      },
+      {
+        summary:
+          "Milestone 4 summary. Wonderwall tommy hilfiger mr. jones and me tell each other fairy tales berry lips, track jackets flannel shirts tom hanks.",
+        signals: [
+          "Signal 1. Super mario world ripped jeans paper fortune teller.",
+          "Signal 2. Super mario world ripped jeans paper fortune teller.",
+          "Signal 3. Super mario world ripped jeans paper fortune teller.",
+        ],
+        examples: [
+          "Example 1. Sports utility vehicles cut-off jean shorts armageddon george michael renting movies at a store.",
+          "Example 2. Sports utility vehicles cut-off jean shorts armageddon george michael renting movies at a store.",
+          "Example 3. Sports utility vehicles cut-off jean shorts armageddon george michael renting movies at a store.",
+        ],
+      },
+      {
+        summary:
+          "Milestone 5 summary. Wonderwall tommy hilfiger mr. jones and me tell each other fairy tales berry lips, track jackets flannel shirts tom hanks.",
+        signals: [
+          "Signal 1. Super mario world ripped jeans paper fortune teller.",
+          "Signal 2. Super mario world ripped jeans paper fortune teller.",
+          "Signal 3. Super mario world ripped jeans paper fortune teller.",
+        ],
+        examples: [
+          "Example 1. Sports utility vehicles cut-off jean shorts armageddon george michael renting movies at a store.",
+          "Example 2. Sports utility vehicles cut-off jean shorts armageddon george michael renting movies at a store.",
+          "Example 3. Sports utility vehicles cut-off jean shorts armageddon george michael renting movies at a store.",
+        ],
+      },
+    ],
+  },
+
+  ORGANIZATIONAL: {
+    displayName: "Organizational",
+    category: "H",
+    description:
+      "Across-team collaborator that combines efforts and resources to achieve company-wide initiatives.",
+    milestones: [
+      {
+        summary:
+          "Milestone 1 summary. Wonderwall tommy hilfiger mr. jones and me tell each other fairy tales berry lips, track jackets flannel shirts tom hanks.",
+        signals: [
+          "Signal 1. Super mario world ripped jeans paper fortune teller.",
+          "Signal 2. Super mario world ripped jeans paper fortune teller.",
+          "Signal 3. Super mario world ripped jeans paper fortune teller.",
+        ],
+        examples: [
+          "Example 1. Sports utility vehicles cut-off jean shorts armageddon george michael renting movies at a store.",
+          "Example 2. Sports utility vehicles cut-off jean shorts armageddon george michael renting movies at a store.",
+          "Example 3. Sports utility vehicles cut-off jean shorts armageddon george michael renting movies at a store.",
+        ],
+      },
+      {
+        summary:
+          "Milestone 2 summary. Wonderwall tommy hilfiger mr. jones and me tell each other fairy tales berry lips, track jackets flannel shirts tom hanks.",
+        signals: [
+          "Signal 1. Super mario world ripped jeans paper fortune teller.",
+          "Signal 2. Super mario world ripped jeans paper fortune teller.",
+          "Signal 3. Super mario world ripped jeans paper fortune teller.",
+        ],
+        examples: [
+          "Example 1. Sports utility vehicles cut-off jean shorts armageddon george michael renting movies at a store.",
+          "Example 2. Sports utility vehicles cut-off jean shorts armageddon george michael renting movies at a store.",
+          "Example 3. Sports utility vehicles cut-off jean shorts armageddon george michael renting movies at a store.",
+        ],
+      },
+      {
+        summary:
+          "Milestone 3 summary. Wonderwall tommy hilfiger mr. jones and me tell each other fairy tales berry lips, track jackets flannel shirts tom hanks.",
+        signals: [
+          "Signal 1. Super mario world ripped jeans paper fortune teller.",
+          "Signal 2. Super mario world ripped jeans paper fortune teller.",
+          "Signal 3. Super mario world ripped jeans paper fortune teller.",
+        ],
+        examples: [
+          "Example 1. Sports utility vehicles cut-off jean shorts armageddon george michael renting movies at a store.",
+          "Example 2. Sports utility vehicles cut-off jean shorts armageddon george michael renting movies at a store.",
+          "Example 3. Sports utility vehicles cut-off jean shorts armageddon george michael renting movies at a store.",
+        ],
+      },
+      {
+        summary:
+          "Milestone 4 summary. Wonderwall tommy hilfiger mr. jones and me tell each other fairy tales berry lips, track jackets flannel shirts tom hanks.",
+        signals: [
+          "Signal 1. Super mario world ripped jeans paper fortune teller.",
+          "Signal 2. Super mario world ripped jeans paper fortune teller.",
+          "Signal 3. Super mario world ripped jeans paper fortune teller.",
+        ],
+        examples: [
+          "Example 1. Sports utility vehicles cut-off jean shorts armageddon george michael renting movies at a store.",
+          "Example 2. Sports utility vehicles cut-off jean shorts armageddon george michael renting movies at a store.",
+          "Example 3. Sports utility vehicles cut-off jean shorts armageddon george michael renting movies at a store.",
+        ],
+      },
+      {
+        summary:
+          "Milestone 5 summary. Wonderwall tommy hilfiger mr. jones and me tell each other fairy tales berry lips, track jackets flannel shirts tom hanks.",
+        signals: [
+          "Signal 1. Super mario world ripped jeans paper fortune teller.",
+          "Signal 2. Super mario world ripped jeans paper fortune teller.",
+          "Signal 3. Super mario world ripped jeans paper fortune teller.",
+        ],
+        examples: [
+          "Example 1. Sports utility vehicles cut-off jean shorts armageddon george michael renting movies at a store.",
+          "Example 2. Sports utility vehicles cut-off jean shorts armageddon george michael renting movies at a store.",
+          "Example 3. Sports utility vehicles cut-off jean shorts armageddon george michael renting movies at a store.",
+        ],
+      },
+    ],
+  },
+
+  CREATIVE: {
+    displayName: "Creative",
+    category: "H",
+    description:
+      "Procedurally suggests improvements that could increase the velocity of software delivery. Is open to new ideas and willing to appropriately challenge the status quo.",
+    milestones: [
+      {
+        summary:
+          "Milestone 1 summary. Wonderwall tommy hilfiger mr. jones and me tell each other fairy tales berry lips, track jackets flannel shirts tom hanks.",
+        signals: [
+          "Signal 1. Super mario world ripped jeans paper fortune teller.",
+          "Signal 2. Super mario world ripped jeans paper fortune teller.",
+          "Signal 3. Super mario world ripped jeans paper fortune teller.",
+        ],
+        examples: [
+          "Example 1. Sports utility vehicles cut-off jean shorts armageddon george michael renting movies at a store.",
+          "Example 2. Sports utility vehicles cut-off jean shorts armageddon george michael renting movies at a store.",
+          "Example 3. Sports utility vehicles cut-off jean shorts armageddon george michael renting movies at a store.",
+        ],
+      },
+      {
+        summary:
+          "Milestone 2 summary. Wonderwall tommy hilfiger mr. jones and me tell each other fairy tales berry lips, track jackets flannel shirts tom hanks.",
+        signals: [
+          "Signal 1. Super mario world ripped jeans paper fortune teller.",
+          "Signal 2. Super mario world ripped jeans paper fortune teller.",
+          "Signal 3. Super mario world ripped jeans paper fortune teller.",
+        ],
+        examples: [
+          "Example 1. Sports utility vehicles cut-off jean shorts armageddon george michael renting movies at a store.",
+          "Example 2. Sports utility vehicles cut-off jean shorts armageddon george michael renting movies at a store.",
+          "Example 3. Sports utility vehicles cut-off jean shorts armageddon george michael renting movies at a store.",
+        ],
+      },
+      {
+        summary:
+          "Milestone 3 summary. Wonderwall tommy hilfiger mr. jones and me tell each other fairy tales berry lips, track jackets flannel shirts tom hanks.",
+        signals: [
+          "Signal 1. Super mario world ripped jeans paper fortune teller.",
+          "Signal 2. Super mario world ripped jeans paper fortune teller.",
+          "Signal 3. Super mario world ripped jeans paper fortune teller.",
+        ],
+        examples: [
+          "Example 1. Sports utility vehicles cut-off jean shorts armageddon george michael renting movies at a store.",
+          "Example 2. Sports utility vehicles cut-off jean shorts armageddon george michael renting movies at a store.",
+          "Example 3. Sports utility vehicles cut-off jean shorts armageddon george michael renting movies at a store.",
+        ],
+      },
+      {
+        summary:
+          "Milestone 4 summary. Wonderwall tommy hilfiger mr. jones and me tell each other fairy tales berry lips, track jackets flannel shirts tom hanks.",
+        signals: [
+          "Signal 1. Super mario world ripped jeans paper fortune teller.",
+          "Signal 2. Super mario world ripped jeans paper fortune teller.",
+          "Signal 3. Super mario world ripped jeans paper fortune teller.",
+        ],
+        examples: [
+          "Example 1. Sports utility vehicles cut-off jean shorts armageddon george michael renting movies at a store.",
+          "Example 2. Sports utility vehicles cut-off jean shorts armageddon george michael renting movies at a store.",
+          "Example 3. Sports utility vehicles cut-off jean shorts armageddon george michael renting movies at a store.",
+        ],
+      },
+      {
+        summary:
+          "Milestone 5 summary. Wonderwall tommy hilfiger mr. jones and me tell each other fairy tales berry lips, track jackets flannel shirts tom hanks.",
+        signals: [
+          "Signal 1. Super mario world ripped jeans paper fortune teller.",
+          "Signal 2. Super mario world ripped jeans paper fortune teller.",
+          "Signal 3. Super mario world ripped jeans paper fortune teller.",
+        ],
+        examples: [
+          "Example 1. Sports utility vehicles cut-off jean shorts armageddon george michael renting movies at a store.",
+          "Example 2. Sports utility vehicles cut-off jean shorts armageddon george michael renting movies at a store.",
+          "Example 3. Sports utility vehicles cut-off jean shorts armageddon george michael renting movies at a store.",
+        ],
+      },
+    ],
+  },
+
+  PROJECT_EXECUTION: {
+    displayName: "Project Execution",
+    category: "H",
+    description:
+      "Defines what it takes to accomplish the project requirements by coordinating people and resources, then performing in accordance to the project plan.",
+    milestones: [
+      {
+        summary:
+          "Milestone 1 summary. Wonderwall tommy hilfiger mr. jones and me tell each other fairy tales berry lips, track jackets flannel shirts tom hanks.",
+        signals: [
+          "Signal 1. Super mario world ripped jeans paper fortune teller.",
+          "Signal 2. Super mario world ripped jeans paper fortune teller.",
+          "Signal 3. Super mario world ripped jeans paper fortune teller.",
+        ],
+        examples: [
+          "Example 1. Sports utility vehicles cut-off jean shorts armageddon george michael renting movies at a store.",
+          "Example 2. Sports utility vehicles cut-off jean shorts armageddon george michael renting movies at a store.",
+          "Example 3. Sports utility vehicles cut-off jean shorts armageddon george michael renting movies at a store.",
+        ],
+      },
+      {
+        summary:
+          "Milestone 2 summary. Wonderwall tommy hilfiger mr. jones and me tell each other fairy tales berry lips, track jackets flannel shirts tom hanks.",
+        signals: [
+          "Signal 1. Super mario world ripped jeans paper fortune teller.",
+          "Signal 2. Super mario world ripped jeans paper fortune teller.",
+          "Signal 3. Super mario world ripped jeans paper fortune teller.",
+        ],
+        examples: [
+          "Example 1. Sports utility vehicles cut-off jean shorts armageddon george michael renting movies at a store.",
+          "Example 2. Sports utility vehicles cut-off jean shorts armageddon george michael renting movies at a store.",
+          "Example 3. Sports utility vehicles cut-off jean shorts armageddon george michael renting movies at a store.",
+        ],
+      },
+      {
+        summary:
+          "Milestone 3 summary. Wonderwall tommy hilfiger mr. jones and me tell each other fairy tales berry lips, track jackets flannel shirts tom hanks.",
+        signals: [
+          "Signal 1. Super mario world ripped jeans paper fortune teller.",
+          "Signal 2. Super mario world ripped jeans paper fortune teller.",
+          "Signal 3. Super mario world ripped jeans paper fortune teller.",
+        ],
+        examples: [
+          "Example 1. Sports utility vehicles cut-off jean shorts armageddon george michael renting movies at a store.",
+          "Example 2. Sports utility vehicles cut-off jean shorts armageddon george michael renting movies at a store.",
+          "Example 3. Sports utility vehicles cut-off jean shorts armageddon george michael renting movies at a store.",
+        ],
+      },
+      {
+        summary:
+          "Milestone 4 summary. Wonderwall tommy hilfiger mr. jones and me tell each other fairy tales berry lips, track jackets flannel shirts tom hanks.",
+        signals: [
+          "Signal 1. Super mario world ripped jeans paper fortune teller.",
+          "Signal 2. Super mario world ripped jeans paper fortune teller.",
+          "Signal 3. Super mario world ripped jeans paper fortune teller.",
+        ],
+        examples: [
+          "Example 1. Sports utility vehicles cut-off jean shorts armageddon george michael renting movies at a store.",
+          "Example 2. Sports utility vehicles cut-off jean shorts armageddon george michael renting movies at a store.",
+          "Example 3. Sports utility vehicles cut-off jean shorts armageddon george michael renting movies at a store.",
+        ],
+      },
+      {
+        summary:
+          "Milestone 5 summary. Wonderwall tommy hilfiger mr. jones and me tell each other fairy tales berry lips, track jackets flannel shirts tom hanks.",
+        signals: [
+          "Signal 1. Super mario world ripped jeans paper fortune teller.",
+          "Signal 2. Super mario world ripped jeans paper fortune teller.",
+          "Signal 3. Super mario world ripped jeans paper fortune teller.",
+        ],
+        examples: [
+          "Example 1. Sports utility vehicles cut-off jean shorts armageddon george michael renting movies at a store.",
+          "Example 2. Sports utility vehicles cut-off jean shorts armageddon george michael renting movies at a store.",
+          "Example 3. Sports utility vehicles cut-off jean shorts armageddon george michael renting movies at a store.",
+        ],
+      },
+    ],
+  },
+
+  ANALYTICAL_THINKING: {
+    displayName: "Analytical Thinking",
+    category: "H",
+    description:
+      "Identifies and defines problems, extracting key information from data and develops workable solutions in order to isolate, test, and verify the problem and solution.",
+    milestones: [
+      {
+        summary:
+          "Milestone 1 summary. Wonderwall tommy hilfiger mr. jones and me tell each other fairy tales berry lips, track jackets flannel shirts tom hanks.",
+        signals: [
+          "Signal 1. Super mario world ripped jeans paper fortune teller.",
+          "Signal 2. Super mario world ripped jeans paper fortune teller.",
+          "Signal 3. Super mario world ripped jeans paper fortune teller.",
+        ],
+        examples: [
+          "Example 1. Sports utility vehicles cut-off jean shorts armageddon george michael renting movies at a store.",
+          "Example 2. Sports utility vehicles cut-off jean shorts armageddon george michael renting movies at a store.",
+          "Example 3. Sports utility vehicles cut-off jean shorts armageddon george michael renting movies at a store.",
+        ],
+      },
+      {
+        summary:
+          "Milestone 2 summary. Wonderwall tommy hilfiger mr. jones and me tell each other fairy tales berry lips, track jackets flannel shirts tom hanks.",
+        signals: [
+          "Signal 1. Super mario world ripped jeans paper fortune teller.",
+          "Signal 2. Super mario world ripped jeans paper fortune teller.",
+          "Signal 3. Super mario world ripped jeans paper fortune teller.",
+        ],
+        examples: [
+          "Example 1. Sports utility vehicles cut-off jean shorts armageddon george michael renting movies at a store.",
+          "Example 2. Sports utility vehicles cut-off jean shorts armageddon george michael renting movies at a store.",
+          "Example 3. Sports utility vehicles cut-off jean shorts armageddon george michael renting movies at a store.",
+        ],
+      },
+      {
+        summary:
+          "Milestone 3 summary. Wonderwall tommy hilfiger mr. jones and me tell each other fairy tales berry lips, track jackets flannel shirts tom hanks.",
+        signals: [
+          "Signal 1. Super mario world ripped jeans paper fortune teller.",
+          "Signal 2. Super mario world ripped jeans paper fortune teller.",
+          "Signal 3. Super mario world ripped jeans paper fortune teller.",
+        ],
+        examples: [
+          "Example 1. Sports utility vehicles cut-off jean shorts armageddon george michael renting movies at a store.",
+          "Example 2. Sports utility vehicles cut-off jean shorts armageddon george michael renting movies at a store.",
+          "Example 3. Sports utility vehicles cut-off jean shorts armageddon george michael renting movies at a store.",
+        ],
+      },
+      {
+        summary:
+          "Milestone 4 summary. Wonderwall tommy hilfiger mr. jones and me tell each other fairy tales berry lips, track jackets flannel shirts tom hanks.",
+        signals: [
+          "Signal 1. Super mario world ripped jeans paper fortune teller.",
+          "Signal 2. Super mario world ripped jeans paper fortune teller.",
+          "Signal 3. Super mario world ripped jeans paper fortune teller.",
+        ],
+        examples: [
+          "Example 1. Sports utility vehicles cut-off jean shorts armageddon george michael renting movies at a store.",
+          "Example 2. Sports utility vehicles cut-off jean shorts armageddon george michael renting movies at a store.",
+          "Example 3. Sports utility vehicles cut-off jean shorts armageddon george michael renting movies at a store.",
+        ],
+      },
+      {
+        summary:
+          "Milestone 5 summary. Wonderwall tommy hilfiger mr. jones and me tell each other fairy tales berry lips, track jackets flannel shirts tom hanks.",
+        signals: [
+          "Signal 1. Super mario world ripped jeans paper fortune teller.",
+          "Signal 2. Super mario world ripped jeans paper fortune teller.",
+          "Signal 3. Super mario world ripped jeans paper fortune teller.",
+        ],
+        examples: [
+          "Example 1. Sports utility vehicles cut-off jean shorts armageddon george michael renting movies at a store.",
+          "Example 2. Sports utility vehicles cut-off jean shorts armageddon george michael renting movies at a store.",
+          "Example 3. Sports utility vehicles cut-off jean shorts armageddon george michael renting movies at a store.",
+        ],
+      },
+    ],
+  },
+
+  PRIORITIZATION: {
+    displayName: "Prioritization",
+    category: "H",
+    description:
+      "Establishes and ranks deliverables based on project plan, product objectives, and business impact.",
+    milestones: [
+      {
+        summary:
+          "Milestone 1 summary. Wonderwall tommy hilfiger mr. jones and me tell each other fairy tales berry lips, track jackets flannel shirts tom hanks.",
+        signals: [
+          "Signal 1. Super mario world ripped jeans paper fortune teller.",
+          "Signal 2. Super mario world ripped jeans paper fortune teller.",
+          "Signal 3. Super mario world ripped jeans paper fortune teller.",
+        ],
+        examples: [
+          "Example 1. Sports utility vehicles cut-off jean shorts armageddon george michael renting movies at a store.",
+          "Example 2. Sports utility vehicles cut-off jean shorts armageddon george michael renting movies at a store.",
+          "Example 3. Sports utility vehicles cut-off jean shorts armageddon george michael renting movies at a store.",
+        ],
+      },
+      {
+        summary:
+          "Milestone 2 summary. Wonderwall tommy hilfiger mr. jones and me tell each other fairy tales berry lips, track jackets flannel shirts tom hanks.",
+        signals: [
+          "Signal 1. Super mario world ripped jeans paper fortune teller.",
+          "Signal 2. Super mario world ripped jeans paper fortune teller.",
+          "Signal 3. Super mario world ripped jeans paper fortune teller.",
+        ],
+        examples: [
+          "Example 1. Sports utility vehicles cut-off jean shorts armageddon george michael renting movies at a store.",
+          "Example 2. Sports utility vehicles cut-off jean shorts armageddon george michael renting movies at a store.",
+          "Example 3. Sports utility vehicles cut-off jean shorts armageddon george michael renting movies at a store.",
+        ],
+      },
+      {
+        summary:
+          "Milestone 3 summary. Wonderwall tommy hilfiger mr. jones and me tell each other fairy tales berry lips, track jackets flannel shirts tom hanks.",
+        signals: [
+          "Signal 1. Super mario world ripped jeans paper fortune teller.",
+          "Signal 2. Super mario world ripped jeans paper fortune teller.",
+          "Signal 3. Super mario world ripped jeans paper fortune teller.",
+        ],
+        examples: [
+          "Example 1. Sports utility vehicles cut-off jean shorts armageddon george michael renting movies at a store.",
+          "Example 2. Sports utility vehicles cut-off jean shorts armageddon george michael renting movies at a store.",
+          "Example 3. Sports utility vehicles cut-off jean shorts armageddon george michael renting movies at a store.",
+        ],
+      },
+      {
+        summary:
+          "Milestone 4 summary. Wonderwall tommy hilfiger mr. jones and me tell each other fairy tales berry lips, track jackets flannel shirts tom hanks.",
+        signals: [
+          "Signal 1. Super mario world ripped jeans paper fortune teller.",
+          "Signal 2. Super mario world ripped jeans paper fortune teller.",
+          "Signal 3. Super mario world ripped jeans paper fortune teller.",
+        ],
+        examples: [
+          "Example 1. Sports utility vehicles cut-off jean shorts armageddon george michael renting movies at a store.",
+          "Example 2. Sports utility vehicles cut-off jean shorts armageddon george michael renting movies at a store.",
+          "Example 3. Sports utility vehicles cut-off jean shorts armageddon george michael renting movies at a store.",
+        ],
+      },
+      {
+        summary:
+          "Milestone 5 summary. Wonderwall tommy hilfiger mr. jones and me tell each other fairy tales berry lips, track jackets flannel shirts tom hanks.",
+        signals: [
+          "Signal 1. Super mario world ripped jeans paper fortune teller.",
+          "Signal 2. Super mario world ripped jeans paper fortune teller.",
+          "Signal 3. Super mario world ripped jeans paper fortune teller.",
+        ],
+        examples: [
+          "Example 1. Sports utility vehicles cut-off jean shorts armageddon george michael renting movies at a store.",
+          "Example 2. Sports utility vehicles cut-off jean shorts armageddon george michael renting movies at a store.",
+          "Example 3. Sports utility vehicles cut-off jean shorts armageddon george michael renting movies at a store.",
+        ],
+      },
+    ],
+  },
+
+  PROBLEM_SOLVING: {
+    displayName: "Problem Solving",
+    category: "H",
+    description:
+      "Proactively foresees and mitigates potential blocking issues, while finding solutions to difficult problems by researching and collaborating with the team members. Remains solution focused but knows when to escalate.",
+    milestones: [
+      {
+        summary:
+          "Milestone 1 summary. Wonderwall tommy hilfiger mr. jones and me tell each other fairy tales berry lips, track jackets flannel shirts tom hanks.",
+        signals: [
+          "Signal 1. Super mario world ripped jeans paper fortune teller.",
+          "Signal 2. Super mario world ripped jeans paper fortune teller.",
+          "Signal 3. Super mario world ripped jeans paper fortune teller.",
+        ],
+        examples: [
+          "Example 1. Sports utility vehicles cut-off jean shorts armageddon george michael renting movies at a store.",
+          "Example 2. Sports utility vehicles cut-off jean shorts armageddon george michael renting movies at a store.",
+          "Example 3. Sports utility vehicles cut-off jean shorts armageddon george michael renting movies at a store.",
+        ],
+      },
+      {
+        summary:
+          "Milestone 2 summary. Wonderwall tommy hilfiger mr. jones and me tell each other fairy tales berry lips, track jackets flannel shirts tom hanks.",
+        signals: [
+          "Signal 1. Super mario world ripped jeans paper fortune teller.",
+          "Signal 2. Super mario world ripped jeans paper fortune teller.",
+          "Signal 3. Super mario world ripped jeans paper fortune teller.",
+        ],
+        examples: [
+          "Example 1. Sports utility vehicles cut-off jean shorts armageddon george michael renting movies at a store.",
+          "Example 2. Sports utility vehicles cut-off jean shorts armageddon george michael renting movies at a store.",
+          "Example 3. Sports utility vehicles cut-off jean shorts armageddon george michael renting movies at a store.",
+        ],
+      },
+      {
+        summary:
+          "Milestone 3 summary. Wonderwall tommy hilfiger mr. jones and me tell each other fairy tales berry lips, track jackets flannel shirts tom hanks.",
+        signals: [
+          "Signal 1. Super mario world ripped jeans paper fortune teller.",
+          "Signal 2. Super mario world ripped jeans paper fortune teller.",
+          "Signal 3. Super mario world ripped jeans paper fortune teller.",
+        ],
+        examples: [
+          "Example 1. Sports utility vehicles cut-off jean shorts armageddon george michael renting movies at a store.",
+          "Example 2. Sports utility vehicles cut-off jean shorts armageddon george michael renting movies at a store.",
+          "Example 3. Sports utility vehicles cut-off jean shorts armageddon george michael renting movies at a store.",
+        ],
+      },
+      {
+        summary:
+          "Milestone 4 summary. Wonderwall tommy hilfiger mr. jones and me tell each other fairy tales berry lips, track jackets flannel shirts tom hanks.",
+        signals: [
+          "Signal 1. Super mario world ripped jeans paper fortune teller.",
+          "Signal 2. Super mario world ripped jeans paper fortune teller.",
+          "Signal 3. Super mario world ripped jeans paper fortune teller.",
+        ],
+        examples: [
+          "Example 1. Sports utility vehicles cut-off jean shorts armageddon george michael renting movies at a store.",
+          "Example 2. Sports utility vehicles cut-off jean shorts armageddon george michael renting movies at a store.",
+          "Example 3. Sports utility vehicles cut-off jean shorts armageddon george michael renting movies at a store.",
+        ],
+      },
+      {
+        summary:
+          "Milestone 5 summary. Wonderwall tommy hilfiger mr. jones and me tell each other fairy tales berry lips, track jackets flannel shirts tom hanks.",
+        signals: [
+          "Signal 1. Super mario world ripped jeans paper fortune teller.",
+          "Signal 2. Super mario world ripped jeans paper fortune teller.",
+          "Signal 3. Super mario world ripped jeans paper fortune teller.",
+        ],
+        examples: [
+          "Example 1. Sports utility vehicles cut-off jean shorts armageddon george michael renting movies at a store.",
+          "Example 2. Sports utility vehicles cut-off jean shorts armageddon george michael renting movies at a store.",
+          "Example 3. Sports utility vehicles cut-off jean shorts armageddon george michael renting movies at a store.",
+        ],
+      },
+    ],
+  },
+
+  INCREMENTAL_DELIVERY: {
+    displayName: "Incremental Delivery",
+    category: "H",
+    description:
+      "Applies code management techniques that enable uninterrupted delivery in a series of gradual releases until the project is complete. Understands and advocates for the use and implementation of automation to reduce waste and errors in the process of delivering solutions.",
+    milestones: [
+      {
+        summary:
+          "Milestone 1 summary. Wonderwall tommy hilfiger mr. jones and me tell each other fairy tales berry lips, track jackets flannel shirts tom hanks.",
+        signals: [
+          "Signal 1. Super mario world ripped jeans paper fortune teller.",
+          "Signal 2. Super mario world ripped jeans paper fortune teller.",
+          "Signal 3. Super mario world ripped jeans paper fortune teller.",
+        ],
+        examples: [
+          "Example 1. Sports utility vehicles cut-off jean shorts armageddon george michael renting movies at a store.",
+          "Example 2. Sports utility vehicles cut-off jean shorts armageddon george michael renting movies at a store.",
+          "Example 3. Sports utility vehicles cut-off jean shorts armageddon george michael renting movies at a store.",
+        ],
+      },
+      {
+        summary:
+          "Milestone 2 summary. Wonderwall tommy hilfiger mr. jones and me tell each other fairy tales berry lips, track jackets flannel shirts tom hanks.",
+        signals: [
+          "Signal 1. Super mario world ripped jeans paper fortune teller.",
+          "Signal 2. Super mario world ripped jeans paper fortune teller.",
+          "Signal 3. Super mario world ripped jeans paper fortune teller.",
+        ],
+        examples: [
+          "Example 1. Sports utility vehicles cut-off jean shorts armageddon george michael renting movies at a store.",
+          "Example 2. Sports utility vehicles cut-off jean shorts armageddon george michael renting movies at a store.",
+          "Example 3. Sports utility vehicles cut-off jean shorts armageddon george michael renting movies at a store.",
+        ],
+      },
+      {
+        summary:
+          "Milestone 3 summary. Wonderwall tommy hilfiger mr. jones and me tell each other fairy tales berry lips, track jackets flannel shirts tom hanks.",
+        signals: [
+          "Signal 1. Super mario world ripped jeans paper fortune teller.",
+          "Signal 2. Super mario world ripped jeans paper fortune teller.",
+          "Signal 3. Super mario world ripped jeans paper fortune teller.",
+        ],
+        examples: [
+          "Example 1. Sports utility vehicles cut-off jean shorts armageddon george michael renting movies at a store.",
+          "Example 2. Sports utility vehicles cut-off jean shorts armageddon george michael renting movies at a store.",
+          "Example 3. Sports utility vehicles cut-off jean shorts armageddon george michael renting movies at a store.",
+        ],
+      },
+      {
+        summary:
+          "Milestone 4 summary. Wonderwall tommy hilfiger mr. jones and me tell each other fairy tales berry lips, track jackets flannel shirts tom hanks.",
+        signals: [
+          "Signal 1. Super mario world ripped jeans paper fortune teller.",
+          "Signal 2. Super mario world ripped jeans paper fortune teller.",
+          "Signal 3. Super mario world ripped jeans paper fortune teller.",
+        ],
+        examples: [
+          "Example 1. Sports utility vehicles cut-off jean shorts armageddon george michael renting movies at a store.",
+          "Example 2. Sports utility vehicles cut-off jean shorts armageddon george michael renting movies at a store.",
+          "Example 3. Sports utility vehicles cut-off jean shorts armageddon george michael renting movies at a store.",
+        ],
+      },
+      {
+        summary:
+          "Milestone 5 summary. Wonderwall tommy hilfiger mr. jones and me tell each other fairy tales berry lips, track jackets flannel shirts tom hanks.",
+        signals: [
+          "Signal 1. Super mario world ripped jeans paper fortune teller.",
+          "Signal 2. Super mario world ripped jeans paper fortune teller.",
+          "Signal 3. Super mario world ripped jeans paper fortune teller.",
+        ],
+        examples: [
+          "Example 1. Sports utility vehicles cut-off jean shorts armageddon george michael renting movies at a store.",
+          "Example 2. Sports utility vehicles cut-off jean shorts armageddon george michael renting movies at a store.",
+          "Example 3. Sports utility vehicles cut-off jean shorts armageddon george michael renting movies at a store.",
+        ],
+      },
+    ],
+  },
+
+  DECISION_MAKING: {
+    displayName: "Decision Making",
+    category: "H",
+    description:
+      "Actively seeks to understand customer impression of products and services to integrate feedback into project plan. Synthesizes different perspectives to create a relevant solutions that drives the business impact.",
+    milestones: [
+      {
+        summary:
+          "Milestone 1 summary. Wonderwall tommy hilfiger mr. jones and me tell each other fairy tales berry lips, track jackets flannel shirts tom hanks.",
+        signals: [
+          "Signal 1. Super mario world ripped jeans paper fortune teller.",
+          "Signal 2. Super mario world ripped jeans paper fortune teller.",
+          "Signal 3. Super mario world ripped jeans paper fortune teller.",
+        ],
+        examples: [
+          "Example 1. Sports utility vehicles cut-off jean shorts armageddon george michael renting movies at a store.",
+          "Example 2. Sports utility vehicles cut-off jean shorts armageddon george michael renting movies at a store.",
+          "Example 3. Sports utility vehicles cut-off jean shorts armageddon george michael renting movies at a store.",
+        ],
+      },
+      {
+        summary:
+          "Milestone 2 summary. Wonderwall tommy hilfiger mr. jones and me tell each other fairy tales berry lips, track jackets flannel shirts tom hanks.",
+        signals: [
+          "Signal 1. Super mario world ripped jeans paper fortune teller.",
+          "Signal 2. Super mario world ripped jeans paper fortune teller.",
+          "Signal 3. Super mario world ripped jeans paper fortune teller.",
+        ],
+        examples: [
+          "Example 1. Sports utility vehicles cut-off jean shorts armageddon george michael renting movies at a store.",
+          "Example 2. Sports utility vehicles cut-off jean shorts armageddon george michael renting movies at a store.",
+          "Example 3. Sports utility vehicles cut-off jean shorts armageddon george michael renting movies at a store.",
+        ],
+      },
+      {
+        summary:
+          "Milestone 3 summary. Wonderwall tommy hilfiger mr. jones and me tell each other fairy tales berry lips, track jackets flannel shirts tom hanks.",
+        signals: [
+          "Signal 1. Super mario world ripped jeans paper fortune teller.",
+          "Signal 2. Super mario world ripped jeans paper fortune teller.",
+          "Signal 3. Super mario world ripped jeans paper fortune teller.",
+        ],
+        examples: [
+          "Example 1. Sports utility vehicles cut-off jean shorts armageddon george michael renting movies at a store.",
+          "Example 2. Sports utility vehicles cut-off jean shorts armageddon george michael renting movies at a store.",
+          "Example 3. Sports utility vehicles cut-off jean shorts armageddon george michael renting movies at a store.",
+        ],
+      },
+      {
+        summary:
+          "Milestone 4 summary. Wonderwall tommy hilfiger mr. jones and me tell each other fairy tales berry lips, track jackets flannel shirts tom hanks.",
+        signals: [
+          "Signal 1. Super mario world ripped jeans paper fortune teller.",
+          "Signal 2. Super mario world ripped jeans paper fortune teller.",
+          "Signal 3. Super mario world ripped jeans paper fortune teller.",
+        ],
+        examples: [
+          "Example 1. Sports utility vehicles cut-off jean shorts armageddon george michael renting movies at a store.",
+          "Example 2. Sports utility vehicles cut-off jean shorts armageddon george michael renting movies at a store.",
+          "Example 3. Sports utility vehicles cut-off jean shorts armageddon george michael renting movies at a store.",
+        ],
+      },
+      {
+        summary:
+          "Milestone 5 summary. Wonderwall tommy hilfiger mr. jones and me tell each other fairy tales berry lips, track jackets flannel shirts tom hanks.",
+        signals: [
+          "Signal 1. Super mario world ripped jeans paper fortune teller.",
+          "Signal 2. Super mario world ripped jeans paper fortune teller.",
+          "Signal 3. Super mario world ripped jeans paper fortune teller.",
+        ],
+        examples: [
+          "Example 1. Sports utility vehicles cut-off jean shorts armageddon george michael renting movies at a store.",
+          "Example 2. Sports utility vehicles cut-off jean shorts armageddon george michael renting movies at a store.",
+          "Example 3. Sports utility vehicles cut-off jean shorts armageddon george michael renting movies at a store.",
+        ],
+      },
+    ],
+  },
+
+  APPROPRIATE_AUTONOMY: {
+    displayName: "Appropriate Autonomy",
+    category: "H",
+    description:
+      "Can be trusted with decision making over topics related to scope of work. Operates without supervision after learning to align with company goals. Seeks input from leaders when appropriate.",
+    milestones: [
+      {
+        summary:
+          "Milestone 1 summary. Wonderwall tommy hilfiger mr. jones and me tell each other fairy tales berry lips, track jackets flannel shirts tom hanks.",
+        signals: [
+          "Signal 1. Super mario world ripped jeans paper fortune teller.",
+          "Signal 2. Super mario world ripped jeans paper fortune teller.",
+          "Signal 3. Super mario world ripped jeans paper fortune teller.",
+        ],
+        examples: [
+          "Example 1. Sports utility vehicles cut-off jean shorts armageddon george michael renting movies at a store.",
+          "Example 2. Sports utility vehicles cut-off jean shorts armageddon george michael renting movies at a store.",
+          "Example 3. Sports utility vehicles cut-off jean shorts armageddon george michael renting movies at a store.",
+        ],
+      },
+      {
+        summary:
+          "Milestone 2 summary. Wonderwall tommy hilfiger mr. jones and me tell each other fairy tales berry lips, track jackets flannel shirts tom hanks.",
+        signals: [
+          "Signal 1. Super mario world ripped jeans paper fortune teller.",
+          "Signal 2. Super mario world ripped jeans paper fortune teller.",
+          "Signal 3. Super mario world ripped jeans paper fortune teller.",
+        ],
+        examples: [
+          "Example 1. Sports utility vehicles cut-off jean shorts armageddon george michael renting movies at a store.",
+          "Example 2. Sports utility vehicles cut-off jean shorts armageddon george michael renting movies at a store.",
+          "Example 3. Sports utility vehicles cut-off jean shorts armageddon george michael renting movies at a store.",
+        ],
+      },
+      {
+        summary:
+          "Milestone 3 summary. Wonderwall tommy hilfiger mr. jones and me tell each other fairy tales berry lips, track jackets flannel shirts tom hanks.",
+        signals: [
+          "Signal 1. Super mario world ripped jeans paper fortune teller.",
+          "Signal 2. Super mario world ripped jeans paper fortune teller.",
+          "Signal 3. Super mario world ripped jeans paper fortune teller.",
+        ],
+        examples: [
+          "Example 1. Sports utility vehicles cut-off jean shorts armageddon george michael renting movies at a store.",
+          "Example 2. Sports utility vehicles cut-off jean shorts armageddon george michael renting movies at a store.",
+          "Example 3. Sports utility vehicles cut-off jean shorts armageddon george michael renting movies at a store.",
+        ],
+      },
+      {
+        summary:
+          "Milestone 4 summary. Wonderwall tommy hilfiger mr. jones and me tell each other fairy tales berry lips, track jackets flannel shirts tom hanks.",
+        signals: [
+          "Signal 1. Super mario world ripped jeans paper fortune teller.",
+          "Signal 2. Super mario world ripped jeans paper fortune teller.",
+          "Signal 3. Super mario world ripped jeans paper fortune teller.",
+        ],
+        examples: [
+          "Example 1. Sports utility vehicles cut-off jean shorts armageddon george michael renting movies at a store.",
+          "Example 2. Sports utility vehicles cut-off jean shorts armageddon george michael renting movies at a store.",
+          "Example 3. Sports utility vehicles cut-off jean shorts armageddon george michael renting movies at a store.",
+        ],
+      },
+      {
+        summary:
+          "Milestone 5 summary. Wonderwall tommy hilfiger mr. jones and me tell each other fairy tales berry lips, track jackets flannel shirts tom hanks.",
+        signals: [
+          "Signal 1. Super mario world ripped jeans paper fortune teller.",
+          "Signal 2. Super mario world ripped jeans paper fortune teller.",
+          "Signal 3. Super mario world ripped jeans paper fortune teller.",
+        ],
+        examples: [
+          "Example 1. Sports utility vehicles cut-off jean shorts armageddon george michael renting movies at a store.",
+          "Example 2. Sports utility vehicles cut-off jean shorts armageddon george michael renting movies at a store.",
+          "Example 3. Sports utility vehicles cut-off jean shorts armageddon george michael renting movies at a store.",
+        ],
+      },
+    ],
+  },
+
+  PLANNING_AND_ESTIMATING: {
+    displayName: "Planning and Estimating",
+    category: "H",
+    description:
+      "Understands product development roadmap scope to identify and suggest optimal resources, materials, and related documents. Develops and communicates sound plan by determining the time, complexity, and processes required to successfully achieve the final outcome.",
+    milestones: [
+      {
+        summary:
+          "Milestone 1 summary. Wonderwall tommy hilfiger mr. jones and me tell each other fairy tales berry lips, track jackets flannel shirts tom hanks.",
+        signals: [
+          "Signal 1. Super mario world ripped jeans paper fortune teller.",
+          "Signal 2. Super mario world ripped jeans paper fortune teller.",
+          "Signal 3. Super mario world ripped jeans paper fortune teller.",
+        ],
+        examples: [
+          "Example 1. Sports utility vehicles cut-off jean shorts armageddon george michael renting movies at a store.",
+          "Example 2. Sports utility vehicles cut-off jean shorts armageddon george michael renting movies at a store.",
+          "Example 3. Sports utility vehicles cut-off jean shorts armageddon george michael renting movies at a store.",
+        ],
+      },
+      {
+        summary:
+          "Milestone 2 summary. Wonderwall tommy hilfiger mr. jones and me tell each other fairy tales berry lips, track jackets flannel shirts tom hanks.",
+        signals: [
+          "Signal 1. Super mario world ripped jeans paper fortune teller.",
+          "Signal 2. Super mario world ripped jeans paper fortune teller.",
+          "Signal 3. Super mario world ripped jeans paper fortune teller.",
+        ],
+        examples: [
+          "Example 1. Sports utility vehicles cut-off jean shorts armageddon george michael renting movies at a store.",
+          "Example 2. Sports utility vehicles cut-off jean shorts armageddon george michael renting movies at a store.",
+          "Example 3. Sports utility vehicles cut-off jean shorts armageddon george michael renting movies at a store.",
+        ],
+      },
+      {
+        summary:
+          "Milestone 3 summary. Wonderwall tommy hilfiger mr. jones and me tell each other fairy tales berry lips, track jackets flannel shirts tom hanks.",
+        signals: [
+          "Signal 1. Super mario world ripped jeans paper fortune teller.",
+          "Signal 2. Super mario world ripped jeans paper fortune teller.",
+          "Signal 3. Super mario world ripped jeans paper fortune teller.",
+        ],
+        examples: [
+          "Example 1. Sports utility vehicles cut-off jean shorts armageddon george michael renting movies at a store.",
+          "Example 2. Sports utility vehicles cut-off jean shorts armageddon george michael renting movies at a store.",
+          "Example 3. Sports utility vehicles cut-off jean shorts armageddon george michael renting movies at a store.",
+        ],
+      },
+      {
+        summary:
+          "Milestone 4 summary. Wonderwall tommy hilfiger mr. jones and me tell each other fairy tales berry lips, track jackets flannel shirts tom hanks.",
+        signals: [
+          "Signal 1. Super mario world ripped jeans paper fortune teller.",
+          "Signal 2. Super mario world ripped jeans paper fortune teller.",
+          "Signal 3. Super mario world ripped jeans paper fortune teller.",
+        ],
+        examples: [
+          "Example 1. Sports utility vehicles cut-off jean shorts armageddon george michael renting movies at a store.",
+          "Example 2. Sports utility vehicles cut-off jean shorts armageddon george michael renting movies at a store.",
+          "Example 3. Sports utility vehicles cut-off jean shorts armageddon george michael renting movies at a store.",
+        ],
+      },
+      {
+        summary:
+          "Milestone 5 summary. Wonderwall tommy hilfiger mr. jones and me tell each other fairy tales berry lips, track jackets flannel shirts tom hanks.",
+        signals: [
+          "Signal 1. Super mario world ripped jeans paper fortune teller.",
+          "Signal 2. Super mario world ripped jeans paper fortune teller.",
+          "Signal 3. Super mario world ripped jeans paper fortune teller.",
+        ],
+        examples: [
+          "Example 1. Sports utility vehicles cut-off jean shorts armageddon george michael renting movies at a store.",
+          "Example 2. Sports utility vehicles cut-off jean shorts armageddon george michael renting movies at a store.",
+          "Example 3. Sports utility vehicles cut-off jean shorts armageddon george michael renting movies at a store.",
+        ],
+      },
+    ],
+  },
+
+  DEPENDABILITY_AND_RELIABILITY: {
+    displayName: "Dependability and Reliability",
+    category: "H",
+    description:
+      "Demonstrates personal accountability for quality and timeliness of deliverables. Manages available resources to complete projects efficiently and on time.",
+    milestones: [
+      {
+        summary:
+          "Milestone 1 summary. Wonderwall tommy hilfiger mr. jones and me tell each other fairy tales berry lips, track jackets flannel shirts tom hanks.",
+        signals: [
+          "Signal 1. Super mario world ripped jeans paper fortune teller.",
+          "Signal 2. Super mario world ripped jeans paper fortune teller.",
+          "Signal 3. Super mario world ripped jeans paper fortune teller.",
+        ],
+        examples: [
+          "Example 1. Sports utility vehicles cut-off jean shorts armageddon george michael renting movies at a store.",
+          "Example 2. Sports utility vehicles cut-off jean shorts armageddon george michael renting movies at a store.",
+          "Example 3. Sports utility vehicles cut-off jean shorts armageddon george michael renting movies at a store.",
+        ],
+      },
+      {
+        summary:
+          "Milestone 2 summary. Wonderwall tommy hilfiger mr. jones and me tell each other fairy tales berry lips, track jackets flannel shirts tom hanks.",
+        signals: [
+          "Signal 1. Super mario world ripped jeans paper fortune teller.",
+          "Signal 2. Super mario world ripped jeans paper fortune teller.",
+          "Signal 3. Super mario world ripped jeans paper fortune teller.",
+        ],
+        examples: [
+          "Example 1. Sports utility vehicles cut-off jean shorts armageddon george michael renting movies at a store.",
+          "Example 2. Sports utility vehicles cut-off jean shorts armageddon george michael renting movies at a store.",
+          "Example 3. Sports utility vehicles cut-off jean shorts armageddon george michael renting movies at a store.",
+        ],
+      },
+      {
+        summary:
+          "Milestone 3 summary. Wonderwall tommy hilfiger mr. jones and me tell each other fairy tales berry lips, track jackets flannel shirts tom hanks.",
+        signals: [
+          "Signal 1. Super mario world ripped jeans paper fortune teller.",
+          "Signal 2. Super mario world ripped jeans paper fortune teller.",
+          "Signal 3. Super mario world ripped jeans paper fortune teller.",
+        ],
+        examples: [
+          "Example 1. Sports utility vehicles cut-off jean shorts armageddon george michael renting movies at a store.",
+          "Example 2. Sports utility vehicles cut-off jean shorts armageddon george michael renting movies at a store.",
+          "Example 3. Sports utility vehicles cut-off jean shorts armageddon george michael renting movies at a store.",
+        ],
+      },
+      {
+        summary:
+          "Milestone 4 summary. Wonderwall tommy hilfiger mr. jones and me tell each other fairy tales berry lips, track jackets flannel shirts tom hanks.",
+        signals: [
+          "Signal 1. Super mario world ripped jeans paper fortune teller.",
+          "Signal 2. Super mario world ripped jeans paper fortune teller.",
+          "Signal 3. Super mario world ripped jeans paper fortune teller.",
+        ],
+        examples: [
+          "Example 1. Sports utility vehicles cut-off jean shorts armageddon george michael renting movies at a store.",
+          "Example 2. Sports utility vehicles cut-off jean shorts armageddon george michael renting movies at a store.",
+          "Example 3. Sports utility vehicles cut-off jean shorts armageddon george michael renting movies at a store.",
+        ],
+      },
+      {
+        summary:
+          "Milestone 5 summary. Wonderwall tommy hilfiger mr. jones and me tell each other fairy tales berry lips, track jackets flannel shirts tom hanks.",
+        signals: [
+          "Signal 1. Super mario world ripped jeans paper fortune teller.",
+          "Signal 2. Super mario world ripped jeans paper fortune teller.",
+          "Signal 3. Super mario world ripped jeans paper fortune teller.",
+        ],
+        examples: [
+          "Example 1. Sports utility vehicles cut-off jean shorts armageddon george michael renting movies at a store.",
+          "Example 2. Sports utility vehicles cut-off jean shorts armageddon george michael renting movies at a store.",
+          "Example 3. Sports utility vehicles cut-off jean shorts armageddon george michael renting movies at a store.",
         ],
       },
     ],
@@ -1333,7 +3321,16 @@ export const totalPointsFromMilestoneMap = milestoneMap =>
 export const categoryColorScale = d3
   .scaleOrdinal()
   .domain(categoryIds)
-  .range(["#00abc2", "#428af6", "#e1439f", "#e54552"])
+  .range([
+    "#00abc2", // BUSINESS ACUMEN
+    "#428af6", // GROWTH MINDSET
+    "#e1439f", // LEADERSHIP
+    "#e54552", // CRAFT
+    "#ead456", // QUALITY
+    "56ea65", // COMMUNICATION
+    "8a56ea", // TEAMWORK
+    "ea6556", // RESULTS
+  ])
 
 export const titles = [
   { label: "Engineer I", minPoints: 0, maxPoints: 16 },
