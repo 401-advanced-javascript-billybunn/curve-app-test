@@ -42,6 +42,7 @@ export const pointsToLevels = {
 
 export const maxLevel = 135
 
+// SOURCE: https://codefellows.github.io/common_curriculum/career_coaching/Professional_Competencies
 export const tracks = {
   // BUSINESS ACUMEN COMPETENCY --------------------
   MISSION_AND_VISION: {
