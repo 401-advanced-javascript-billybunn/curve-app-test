@@ -1,10 +1,32 @@
+import React from "react"
 import {
   pointsToLevels,
   milestoneToPoints,
   trackIds,
   totalPointsFromMilestoneMap,
 } from "../constants"
-import React from "react"
+import styled from "styled-components"
+
+const PointSummariesTable = styled.table`
+  border-spacing: 3px;
+  margin-bottom: 20px;
+  margin-left: -3px;
+`
+const PointSummaryLabelTableHeader = styled.th`
+  font-size: 12px;
+  text-align: center;
+  font-weight: normal;
+  width: 120px;
+`
+const PointSummaryValueTableData = styled.td`
+  width: 120px;
+  background: #eee;
+  font-size: 24px;
+  font-weight: bold;
+  line-height: 50px;
+  border-radius: 2px;
+  text-align: center;
+`
 
 class PointSummaries extends React.Component {
   render() {
@@ -42,46 +64,30 @@ class PointSummaries extends React.Component {
     ]
 
     return (
-      <table>
-        <style jsx>{`
-          table {
-            border-spacing: 3px;
-            margin-bottom: 20px;
-            margin-left: -3px;
-          }
-          .point-summary-label {
-            font-size: 12px;
-            text-align: center;
-            font-weight: normal;
-            width: 120px;
-          }
-          .point-summary-value {
-            width: 120px;
-            background: #eee;
-            font-size: 24px;
-            font-weight: bold;
-            line-height: 50px;
-            border-radius: 2px;
-            text-align: center;
-          }
-        `}</style>
+      <PointSummariesTable>
         <tbody>
           <tr>
             {blocks.map(({ label }, i) => (
-              <th key={i} className="point-summary-label">
+              <PointSummaryLabelTableHeader
+                key={i}
+                className="point-summary-label"
+              >
                 {label}
-              </th>
+              </PointSummaryLabelTableHeader>
             ))}
           </tr>
           <tr>
             {blocks.map(({ value }, i) => (
-              <td key={i} className="point-summary-value">
+              <PointSummaryValueTableData
+                key={i}
+                className="point-summary-value"
+              >
                 {value}
-              </td>
+              </PointSummaryValueTableData>
             ))}
           </tr>
         </tbody>
-      </table>
+      </PointSummariesTable>
     )
   }
 }

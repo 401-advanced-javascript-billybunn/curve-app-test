@@ -1,10 +1,34 @@
 import React from "react"
 import * as d3 from "d3"
+import styled from "styled-components"
 import { trackIds, milestones, tracks, categoryColorScale } from "../constants"
 
 const width = 400
 // "milestones" is an array of each level; [0, 1, 2, 3, 4, 5]
 const arcMilestones = milestones.slice(1) // we'll draw the '0' milestone with a circle, not an arc.
+
+// Styles
+const Figure = styled.figure`
+  margin: 0;
+`
+const Svg = styled.svg`
+  width: ${width}px;
+  height: ${width}px;
+`
+const TrackMilestone = styled.path`
+  fill: #eee;
+  cursor: pointer;
+`
+const TrackMilestoneCurrent = styled.path`
+  stroke: #000;
+  stroke-width: 4px;
+  stroke-linejoin: round;
+  &:hover {
+    stroke: #000;
+    stroke-width: 4px;
+    stroke-linejoin: round;
+  }
+`
 
 class NightingaleChart extends React.Component {
   constructor(props) {
@@ -37,14 +61,10 @@ class NightingaleChart extends React.Component {
       this.props.focusedTrackId
     ]
     return (
-      <figure>
+      <Figure>
         <style jsx>{`
           figure {
             margin: 0;
-          }
-          svg {
-            width: ${width}px;
-            height: ${width}px;
           }
           .track-milestone {
             fill: #eee;
@@ -57,7 +77,7 @@ class NightingaleChart extends React.Component {
             stroke-linejoin: round;
           }
         `}</style>
-        <svg>
+        <Svg>
           <g transform={`translate(${width / 2},${width / 2}) rotate(-33.75)`}>
             {trackIds.map((trackId, i) => {
               const isCurrentTrack = trackId == this.props.focusedTrackId
@@ -116,8 +136,8 @@ class NightingaleChart extends React.Component {
               )
             })}
           </g>
-        </svg>
-      </figure>
+        </Svg>
+      </Figure>
     )
   }
 }

@@ -1,4 +1,5 @@
 import React from "react"
+import styled from "styled-components"
 import {
   eligibleTitles,
   trackIds,
@@ -8,7 +9,14 @@ import {
 import NameInput from "../components/NameInput"
 import TitleSelector from "../components/TitleSelector"
 import PointSummaries from "../components/PointSummaries"
+import LevelThermometer from "../components/LevelThermometer"
 import NightingaleChart from "../components/NightingaleChart"
+import TrackSelector from "../components/TrackSelector"
+
+// const MainApp = styled.div`
+//   width: 960px;
+//   margin: 0 auto;
+// `
 
 class CurveApp extends React.Component {
   constructor(props) {
@@ -55,37 +63,70 @@ class CurveApp extends React.Component {
     this.setState({ milestoneByTrack, focusedTrackId: trackId, title })
   }
 
+  setFocusedTrackId(trackId) {
+    let index = trackIds.indexOf(trackId)
+    const focusedTrackId = trackIds[index]
+    this.setState({ focusedTrackId })
+  }
+
   render() {
     return (
-      <div style={{ display: "flex" }}>
-        <div style={{ flex: 1 }}>
-          <form>
-            <NameInput
-              name={this.state.name}
-              handleNameInputChange={e =>
-                this.setState({ name: e.target.value })
+      <>
+        <div style={{ display: "flex" }}>
+          <div style={{ flex: 1 }}>
+            <form>
+              <NameInput
+                name={this.state.name}
+                handleNameInputChange={e =>
+                  this.setState({ name: e.target.value })
+                }
+              />
+              <TitleSelector
+                milestoneByTrack={this.state.milestoneByTrack}
+                currentTitle={this.state.title}
+                setTitleFn={title => this.setTitle(title)}
+              />
+            </form>
+            <PointSummaries milestoneByTrack={this.state.milestoneByTrack} />
+            <LevelThermometer milestoneByTrack={this.state.milestoneByTrack} />
+          </div>
+
+          <div style={{ flex: 0 }}>
+            <NightingaleChart
+              milestoneByTrack={this.state.milestoneByTrack}
+              focusedTrackId={this.state.focusedTrackId}
+              handleTrackMilestoneChangeFn={(track, milestone) =>
+                this.handleTrackMilestoneChange(track, milestone)
               }
             />
-            <TitleSelector
-              milestoneByTrack={this.state.milestoneByTrack}
-              currentTitle={this.state.title}
-              setTitleFn={title => this.setTitle(title)}
-            />
-          </form>
-          <PointSummaries milestoneByTrack={this.state.milestoneByTrack} />
-          {/* <LevelThermometer milestoneByTrack={this.state.milestoneByTrack} /> */}
+          </div>
         </div>
 
-        <div style={{ flex: 0 }}>
-          <NightingaleChart
-            milestoneByTrack={this.state.milestoneByTrack}
-            focusedTrackId={this.state.focusedTrackId}
-            handleTrackMilestoneChangeFn={(track, milestone) =>
-              this.handleTrackMilestoneChange(track, milestone)
-            }
-          />
-        </div>
-      </div>
+        <TrackSelector
+          milestoneByTrack={this.state.milestoneByTrack}
+          focusedTrackId={this.state.focusedTrackId}
+          setFocusedTrackIdFn={this.setFocusedTrackId.bind(this)}
+        />
+        {/*<KeyboardListener
+          selectNextTrackFn={this.shiftFocusedTrack.bind(this, 1)}
+          selectPrevTrackFn={this.shiftFocusedTrack.bind(this, -1)}
+          increaseFocusedMilestoneFn={this.shiftFocusedTrackMilestoneByDelta.bind(
+            this,
+            1
+          )}
+          decreaseFocusedMilestoneFn={this.shiftFocusedTrackMilestoneByDelta.bind(
+            this,
+            -1
+          )}
+        />
+        <Track
+          milestoneByTrack={this.state.milestoneByTrack}
+          trackId={this.state.focusedTrackId}
+          handleTrackMilestoneChangeFn={(track, milestone) =>
+            this.handleTrackMilestoneChange(track, milestone)
+          }
+        /> */}
+      </>
     )
   }
 }
